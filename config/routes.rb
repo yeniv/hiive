@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
 
-  resources :users, only: [] do
-    resources :products, only: [:index]
-  end
+  root to: 'pages#home']
 
-  resource :profile, only: [:show]
   resources :products, only: [:show, :new, :create]
 
   get '/discover', to: 'pages#discover'
+  get '/profile', to: 'profiles#index' # private profile page
+  get '/profile/:id', to: 'profiles#show' # public profile page
 end
