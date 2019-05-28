@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :products, only: [:show, :new, :create]
+  resources :products, only: [:index, :show, :new, :create]
 
   get '/discover', to: 'pages#discover'
-  get '/profile', to: 'profiles#index' # private profile page
-  get '/profile/:id', to: 'profiles#show' # public profile page
+  get '/profile', to: 'profiles#private_profile', as: :private_profile
+  get '/profile/:id', to: 'profiles#public_profile', as: :public_profile
 end
