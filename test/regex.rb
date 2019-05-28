@@ -1,21 +1,15 @@
 def validator(text)
   text.gsub(/[",']/, "")
   splitted = text.split(" ")
-  splitted.each do |word|
-    matched = word.match?(/(https?:)?(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?((.[a-zA-Z0-9_%]*)+)?(\.[a-z]*)?/)
-    if matched
-      p word
-    end
-  end
+  arr = splitted.reject { |word| !word.match?(/(https?:)?(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?((.[a-zA-Z0-9_%]*)+)?(\.[a-z]*)?/) }
+  p arr
 end
 
-validator("
-    Pete McKinnon
-    Publicado a 23/05/2019
-    NEW Lightroom PRESET PACK: https://goo.gl/1CfEKF
+validator("NEW Lightroom PRESET PACK: https://goo.gl/1CfEKF
     The Music I use: https://goo.gl/IMZC9A - AMAZING for YouTubers
     Colour Graded with my PM LUTS Pack : https://goo.gl/JmUrM7
     PM MERCH & COFFEE! : https://goo.gl/TkzM6S
+    
     My 2019 KIT for Filmmaking, Photography & Vlogs:
     Camera Bag: https://amzn.to/2MafNtQ
     Camera Bag Organizer Pouches: https://amzn.to/2suAQ0Z
