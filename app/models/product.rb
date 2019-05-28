@@ -3,4 +3,6 @@ class Product < ApplicationRecord
   has_many :reviews
   has_many :product_categories
   has_many :likes
+
+  mount_uploader :photo, PhotoUploader
 end
