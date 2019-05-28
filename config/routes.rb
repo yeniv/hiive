@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'profile/show'
+  get 'products/index'
+  get 'products/new'
+  get 'products/create'
+  get 'products/show'
   devise_for :users
 
   root to: 'pages#home'
