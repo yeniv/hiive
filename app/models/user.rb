@@ -8,9 +8,9 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-   validates :first_name, presence: true
+  validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :user_type, presence: true
+  # validates :user_type, presence: true
 
 
   mount_uploader :photo, PhotoUploader
