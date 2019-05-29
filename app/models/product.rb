@@ -8,7 +8,6 @@ class Product < ApplicationRecord
   validates :title, presence: true
   validates :price, presence: true, numericality: { only_integer: true }
   validates :description, presence: true
-  validates :photo_url, presence: true #Dont know
   validates :brand_name, presence: true
   validates :seller, presence: true
 
