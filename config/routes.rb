@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  resources :products, only: [:index, :show, :new, :create]
+  resources :products, only: [:index, :show, :new, :create] do
+    resources :reviews, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
+  end
 
   get '/discover', to: 'pages#discover'
   get '/profile', to: 'profiles#private_profile', as: :private_profile
