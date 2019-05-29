@@ -1,1 +1,34 @@
-<h1> Hello  <%= @user.email %>, this is your public profile</h1>
+<div class="public-profile-background">
+    <div class="edit-public-profile-card">
+        <div class="title-in-middle">
+            <h2 class="h2-public-profile"> Hello  <%= @user.first_name %>, Welcome to your public profile</h2>
+            <div class="public-profile-text-div">
+                <%= cl_image_tag @user.photo, width: 400, height: 300, crop: :fill, class: 'profile-picture-public-profile'%>
+                <div class="profile-information">
+                    <div class="information-text-public-profile">
+                        <strong>First Name:  </strong><%= @user.first_name %>
+                    </div>
+                    <div class="information-text-public-profile">
+                        <strong>Last Name:  </strong><%= @user.last_name %>
+                    </div>
+                    <div class="information-text-public-profile">
+                        <strong>User type:  </strong><%= @user.user_type %>
+                    </div>
+                    <div class="information-text-public-profile">
+                        <strong>E-mail: </strong> <%= @user.email %>
+                    </div>
+                </div>
+            </div>
+            <div class="display-grid-all-products">
+                <% @user.products.each do |product| %>
+                <div class="card-product-public-profile">
+                    <%= cl_image_tag product.photo, width: 200, height: 150, crop: :fill, class: 'images-public-profile' %>
+                    <p class='product-title-public-profile'><strong><%= product.title %></strong></p>
+                    <p class="margin-price-public-profile"><%= product.price %>€</p>
+                    <%= button_to "Buy!", product.referal_link, class: 'btn btn-product-public-profile' %> 
+                </div>
+              <% end %>
+            </div>
+        </div>
+    </div>
+</div>

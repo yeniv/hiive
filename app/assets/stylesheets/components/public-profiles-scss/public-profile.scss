@@ -1,0 +1,45 @@
+.public-profile-background {
+    background-color: #F4FDFF;
+    height: 100%;
+    padding: 100px;
+}
+
+.edit-public-profile-card {
+    background-color: white;
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.1);
+    border-radius: 4.5px;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-in-middle {
+    width: 100%;
+}
+
+.public-profile-text-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.profile-information {
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+}
+
+.information-text-public-profile {
+    margin-top: 20px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 20px;
+}
+
+.profile-picture-public-profile {
+    border-radius: 4.5px;
+}
+
+.h2-public-profile {
+    font-family: 'Overpass', sans-serif;
+}
