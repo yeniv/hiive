@@ -2,6 +2,8 @@
   <div class="container sign-up-card">
     <h2 class="h2-sign-up-scss">Sign up</h2>
 
+    <%#= resource.errors.full_messages %>
+
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
