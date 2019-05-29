@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   validates :title, presence: true
   validates :price, presence: true
   validates :description, presence: true
-  validates :brand_name, presence: true
+  validates :brand, presence: true
   validates :seller, presence: true
 
   mount_uploader :photo, PhotoUploader
