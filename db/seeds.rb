@@ -2,9 +2,9 @@
 
 puts "Wiping DB clean..."
 
+Review.delete_all
 Product.delete_all
 User.delete_all
-Review.delete_all
 
 # CREATE USERS
 

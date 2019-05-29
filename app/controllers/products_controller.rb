@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
     authorize @product
 
     if @product.save!
-      redirect_to profile_path(current_user)
+      redirect_to private_profile_path(current_user)
     else
       render :new
     end
