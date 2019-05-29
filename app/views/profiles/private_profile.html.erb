@@ -1,1 +1,14 @@
 <h1> Hello  <%= @user.email %> , this is your private page</h1>
+
+<% unless @products.nil? %>
+  <% @products.each do |product| %>
+    <ul>
+      <li><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></li>
+      <li><%= product.title %></li>
+      <li><%= product.brand %></li>
+      <li><%= product.seller %></li>
+      <li><%= product.price %></li>
+      <li><%= product.description %></li>
+    </ul>
+  <% end %>
+<% end %>
