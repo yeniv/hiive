@@ -32,7 +32,7 @@ class Scraper
 
       images = html_doc.search('#imgTagWrapperId img').attr('data-a-dynamic-image').text
       images_hash = JSON.parse(images.gsub('=>', ':'))
-      product_params[:photo] = images_hash.map { |key, value| key }
+      product_params[:photo] = (images_hash.map { |key, value| key }).first # remove .first once we can accept multiple images
 
       product_params
     rescue => error
@@ -40,7 +40,7 @@ class Scraper
     end
   end
 
-  def self.run(text)
+  def self.go(text)
     product_params = []
     url_regex = /(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?/
     validator(text).each do |link|
