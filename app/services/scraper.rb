@@ -22,7 +22,7 @@ class Scraper
 
       product_params[:referal_link] = url
       product_params[:title] = html_doc.search('#title').text.strip
-      product_params[:price] = html_doc.search('#price_inside_buybox').text.strip
+      product_params[:price] = html_doc.search('#price .priceBlockBuyingPriceString').text.strip
       product_params[:brand] = html_doc.search('#bylineInfo').text.strip
       product_params[:seller] = "Amazon"
 
