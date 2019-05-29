@@ -1,9 +1,9 @@
 # require 'nokogiri'
-# require 'rest-client'
+require 'rest-client'
 # require 'JSON'
 
 class Scraper
-  def validator(text)
+  def self.validator(text)
     links = []
     text.gsub(/[",']/, "")
     split = text.split(" ")
@@ -14,7 +14,7 @@ class Scraper
     links
   end
 
-  def amazon_scraper(url)
+  def self.amazon_scraper(url)
     begin
       product_params = {}
       html_file = RestClient.get(url)
@@ -35,23 +35,24 @@ class Scraper
       product_params[:photo] = images_hash.map { |key, value| key }
 
       product_params
-
     rescue => error
       puts error.inspect
     end
   end
 
-  def self.scrape(text)
+  def self.run(text)
+    product_params = []
     url_regex = /(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?/
     validator(text).each do |link|
       seller = link.match(url_regex)[2]
       case seller
-        when 'amzn' || 'amazon'
-          p amazon_scraper(link)
-          # sleep 1
-        else
-          p "Sorry. Unable to auto-generate a link from #{seller}."
+      when 'amzn' || 'amazon'
+        product_params << amazon_scraper(link)
+        # sleep 1
+      else
+        p "Sorry. Unable to auto-generate a link from #{seller}."
       end
     end
+    product_params
   end
 end
