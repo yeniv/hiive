@@ -1,0 +1,52 @@
+.background-sign-up {
+    background-color: #F4FDFF;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.sign-up-card {
+    background-color: white;
+    width: 600px;
+    padding: 35px 25px;
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.1);
+    border-radius: 4.5px;
+    font-family: 'Chivo', sans-serif;
+}
+
+.h2-sign-up-scss {
+    font-family: 'Overpass', sans-serif;
+}
+
+.btn-width-sign-up {
+    width: 100px;
+}
+
+.sign-up-btn-aligned {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-width-log-in-sign-up-form {
+    width: 100px;
+    // border: solid;
+    // border-width: 0.5px;
+    // border-radius: 2px;
+    background-color: #F4FDFF;
+    box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
+}
+
+.btn-width-log-in-sign-up-form:hover {
+    // border: none;
+    background-color: #e5fcff;
+    box-shadow: none;
+}
+
+.btn-sign-up {
+    box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
+    background-color: #d8faff;
+}
+
+.btn-sign-up:hover {
+    box-shadow: none;
+    background-color: #cff6fc;
+}
