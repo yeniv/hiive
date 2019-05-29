@@ -32,7 +32,7 @@ class Scraper
 
       images = html_doc.search('#imgTagWrapperId img').attr('data-a-dynamic-image').text
       images_hash = JSON.parse(images.gsub('=>', ':'))
-      product_params[:photo] = (images_hash.map { |key, value| key }).first # remove .first once we can accept multiple images
+      product_params[:photo] = (images_hash.map { |key, value| key }).first # remove (.first) once we can accept multiple images
 
       product_params
     rescue => error
