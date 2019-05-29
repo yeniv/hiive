@@ -1,29 +1,38 @@
 <header>
   <div class="header-inner">
     <%= link_to root_path do %>
-      <%= image_tag "logo.png", class: "brand" %>
+    <%= image_tag "logo.png", class: "brand" %>
     <% end %>
 
     <!-- a href="#" class="brand">
     </a> -->
 
     <div class="navigation">
-      <%= link_to "Profile", private_profile_path, class: "nav-scroll"  %>
-      <a class="nav-scroll" href="#home">
-        HOME
-      </a>
-      <a class="nav-scroll" href="#about">
-        ABOUT
-      </a>
-      <a class="nav-scroll" href="#skills">
-        SKILLS
-      </a>
-      <a class="nav-scroll" href="#blog">
-        BLOG
-      </a>
-      <a class="nav-scroll" href="#contact">
-        CONTACT
-      </a>
+
+      <div class="dropdown show">
+        <%= link_to "Products", products_path, class: "nav-scroll"  %>
+        <%= link_to "Discover", discover_path, class: "nav-scroll"  %>
+        <%= link_to "Create shop", new_product_path, class: "nav-scroll"  %>
+
+        <a class="nav-scroll dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <% if user_signed_in? %>
+            <%= link_to "Profile", private_profile_path, class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <%  else %>
+            <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+          <% end %>
+        </div>
+
+        <% if user_signed_in? %>
+          <img class="avatar dropdown-toggle user-avatar" src=<%= current_user.photo %> />
+          <% end %>
+      </div>
     </div>
   </div>
 </header>
+
+

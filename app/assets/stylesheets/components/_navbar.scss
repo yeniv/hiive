@@ -66,3 +66,11 @@ header{
   }
 }
 
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  position: relative;
+  top: -7px;
+}
+
