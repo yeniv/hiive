@@ -2,6 +2,7 @@
 
 puts "Wiping DB clean..."
 
+Like.delete_all
 Review.delete_all
 Product.delete_all
 User.delete_all
