@@ -1,10 +1,17 @@
+// add to the container of every page to push down navpar
+.nav-padding {
+  padding-top: 75px;
+}
+
 header{
   z-index: 102;
   width: 100%;
   // background-color: $orange;
-  padding: 12px 0;
+  position: absolute;
+  top: 0;
+  padding: 20px;
   .header-inner{
-    width: 1120px;
+    // width: 1120px;
     margin: 0 auto;
     a{
       .brand{
@@ -17,41 +24,48 @@ header{
       float: right;
       line-height: 30px;
       a.nav-scroll{
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 100;
-        font-size: 13px;
+        // text-transform: uppercase;
+        letter-spacing: 0.9px;
+        font-family: $fun-body, sans-serif;
+        font-weight: 700;
+        font-size: 15px;
         position: relative;
         display: inline-block;
         text-decoration: none;
-        color: $dark-purple ;
+        color: $purple ;
+        margin-left: 50px;
+        transition: 0.3s;
+
         &::after, &::before{
           display: inline-block;
           opacity: 0;
         }
-        &::before {
-          margin-left: 10px;
-          color: $purple ;
-          content: '|';
-          transform: translateX(20px);
+        &:hover {
+          color: $rollover-purple;
         }
-        &::after {
-          margin-right: 10px;
-          color: $purple ;
-          content: '|';
-          transform: translateX(-20px);
-        }
-        &:hover, &.active{
-          color: $purple;
-          &::after, &::before{
-            display: inline-block;
-            opacity: 1;
-            transform: translateX(0px);
-            transition: transform 0.3s, opacity 0.3s;
-          }
+        // &::before {
+        //   margin-left: 10px;
+        //   color: $rollover-purple ;
+        //   content: '|';
+        //   transform: translateX(20px);
+        // }
+        // &::after {
+        //   margin-right: 10px;
+        //   color: $rollover-purple ;
+        //   border-bottom: 1px solid $rollover-purple;
+        //   content: '|';
+        //   transform: translateX(-20px);
+        // }
+        // &:hover, &.active{
+        //   color: $rollover-purple;
+        //   &::after, &::before{
+        //     display: inline-block;
+        //     opacity: 1;
+        //     transform: translateX(0px);
+        //     transition: transform 0.3s, opacity 0.3s;
+        //   }
 
-        }
+        // }
       }
     }
   }

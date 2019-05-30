@@ -1,3 +1,4 @@
+
 <div class=“container nav-padding”>
   <header>
     <div class="header-inner">
@@ -27,6 +28,7 @@
               <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
             <% end %>
           </div>
+
 
           <% if user_signed_in? %>
             <img class="avatar dropdown-toggle user-avatar" src=<%= current_user.photo %> />
