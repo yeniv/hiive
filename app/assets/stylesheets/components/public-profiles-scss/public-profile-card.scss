@@ -2,19 +2,22 @@
     margin-top: 45px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 }
 .card-product-public-profile {
-    width: 200px;
-    border-radius: 4.5px;
-    background-color: moccasin;
+    width: 230px;
+    border-radius: 8px;
+    background-color: white;
     font-family: 'Chivo', sans-serif;
-    box-shadow: 0px 0px 12px 5px rgba(0,0,0,0.2);
-    position: relative;
+    box-shadow: 0px 25px 40px 5px rgba(0, 0, 0, 0.1);
 
+    position: relative;
+    padding: 10px;
+    text-align: center;
 }
 
 .images-public-profile {
-    border-radius: 4.5px;
     object-fit: cover;
 }
 
@@ -22,8 +25,8 @@
     position: absolute;
     bottom: 5px;
     left: 5px;
-    background-color: red;
-    width: 190px;
+    width: 106px;
+    border-radius: 7px;
 }
 .product-title-public-profile {
     font-family: 'Overpass', sans-serif;
@@ -31,4 +34,12 @@
 }
 .margin-price-public-profile {
     margin: 5px 5px 50px 5px;
+}
+
+.details-btn-product-public-profile {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 106px;
+    border-radius: 7px;
 }
