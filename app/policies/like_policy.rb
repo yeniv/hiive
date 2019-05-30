@@ -10,6 +10,6 @@ class LikePolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == current_user
+    record.user == user
   end
 end

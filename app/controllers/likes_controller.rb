@@ -1,9 +1,8 @@
 class LikesController < ApplicationController
-
   def create
-    @like = Like.new(like_params)
+    @like = Like.new
     @like.user = current_user
-    @like.product = Product.find(params[:id])
+    @like.product = Product.find(params[:product_id])
 
     authorize @like
 
@@ -16,13 +15,10 @@ class LikesController < ApplicationController
 
   def destroy
     @like = Like.find(params[:id])
+
+    authorize @like
+
     @like.destroy
-    redirect_to product_path
-  end
-
-  private
-
-  def like_params
-    # params.require(:like).permit( )
+    redirect_to private_profile_path(current_user)
   end
 end
