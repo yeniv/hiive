@@ -1,0 +1,23 @@
+.form-header {
+  label {
+    color: $purple;
+    font-weight: 700;
+    font-family: $fun-body;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .form-group {
+    padding: 0;
+    margin-bottom: 0.65em;
+  }
+}
+
+.text-header {
+  h2 {
+  color: $purple;
+  margin-bottom: 22px;
+  // text-align: center;
+  font-weight: 700;
+  padding-left: 5px;
+  }
+}

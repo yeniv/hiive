@@ -5,6 +5,10 @@ class ProductPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    user ? true : false
+  end
+
   def show?
     true
   end
