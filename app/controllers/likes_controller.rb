@@ -7,9 +7,17 @@ class LikesController < ApplicationController
     authorize @like
 
     if @like.save!
-      redirect_to private_profile_path(current_user)
+      # redirect_to private_profile_path(current_user)
+      respond_to do |format|
+        format.html { private_profile_path(current_user) }
+        format.js
+      end
     else
-      render :new
+      # render :new
+      respond_to do |format|
+        format.html { private_profile_path(current_user) }
+        format.js
+      end
     end
   end
 
@@ -18,7 +26,14 @@ class LikesController < ApplicationController
 
     authorize @like
 
-    @like.destroy
-    redirect_to private_profile_path(current_user)
+    if @like.destroy
+      # redirect_to private_profile_path(current_user)
+      respond_to do |format|
+          format.html { private_profile_path(current_user) }
+          format.js
+      end
+    else
+      flash[:alert] = "Something went wrong, please try again"
+    end
   end
 end
