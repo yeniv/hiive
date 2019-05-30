@@ -3,36 +3,34 @@
   <header>
     <div class="header-inner">
       <%= link_to root_path do %>
-      <%= image_tag "logo.png", class: "brand" %>
+      <%= image_tag "logo/bee.png", class: "brand" %>
       <% end %>
-
-      <!-- a href="#" class="brand">
-      </a> -->
 
       <div class="navigation">
 
         <div class="dropdown show">
-          <%= link_to "browse", products_path, class: "nav-scroll"  %>
+          <%= link_to "Browse", products_path, class: "nav-scroll"  %>
           <%= link_to "Discover", discover_path, class: "nav-scroll"  %>
           <%= link_to "Create shop", products_path, class: "nav-scroll"  %>
 
-          <a class="nav-scroll dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Login
-          </a>
+          <a class="nav-scroll dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <% if user_signed_in? %>
-              <%= link_to "Profile", private_profile_path, class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-              <%  else %>
-              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
-            <% end %>
-          </div>
-
-
-          <% if user_signed_in? %>
             <img class="avatar dropdown-toggle user-avatar" src=<%= current_user.photo %> />
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <% if user_signed_in? %>
+                  <%= link_to "Profile", private_profile_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                  <%  else %>
+                <% end %>
+              </div>
+            <% else %>
+              Login
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+                </div>
             <% end %>
+          </a>
         </div>
       </div>
     </div>
