@@ -11,11 +11,10 @@
   <li><%= product.seller %></li>
   <li><%= product.price %></li>
   <li><%= product.description %></li>
-
+  <%= button_to "Delete Product", product_path(product), method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-danger" %>
 
   <% unless product.likes.where(user: @user).empty? %>
   <% like = product.likes.where(user: @user).first %>
-  <%= link_to product_like_path(product, like), method: :delete do %>
   <i class="fas fa-hand-spock"></i>
   <% end %>
   <% else %>
@@ -26,5 +25,5 @@
   <% end %>
 </ul>
 <% end %>
-<% end %>
+
 </div>
