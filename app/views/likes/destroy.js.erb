@@ -1,0 +1,1 @@
+document.querySelector(".like-button-<%= @like.product.id %>").innerHTML = `<%= render partial: 'likes/like', locals: { product: @like.product } %>`;

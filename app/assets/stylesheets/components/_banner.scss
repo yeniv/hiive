@@ -1,0 +1,57 @@
+.banner-container {
+  width: 100%;
+  // height: 94.35vh;
+  height: 100vh;
+  background-color: #fcd04d;
+  background: linear-gradient(321deg, #fcb42d 24%, #fcd04d 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 0;
+}
+
+.banner-card {
+  background-color: $purple;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 3px 3px 20px rgba(0,0,0,0.05);
+}
+
+.banner-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.banner-half {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.banner-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 400px;
+}
+
+.banner-headline {
+  font-family: $home-page-headline;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+  font-size: 68px;
+  line-height: 68px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+#bee-logo {
+  position: relative;
+  right: 85px;
+  bottom: 80px;
+  font-size: 110px;
+  transform: rotate(-15deg)
+}

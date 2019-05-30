@@ -1,11 +1,20 @@
-<div class="display-grid-all-products">
-    <div class="card-product-public-profile">
-        <%= cl_image_tag @product.photo, width: 300, height: 300, crop: :fill, class: 'images-public-profile' %>
-        <p class='product-title-public-profile'><strong><%= @product.title %></strong></p>
-        <p class="margin-price-public-profile"><%= @product.price %></p>
-        <p class="margin-price-public-profile"><%= @product.description %></p>
-        <p class="margin-price-public-profile"><%= @product.brand %></p>
-        <p class="margin-price-public-profile"><%= @product.seller %></p>
 
-        <%= button_to "Buy", @product.referal_link, class: 'btn btn-product-public-profile btn-primary' %>
+<div class="background-colors">
+    <div class="container container-background">
+        <div class="title-in-middle">
+            <h1 class='product-title-public-profile'><strong><%= @product.title %></strong></h1>
+        </div>
+        <div class="text-aligned-with-photo">
+            <%= cl_image_tag @product.photo, width: 400, height: 400, crop: :fill, class: 'images-public-profile' %>
+            <p class="font-family "><strong>Description: </strong><%= @product.description %></p>
+        </div>
+        <div class="margin-product-information">
+            <p class="font-family "><strong>Brand: </strong><%= @product.brand %></p>
+            <p class="font-family "><strong>Product Seller: </strong><%= @product.seller %></p>
+            <p class="font-family "><strong>Price: </strong><%= @product.price %>€</p>    
+        </div>
+        <div class="buy-button-in-middle">
+            <%= button_to "Buy", @product.referal_link, class: 'btn btn-width-radius' %>
+        </div>
     </div>
+</div>
