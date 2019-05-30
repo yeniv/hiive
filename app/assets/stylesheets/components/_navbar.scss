@@ -17,11 +17,11 @@ header{
       float: right;
       line-height: 30px;
       a.nav-scroll{
-        text-transform: uppercase;
+        // text-transform: uppercase;
         letter-spacing: 1px;
-        font-family: 'Quicksand', sans-serif;
-        font-weight: 100;
-        font-size: 13px;
+        font-family: $fun-body, sans-serif;
+        font-weight: 700;
+        font-size: 15px;
         position: relative;
         display: inline-block;
         text-decoration: none;
