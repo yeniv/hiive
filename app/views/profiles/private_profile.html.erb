@@ -3,6 +3,7 @@
 <h1> Hello  <%= @user.email %> , this is your private page</h1>
 
 <% unless @products.nil? %>
+
 <% @products.each do |product| %>
 <ul>
   <li><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></li>
@@ -22,8 +23,22 @@
   <i class="far fa-hand-spock"></i>
   <% end %>
 
+
+        <% else %>
+
+          <%= render partial: "likes/unlike", locals: {
+            product: product,
+            like: product.likes.find_by_user_id(current_user.id)
+          } %>
+
+        <% end %>
+
+      </li>
+    </ul>
   <% end %>
+
 </ul>
 <% end %>
+
 
 </div>
