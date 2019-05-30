@@ -27,8 +27,8 @@
                     <%= cl_image_tag product.photo, width: 200, height: 150, crop: :fill, class: 'images-public-profile' %>
                     <p class='product-title-public-profile'><strong><%= product.title %></strong></p>
                     <p class="margin-price-public-profile"><%= product.price %>€</p>
-                    <%= button_to "Buy", product.referal_link, class: 'btn btn-product-public-profile btn-primary' %> 
-                    <%= button_to "Details",  product_path(params[:id]), class: 'btn details-btn-product-public-profile btn-secondary'%>
+                    <%= button_to "Buy", product.referal_link, class: 'btn btn-product-public-profile' %> 
+                    <%= button_to "Details",  product_path(params[:id]), class: 'btn details-btn-product-public-profile'%>
                 </div>
               <% end %>
             </div>
