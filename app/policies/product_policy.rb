@@ -16,4 +16,8 @@ class ProductPolicy < ApplicationPolicy
   def update?
     record.user == current_user
   end
+
+  def destroy?
+    record.user == user
+  end
 end
