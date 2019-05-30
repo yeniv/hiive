@@ -1,0 +1,11 @@
+<div class="display-grid-all-products">
+    <div class="card-product-public-profile">
+        <%= cl_image_tag @product.photo, width: 300, height: 300, crop: :fill, class: 'images-public-profile' %>
+        <p class='product-title-public-profile'><strong><%= @product.title %></strong></p>
+        <p class="margin-price-public-profile"><%= @product.price %></p>
+        <p class="margin-price-public-profile"><%= @product.description %></p>
+        <p class="margin-price-public-profile"><%= @product.brand %></p>
+        <p class="margin-price-public-profile"><%= @product.seller %></p>
+
+        <%= button_to "Buy", @product.referal_link, class: 'btn btn-product-public-profile btn-primary' %>
+    </div>

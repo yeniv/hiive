@@ -1,0 +1,21 @@
+<form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+    <div class="search-form-control form-group">
+      <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+      <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  </form>
+
+<div class="display-grid-all-products">
+    <% @products.each do |product| %>
+    <div class="card-product-public-profile p-show">
+        <%= cl_image_tag product.photo, width: 450, height: 450, crop: :fill, class: 'images-public-profile' %>
+        <p class="margin-price-public-profile"> Recomended by: <%= product.user.first_name %></p>
+      
+        
+        <%= link_to "details", product_path(product), class: 'btn btn-product-public-profile btn-primary' %>
+    </div>  
+    <%= cl_image_tag product.user.photo, width: 50, height: 50, crop: :fill, class: 'images-public-profile avatar-for-show-product' %>
+    
+  <% end %>
