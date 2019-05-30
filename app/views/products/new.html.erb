@@ -7,14 +7,14 @@
     <div class="new-card form-header">
 
     <%= simple_form_for @product do |f| %>
-      <%= f.input :title %>
-      <%= f.input :brand %>
-      <%= f.input :price %>
-      <%= f.input :description %>
-      <%= f.input :category, collection: ["Categories", "To", "Go", "Here"]%>
-      <%= f.input :referal_link %>
-      <%= f.input :seller %>
-      <%= f.input :photo %>
+      <%= f.input :title, label: "title" %>
+      <%= f.input :brand, label: "brand" %>
+      <%= f.input :price, label: "price" %>
+      <%= f.input :description, label: "description" %>
+      <%= f.input :category, label: "category", collection: ["Categories", "To", "Go", "Here"]%>
+      <%= f.input :referal_link, label: 'referral link' %>
+      <%= f.input :seller, label: "seller" %>
+      <%= f.input :photo, label: "product photo" %>
       <%= f.input :photo_cache, as: :hidden %>
       <%#= f.button :submit, "Add product", class: "link-input-btn btn-100-percent" %>
 
