@@ -1,1 +1,45 @@
-@import 'lookup'
+@import 'lookup';
+
+.background-colors {
+    background: linear-gradient(321deg, #fcb42d 24%, #fcd04d 100%);
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+}
+.container-background {
+    background-color: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.title-in-middle {
+    width: 100%;
+    text-align: center;
+}
+
+.buy-button-in-middle {
+    width: 100%;
+    text-align: center;
+}
+
+.btn-width-radius{
+    width: 50%;
+    border-radius: 10px;
+    background-color: $rollover-purple;
+    color: white;
+}
+
+.font-family {
+    font-family: $body-font;
+    font-size: 18px;
+}
+
+.text-aligned-with-photo {
+    display: flex;
+    margin: 35px; 
+}
+
+.margin-product-information {
+    margin: 35px;
+    width: 35%;
+}

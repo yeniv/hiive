@@ -28,7 +28,7 @@
                     <p class='product-title-public-profile'><strong><%= product.title %></strong></p>
                     <p class="margin-price-public-profile"><%= product.price %>€</p>
                     <%= button_to "Buy", product.referal_link, class: 'btn btn-product-public-profile btn-primary' %> 
-                    <%= button_to "Details",  product_path(params[:id]), class: 'btn details-btn-product-public-profile btn-secondary'%>
+                    <%= button_to "Details",  product_path(product), class: 'btn details-btn-product-public-profile btn-secondary'%>
                 </div>
               <% end %>
             </div>
