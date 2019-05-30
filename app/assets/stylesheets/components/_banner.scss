@@ -55,3 +55,18 @@
   font-size: 110px;
   transform: rotate(-15deg)
 }
+
+#bee-logo-img {
+  height: 115px;
+  width: 115px;
+  position: relative;
+  bottom: 475px;
+  left: 405px;
+  // right: 90px;
+  // bottom: 110px;
+  transform: rotate(-15deg);
+  background-image: url("logo/bee.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
