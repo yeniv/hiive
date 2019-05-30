@@ -3,42 +3,33 @@
 <h1> Hello  <%= @user.email %> , this is your private page</h1>
 
 <% unless @products.nil? %>
-
-<% @products.each do |product| %>
 <ul>
-  <li><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></li>
-  <li><%= product.title %></li>
-  <li><%= product.brand %></li>
-  <li><%= product.seller %></li>
-  <li><%= product.price %></li>
-  <li><%= product.description %></li>
-  <%= button_to "Delete Product", product_path(product), method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-danger" %>
-
-  <% unless product.likes.where(user: @user).empty? %>
-  <% like = product.likes.where(user: @user).first %>
-  <i class="fas fa-hand-spock"></i>
+  <% @products.each do |product| %>
+    <li><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></li>
+    <li><%= product.title %></li>
+    <li><%= product.brand %></li>
+    <li><%= product.seller %></li>
+    <li><%= product.price %></li>
+    <li><%= product.description %></li>
+    <%= button_to "Delete Product", product_path(product), method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-danger" %>
+    <% unless product.likes.where(user: @user).empty? %>
+      <% like = product.likes.where(user: @user).first %>
+      <i class="fas fa-hand-spock"></i>
+    <% end %>
   <% end %>
-  <% else %>
-  <%= link_to product_likes_path(product), method: :post do %>
-  <i class="far fa-hand-spock"></i>
-  <% end %>
-
-
-        <% else %>
-
-          <%= render partial: "likes/unlike", locals: {
-            product: product,
-            like: product.likes.find_by_user_id(current_user.id)
-          } %>
-
-        <% end %>
-
+<% else %>
+    <%= link_to product_likes_path(product), method: :post do %>
+      <i class="far fa-hand-spock"></i>
+    <% end %>
+  <%= render partial: "likes/unlike", locals: {
+    product: product,
+    like: product.likes.find_by_user_id(current_user.id)
+  } %>
       </li>
     </ul>
-  <% end %>
+<% end %>
 
 </ul>
-<% end %>
 
 
 </div>
