@@ -17,18 +17,18 @@
 
             <% if user_signed_in? %>
             <img class="avatar dropdown-toggle user-avatar" src=<%= current_user.photo %> />
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <% if user_signed_in? %>
-                  <%= link_to "Profile", private_profile_path, class: "dropdown-item" %>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                  <%  else %>
-                <% end %>
-              </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <% if user_signed_in? %>
+              <%= link_to "Profile", private_profile_path, class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%  else %>
+              <% end %>
+            </div>
             <% else %>
-              Login
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
-                </div>
+            Login
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+            </div>
             <% end %>
           </a>
         </div>
