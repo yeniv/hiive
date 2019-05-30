@@ -23,9 +23,9 @@
     outline: none;
 }
 
-.link-input:hover ~ .link-input-btn {
-  background: $rollover-purple;
-}
+// .link-input:hover ~ .link-input-btn {
+//   background: $rollover-purple;
+// }
 
 .link-input-btn {
   height: 55px;
@@ -44,4 +44,8 @@
 
 .link-input-btn:hover {
   background: $rollover-purple;
+}
+
+.link-input-btn:focus {
+    outline: none;
 }
