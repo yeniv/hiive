@@ -31,6 +31,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     authorize @product
     @product.destroy
+    redirect_to private_profile_path(current_user)
   end
 
   private
