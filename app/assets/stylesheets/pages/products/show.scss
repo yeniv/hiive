@@ -24,6 +24,13 @@
     text-align: center;
 }
 
+.images-public-profile {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  flex: 0 0 400px;
+}
+
 .btn-width-radius{
     width: 50%;
     border-radius: 10px;
@@ -34,18 +41,18 @@
 .font-family {
     font-family: $body-font;
     font-size: 18px;
-    
+
 }
 
 .text-aligned-with-photo {
     display: flex;
-    margin: 35px; 
-    
+    margin: 35px;
+
 
 }
 .text-aligned-with-photo p {
     margin-left: 50px;
-    
+
 }
 
 .margin-product-information {
@@ -54,8 +61,8 @@
     text-align: center;
     margin-bottom: 100px;
     bottom: 100px
-    
-   
+
+
 }
 .center{
     margin-left: 50%;
