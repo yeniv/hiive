@@ -1,35 +1,49 @@
-<div class="container nav-padding">
-
-<h1> Hello  <%= @user.email %> , this is your private page</h1>
-
-<% unless @products.nil? %>
-<ul>
-  <% @products.each do |product| %>
-    <li><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></li>
-    <li><%= product.title %></li>
-    <li><%= product.brand %></li>
-    <li><%= product.seller %></li>
-    <li><%= product.price %></li>
-    <li><%= product.description %></li>
-    <%= button_to "Delete Product", product_path(product), method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-danger" %>
-    <% unless product.likes.where(user: @user).empty? %>
-      <% like = product.likes.where(user: @user).first %>
-      <i class="fas fa-hand-spock"></i>
-    <% end %>
-  <% end %>
-<% else %>
-    <%= link_to product_likes_path(product), method: :post do %>
-      <i class="far fa-hand-spock"></i>
-    <% end %>
-  <%= render partial: "likes/unlike", locals: {
-    product: product,
-    like: product.likes.find_by_user_id(current_user.id)
-  } %>
-      </li>
+<div class="everything-private-in-middle">
+  <div class="cards-container-private-profile">
+    <div class="private-profile-information">
+      <h1> Hello  <%= @user.first_name %>! This is your private profile</h1>
+      <p><strong>E-mail: </strong><%= @user.email %></p>
+      <p><strong>First Name: </strong><%= @user.first_name %></p>
+      <p><strong>Last Name: </strong><%= @user.last_name %></p>
+      <p><strong>User Type: </strong><%= @user.user_type %></p>
+      <%= link_to 'Edit Information', edit_user_registration_path, class: "btn btn-primary btn-border-radius" %>
+    </div>
+    <% unless @products.nil? %>
+    
+      <div class='display-all-cards-grid'>
+        <% @products.each do |product| %>
+          <div class="single-card-private-profile">
+            <div class="title-imgae-next-to-each-other">
+              <p><%= cl_image_tag product.photo, width: 350, height: 300, crop: :fill %></p>
+              <div class="styling-title-private-cards">
+                <p class="title-text-bigger"><strong><%= product.title %></strong></p>
+              </div>
+            </div>
+            <p><strong>Brand: </strong><%= product.brand %></p>
+            <p><strong>Seller: </strong><%= product.seller %></p>
+            <p><strong>Description: </strong><%= product.description %></p>
+            <p class="price-text-bigger"><strong>Price: <%= product.price %>€</strong></p>
+            <div class="button-next-each-other">
+              <%= button_to "Delete Product", product_path(product), method: :delete, data: { confirm: "Are you sure" }, class: "btn btn-danger btn-border-radius" %>
+              <%= button_to "Edit Product", product_path(product), class: "btn btn-primary btn-border-radius" %>
+            </div>
+            <% unless product.likes.where(user: @user).empty? %>
+              <% like = product.likes.where(user: @user).first %>
+              <i class="fas fa-hand-spock"></i>
+            <% end %>
+          </div>
+        <% end %>
+        <% else %>
+            <%= link_to product_likes_path(product), method: :post do %>
+              <i class="far fa-hand-spock"></i>
+            <% end %>
+          <%= render partial: "likes/unlike", locals: {
+            product: product,
+            like: product.likes.find_by_user_id(current_user.id)
+          } %>
+              </li>
+        <% end %>
+      </div>
     </ul>
-<% end %>
-
-</ul>
-
-
+  </div>
 </div>
