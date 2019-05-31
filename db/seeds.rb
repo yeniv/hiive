@@ -28,7 +28,7 @@ max_s = User.new(
   password: "123456",
   first_name: "Max",
   last_name: "Salemans",
-  user_type: "shopper",
+  user_type: "creator",
   photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
 )
 max_s.save!
