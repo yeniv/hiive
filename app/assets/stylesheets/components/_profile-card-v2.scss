@@ -1,0 +1,63 @@
+.hiive-card-container {
+  padding: 7px;
+}
+
+.hiive-card {
+  height: 390px;
+  background: white;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.08);
+}
+
+.hiive-card-photo {
+  width: 100%;
+  height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  // border: 5px solid white;
+}
+
+.hiive-card-content {
+  padding: 15px 10px 10px 10px;
+  color: $bright-purple;
+  font-weight: 700;
+}
+.hiive-card-title {
+  text-align: center;
+  height: 40px;
+}
+
+.hiive-card-price {
+  text-align: right;
+  padding-right: 10px;
+  font-size: 22px;
+}
+
+.hiive-card-btn {
+  height: 55px;
+  border: 0px;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-size: 19px;
+  font-family: $fun-body;
+  font-weight: 700;
+  float: left;
+  background-color: $bright-purple;
+  // background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
+}
+
+.hiive-card-btn-left {
+  border-radius: 0 0 0 10px;
+  border-right: 1px solid $dark-purple;
+}
+.hiive-card-btn-right {
+  border-radius: 0 0 10px 0;
+
+}
+.hiive-card-btn:hover {
+  background: $rollover-purple;
+  color: white;
+}
+
