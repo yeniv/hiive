@@ -1,4 +1,3 @@
-
 <div class="background-colors">
     <div class="container container-background">
         <div class="title-in-middle">
@@ -7,14 +6,16 @@
         <div class="text-aligned-with-photo">
             <%= cl_image_tag @product.photo, width: 400, height: 400, crop: :fill, class: 'images-public-profile' %>
             <p class="font-family "><strong>Description: </strong><%= @product.description %></p>
+
         </div>
+        <div class="container center"><%= button_to "Buy", @product.referal_link, class: 'link-input-btn rounded-btn'%></div>
         <div class="margin-product-information">
             <p class="font-family "><strong>Brand: </strong><%= @product.brand %></p>
             <p class="font-family "><strong>Product Seller: </strong><%= @product.seller %></p>
-            <p class="font-family "><strong>Price: </strong><%= @product.price %>€</p>    
+            <p class="font-family "><strong>Price: </strong><%= @product.price %>€</p>
+
         </div>
-        <div class="buy-button-in-middle">
-            <%= button_to "Buy", @product.referal_link, class: 'btn btn-width-radius' %>
-        </div>
+
     </div>
+
 </div>

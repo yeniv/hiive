@@ -8,8 +8,9 @@
 
 }
 .container-background {
+    margin-top: 60px;
     background-color: white;
-    padding: 35px;
+    padding: 45px;
     border-radius: 10px;
 }
 
@@ -33,15 +34,33 @@
 .font-family {
     font-family: $body-font;
     font-size: 18px;
+    
 }
 
 .text-aligned-with-photo {
     display: flex;
     margin: 35px; 
+    
+
+}
+.text-aligned-with-photo p {
+    margin-left: 50px;
+    
 }
 
 .margin-product-information {
     margin: 35px;
     width: 35%;
+    text-align: center;
+    margin-bottom: 100px;
+    bottom: 100px
+    
+   
+}
+.center{
+    margin-left: 50%;
+}
+.rounded-btn{
+    border-radius: 50px;
 }
 
