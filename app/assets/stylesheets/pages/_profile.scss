@@ -20,8 +20,10 @@
 }
 .profile-user-card {
   margin-top: 60px;
-  height: 200px;
+  background-color: pink;
+  border-top: 1px solid $purple;
 }
+
 .profile-title {
   text-align: center;
   padding: 20px 0;
