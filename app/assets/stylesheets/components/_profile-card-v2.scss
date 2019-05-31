@@ -18,12 +18,13 @@
   border-radius: 10px 10px 0 0;
   // border: 5px solid white;
 }
-
 .hiive-card-content {
   padding: 15px 10px 10px 10px;
   color: $bright-purple;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: $fun-body;
 }
+
 .hiive-card-title {
   text-align: center;
   height: 40px;
