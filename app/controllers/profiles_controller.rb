@@ -25,4 +25,9 @@ class ProfilesController < ApplicationController
 
     @products = Product.where(user: @user)
   end
+
+  def profiles
+    @profiles = User.where(user_type: 'creator')
+    authorize :profile, :profiles?
+  end
 end

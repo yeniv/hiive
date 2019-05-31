@@ -1,1 +1,10 @@
-<h1>Hello World</h1>
+<div class="container nav-padding">
+  <ul>
+    <% @profiles.each do |profile| %>
+        <li>
+        <%= link_to profile.first_name, public_profile_path(profile) %>
+        </li>
+    <% end %>
+
+    </ul>
+</div>

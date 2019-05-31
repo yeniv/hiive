@@ -12,4 +12,8 @@ class ProfilePolicy < ApplicationPolicy
   def public_profile?
     true
   end
+
+  def profiles?
+    true
+  end
 end
