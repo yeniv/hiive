@@ -61,6 +61,8 @@ tristan = User.new(
 
 tristan.save!
 
+puts "Creating fake Peter..."
+
 peter = User.new(
   email: "peter@live.com",
   password: "123456",
@@ -71,6 +73,7 @@ peter = User.new(
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
   )
 
+peter.save!
 # CREATE PRODUCTS
 
 puts "Creating Tristan's gear"
