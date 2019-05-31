@@ -9,7 +9,7 @@
 
         <div class="hiive-card-content">
          <h2 class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </h2>
-         <p class= "user-description"> Description goes here what happens now??????</p>
+         <p class= ""> <%= @user.description %></p>
         <p>Products: <%= @user.products.count %></p>
         <p> Reviews: <%= @user.reviews.count %></p>
         <p>Likes: <%= @user.likes.count %></p>
