@@ -67,7 +67,7 @@ peter = User.new(
   first_name: "Peter",
   last_name: "McKinnon",
   user_type: "creator",
-  photo: Pathname.new("./app/assets/images/seed-user/peter.jpg"),
+  photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
   )
 
