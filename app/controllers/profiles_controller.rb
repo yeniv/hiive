@@ -21,6 +21,7 @@ class ProfilesController < ApplicationController
 
   def public_profile
     @user = User.find(params[:id])
+    @current = current_user
     authorize :profile, :public_profile?
 
     @products = Product.where(user: @user)

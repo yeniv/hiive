@@ -35,8 +35,25 @@
           </div>
 
           <div class="hiive-card-content">
-          <p class="hiive-card-title"><%= product.title.truncate(70)%></p>
-          <p class="hiive-card-price">€<%= product.price %></p>
+          <p class="hiive-card-title"><%= product.title.truncate(67)%></p>
+          <div class="d-flex justify-content-between">
+          <div class="like-button-<%= product.id %>">
+
+            <% if product.likes.where(user: @current).empty? %>
+
+              <%= render partial: "likes/like", locals: {
+                product: product
+              } %>
+
+            <% else %>
+              <%= render partial: "likes/unlike", locals: {
+                product: product,
+                like: product.likes.find_by_user_id(current_user.id)
+              } %>
+            <% end %>
+          </div>
+          <p class="hiive-card-price"><%= product.price %></p>
+          </div>
           </div>
           </div>
             <%= button_to "buy", product.referal_link, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
