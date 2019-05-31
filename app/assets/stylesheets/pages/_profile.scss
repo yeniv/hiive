@@ -1,0 +1,40 @@
+.profile-flex {
+  display: flex;
+  height: 100vh;
+  // width: 1400px;
+  // margin: 0 auto;
+}
+.user-info {
+  width: 16%;
+}
+.user-center {
+  width: 68%;
+  // background-color: blue;
+}
+.user-info-right {
+  background-color: yellow;
+}
+.user-info-left {
+  background-color: red;
+}
+.profile-user-card {
+  margin-top: 60px;
+  height: 200px;
+  background-color: pink;
+}
+.profile-title {
+  text-align: center;
+  padding: 20px 0;
+}
+.profile-product-size {
+  background-color: white;
+  border: 1px solid $bright-purple;
+  height: 250px;
+}
+
+@media (min-width: 1200px) {
+  .profile-flex {
+      max-width: 1400px;
+  }
+}
+
