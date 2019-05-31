@@ -9,27 +9,48 @@
 }
 .user-center {
   width: 68%;
+  // padding-bottom: 50px;
   // background-color: blue;
 }
 .user-info-right {
-  background-color: yellow;
+  // background-color: yellow;
 }
 .user-info-left {
-  background-color: red;
+  // background-color: red;
 }
 .profile-user-card {
   margin-top: 60px;
   height: 200px;
-  background-color: pink;
 }
 .profile-title {
   text-align: center;
   padding: 20px 0;
 }
-.profile-product-size {
-  background-color: white;
-  border: 1px solid $bright-purple;
-  height: 250px;
+
+.profile-headline {
+  h1 {
+  font-family: $home-page-headline;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 900;
+  }
+}
+
+.profile-headline-highlight {
+  background: $rollover-purple;
+  background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: -12px;
+}
+.profile-headline-purple {
+  color: $rollover-purple;
+  background: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: -12px;
 }
 
 @media (min-width: 1200px) {
@@ -37,4 +58,3 @@
       max-width: 1400px;
   }
 }
-

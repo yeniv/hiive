@@ -1,0 +1,13 @@
+<% @products.each do |product| %>
+<div class="card-product p-show profilepage">
+    <%= cl_image_tag product.photo, width: 250, height: 250, crop: :fill, class: 'images-prod' %>
+    <p class="font-family ptop "><strong>Price: </strong><%= product.price %>€</p>
+    <h1 class='title-in-middle-card'><strong><%= product.title %></strong></h1>
+    <div class='side-by-side'>
+    <%= button_to "Buy", product.referal_link, class: 'link-input-btn rounded-btn btn-50-50' %>
+    <%= button_to "Details", product_path(product), class: 'link-input-btn rounded-btn btn-50-50 btn-diffc' %>
+</div>
+</div>
+    <% end %>
+
+</div>
