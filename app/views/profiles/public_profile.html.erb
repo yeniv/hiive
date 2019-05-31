@@ -1,23 +1,25 @@
-<div class="container nav-padding profile-flex">
+<div class="container profile-flex nav-padding">
 
-    <div class="user-info user-info-left">
-      <div class="profile-user-card">
+  <div class="user-info user-info-left">
+      <div class="profile-user-card profile-headline">
+        <h3> <span class="profile-headline-highlight"> creator </span></h3>
         <div class="d-flex justify-content-center">
         <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
         </div>
-        <div class="profile-about-user-text">
-         <p class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </p>
+
+        <div class="hiive-card-content">
+         <h2 class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </h2>
          <p class= "user-description"> Description goes here what happens now??????</p>
-       </div>
+        <p>Products: <%= @user.products.count %></p>
+        <p> Reviews: <%= @user.reviews.count %></p>
+        <p>Likes: <%= @user.likes.count %></p>
+        <p> Follow here: </p>
+
+      </div>
      </div>
-   </div>
+  </div>
 
   <div class="user-center">
-
-    <div class="profile-title profile-headline">
-      <h1><span class=""><%= @user.first_name %>'s</span> <span class="">shop.</span> </h1>
-
-    </div>
 
     <div class="container">
       <div class="row">
@@ -45,17 +47,5 @@
       </div>
     </div>
   </div>
-
-  <div class="user-info user-info-right">
-    <div class="profile-user-card">
-      <div class="profile-social-media-links profile-about-user-text">
-        <p>Products: <%= @user.products.count %></p>
-        <p>Reviews: <%= @user.reviews.count %></p>
-        <p>Likes: <%= @user.likes.count %></p>
-        <p class="text-center">Follow here:</p>
-      </div>
-    </div>
-  </div>
-
 </div>
 
