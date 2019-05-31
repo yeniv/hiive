@@ -3,6 +3,10 @@
   padding-top: 75px;
 }
 
+.nav-sign-in-padding {
+  padding-right: 35px;
+}
+
 header{
   z-index: 102;
   width: 100%;
@@ -72,8 +76,8 @@ header{
 }
 
 .user-avatar {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
   position: relative;
   top: -7px;
