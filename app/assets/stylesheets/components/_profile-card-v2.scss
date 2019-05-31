@@ -48,6 +48,16 @@
   background-color: $bright-purple;
   // background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
 }
+.hiive-card-btn:hover {
+  background: $rollover-purple;
+  color: white;
+}
+.hiive-card-btn-delete {
+  background-color: #C70039;
+}
+.hiive-card-btn-delete:hover {
+  background-color: #db0036;
+}
 
 .hiive-card-btn-left {
   border-radius: 0 0 0 10px;
@@ -57,8 +67,5 @@
   border-radius: 0 0 10px 0;
 
 }
-.hiive-card-btn:hover {
-  background: $rollover-purple;
-  color: white;
-}
+
 
