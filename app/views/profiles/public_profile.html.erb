@@ -1,13 +1,20 @@
 <body class="profile-public">
 
-<div class="container nav-padding profile-flex">
+  <div class="container nav-padding profile-flex">
 
-  <div class="user-info user-info-left">
-    <div class="profile-user-card">
-    </div>
-  </div>
+    <div class="user-info user-info-left">
+      <div class="profile-user-card">
+        <div class="d-flex justify-content-center">
+        <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+        </div>
+        <div class="profile-about-user-text">
+         <p class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </p>
+         <p class= "user-description"> Description goes here what happens now??????</p>
+       </div>
+     </div>
+   </div>
 
-  <div class="user-center">
+   <div class="user-center">
     <div class="profile-title text-header">
       <h1>Welcome to Max's products</h1>
     </div>
@@ -24,6 +31,12 @@
 
   <div class="user-info user-info-right">
     <div class="profile-user-card">
+      <div class="profile-social-media-links profile-about-user-text">
+        <p>Products: <%= @user.products.count %></p>
+        <p> Reviews: <%= @user.reviews.count %></p>
+        <p>Likes: <%= @user.likes.count %></p>
+        <p class="text-center">Follow here:</p>
+      </div>
     </div>
   </div>
 
