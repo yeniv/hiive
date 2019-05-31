@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:public_profile]
+  skip_before_action :authenticate_user!, only: [:public_profile, :profiles]
 
   def private_profile
     @user = current_user

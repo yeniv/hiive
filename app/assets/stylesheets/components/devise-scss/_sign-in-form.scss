@@ -1,5 +1,5 @@
 .background-log-in-form {
-    background-color: #F4FDFF;
+    // background-color: #F4FDFF;
     height: 100vh;
     padding-top: 100px;
 }
@@ -10,23 +10,22 @@
     padding: 35px 25px;
     box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.1);
     border-radius: 4.5px;
-    font-family: 'Chivo', sans-serif;
 }
 
 .h2-log-in {
-    font-family: 'Overpass', sans-serif;
 }
 
 .log-in-btn {
     width: 100px;
-    background-color: #d8faff;
+    color: white;
+    background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
     box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
     margin-bottom: 15px;
 }
 
 .log-in-btn:hover {
-    background-color: #cff6fc;
-    box-shadow: none;
+  background: $rollover-purple;
+  color: white;
 }
 
 .render-btn-log-in-form {
@@ -34,6 +33,6 @@
 }
 
 .render-btn-log-in-form:hover {
-    color: #49c5ff;
-    text-decoration-line: underline;
+  background: $rollover-purple;
+  color: white;
 }
