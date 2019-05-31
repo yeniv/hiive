@@ -12,31 +12,33 @@ User.delete_all
 puts "Creating fake Joao..."
 
 joao = User.new(
-  email: "joao@fetch.com",
+  email: "joao@hiive.com",
   password: "123456",
   first_name: "Joao",
   last_name: "Lobo",
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
+  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
 )
 joao.save!
 
 puts "Creating fake Max S..."
 
 max_s = User.new(
-  email: "max.s@fetch.com",
+  email: "max.s@hiive.com",
   password: "123456",
   first_name: "Max",
   last_name: "Salemans",
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
+  description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!"
 )
 max_s.save!
 
 puts "Creating fake Max T..."
 
 max_t = User.new(
-  email: "max.t@fetch.com",
+  email: "max.t@hiive.com",
   password: "123456",
   first_name: "Max",
   last_name: "Teunissen",
@@ -48,15 +50,26 @@ max_t.save!
 puts "Creating fake Tristan..."
 
 tristan = User.new(
-  email: "tristan@fetch.com",
+  email: "tristan@hiive.com",
   password: "123456",
   first_name: "Tristan",
   last_name: "Viney",
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
-
+  description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places."
 )
+
 tristan.save!
+
+peter = User.new(
+  email: "peter@live.com",
+  password: "123456",
+  first_name: "Peter",
+  last_name: "McKinnon",
+  user_type: "creator",
+  photo: Pathname.new("./app/assets/images/seed-user/peter.jpg"),
+  description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
+  )
 
 # CREATE PRODUCTS
 
@@ -65,7 +78,7 @@ puts "Creating Tristan's gear"
 bag = Product.new(
   referal_link: "http://amzn.to/2m8jnaT",
   title: "Lowepro ProTactic 450 AW Camera Backpack - Professional Protection for Your Camera Gear or DJI Mavic Pro/Mavic Pro Platinum",
-  price: 199,
+  price: "$199",
   description: 'Fits 1-2 Pro DSLRs, one with up to 70-200mm f/2.8 lens attached, 8 lenses/speed lights, 15" laptop, tripod and accessories. The ProTactic 450 AW also fits the DJI Mavic Pro drone
                 Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
                 Create limitless set-ups with a robust, Slip Lock compatible strap system. Internal Dimensions: 31.8 x 19.8 x 44 cm (12.52 x 7.80 x 17.32 in) External Dimensions: 34.8 x 27 x 48.8 cm (13.70 x 10.63 x 19.21 in). Weight: 2.6 kg (5.72 lbs)
@@ -82,7 +95,7 @@ bag.save!
 main_camera = Product.new(
   referal_link: "http://amzn.to/2kdu35o",
   title: "Canon EOS-1DX Mark II DSLR Camera (Body Only)",
-  price: 4298,
+  price: "$4298",
   description: "Fastest shooting EOS-1D, capable of up to 14 fps full-resolution RAW or JPEG, and up to 16 fps in Live View mode with new Dual DIGIC 6+ Image Processors. The magnification is approx. 0.76x (-1m-1 with 50mm lens at infinity) / 35.1° angle of view
                 Achieves a maximum burst rate of up to 170 RAWs in continuous shooting at up to 16 fps, and 4K movies using CFast cards in the new CFast 2.0 slot
                 Improved AF performance through 61-point, wide area AF system with 41 cross-type points, improved center point focusing sensitivity to -3 EV and compatibility down to f/8
@@ -99,7 +112,7 @@ main_camera.save!
 vlog_cam = Product.new(
   referal_link: "http://amzn.to/2kSyfdj",
   title: "Canon EOS 6D Mark II Digital SLR Camera Body – Wi-Fi Enabled",
-  price: 1155,
+  price: "$1155",
   description: "26.2 Megapixel Full-frame CMOS Sensor
                 Optical Viewfinder with a 45-point All Cross-type AF System. Compatible Lenses: Canon EF lenses (excluding EF-S and EF-M lenses)
                 Dual Pixel CMOS AF with Phase-detection & Full HD 60p
@@ -117,7 +130,7 @@ vlog_cam.save!
 backup_camera = Product.new(
   referal_link: "http://amzn.to/2r29gGg",
   title: "Canon EOS 5D Mark IV Full Frame Digital SLR Camera Body",
-  price: 2799,
+  price: "$2799",
   description: "30.4 MP full-frame CMOS sensor for versatile shooting
                 Up to 7.0 frames per second continuous shooting speed
                 61-point AF system with 41 cross-points for expanded vertical coverage
@@ -135,7 +148,7 @@ backup_camera.save!
 favorite_lens = Product.new(
   referal_link: "http://amzn.to/2kQNK4U",
   title: "Canon EF 24mm f/1.4L II USM Wide Angle Lens - Fixed",
-  price: 1549,
+  price: "$1549",
   description: "Make sure this fits by entering your model number.
                 Lens not zoomable
                 Minimum focus Distance is 0.8ft
@@ -154,7 +167,7 @@ puts "Creating Joao's gear"
 wheels = Product.new(
   referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
   title: "Enve 4.5 Clincher Wheelset",
-  price: 2900,
+  price: "$2900",
   description: "Custom built product- Please allow 2 business days production before shipping.
                 Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
                 Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
@@ -171,7 +184,7 @@ wheels.save!
 cycle_bag = Product.new(
   referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
   title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
-  price: 124.95,
+  price: "$124.95",
   description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
                 Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
                 Create limitless set-ups with a robust, SlipLock compatible strap system
@@ -188,7 +201,7 @@ cycle_bag.save!
 helmet = Product.new(
   referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
   title: "Kask Protone Helmet",
-  price: 181.42,
+  price: "$181.42",
   description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
                 MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
                 In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
@@ -204,7 +217,7 @@ helmet.save!
 shimano_gear = Product.new(
   referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
   title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
-  price: 223,
+  price: "$223",
   description: "HG-EV 11-speed cassette sprocket
                 Rider tuned wider gearing options
                 Includes lock ring
@@ -222,7 +235,7 @@ puts "Creating Max Gear"
 chisel = Product.new(
   referal_link: "https://www.amazon.com/dp/B0165WKKY2/?cv_ct_id=amzn1.idea.MUCBTHY2XFPZ&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: 'Narex 6 pc set 6mm (1/4"), 10 (3/8"), 12 (1/2"), 16 (5/8"), 20 (13/16") , 26 (1 1/16") Woodworking Chisels in Wooden Presentation Box 853053',
-  price: 84.99,
+  price: "$84.99",
   description: "6 piece set comes on a wooden presentation box
                 Blades are made from fine-grained, nicely tempered chrome-manganese steel and hardened to Rc 59
                 Contains the following sizes: 6, 10, 12, 16, 20 and 26 mm
@@ -239,7 +252,7 @@ chisel.save!
 router = Product.new(
   referal_link: "https://www.amazon.com/dp/B01LG5XIZG/?cv_ct_id=amzn1.idea.MUCBTHY2XFPZ&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: "Festool 574692 Router OF 1400 EQ Imperial",
-  price: 600,
+  price: "$600",
   description: "Ergonomic handles: Festool routers are designed for increased control and reduced fatigue. Integrated switches allow use with just one hand
                 Dust extraction: Integrated dust extraction ports capture dust and debris at the point of creation, increasing visibility, prolonging cutter life, and saving valuable cleanup time
                 Swiveling chip deflector: Can be used with edge forming bits, maximizing chip and dust extraction even around curves and corners. Attaches and releases quickly with tool-free spring clip system
@@ -256,7 +269,7 @@ router.save!
 bevel = Product.new(
   referal_link: "https://www.amazon.com/dp/B001C04FZS/?cv_ct_id=amzn1.idea.MUCBTHY2XFPZ&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: "Crown Tools 116 / Big Horn 20120 9 Inch Miniature Bevel, Rosewood",
-  price: 22.94,
+  price: "$22.94",
   description: 'Exceptional quality tool from Crown Hand Tools Ltd, Sheffield, England
                 Tempered blued steel blade | Rosewood Handle
                 Solid brass end cap with adjusting wing nut
@@ -273,7 +286,7 @@ bevel.save!
 finish = Product.new(
   referal_link: "https://www.amazon.com/dp/B0155AUTG4/?cv_ct_id=amzn1.idea.3QN2LXQZFF81P&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: "Tried and True Danish Oil, Pint",
-  price: 23.99,
+  price: "$23.99",
   description: 'Superior penetrating linseed oil finish that is polymerized for fast and easy application on interior woodwork and furniture
                 Danish Oil is a good choice for any wood work where you want a satin finish
                 Use on kitchenware, cutting boards, and children\'s furniture, since it is food safe and non-toxic
