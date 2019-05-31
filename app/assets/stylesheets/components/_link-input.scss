@@ -5,7 +5,7 @@
   padding: 20px;
   -webkit-appearance: none;
   box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
-  margin-left: 15px;
+  // margin-left: 15px;
   margin-bottom: 0;
   overflow: auto;
   border: 0;
@@ -26,26 +26,3 @@
 // .link-input:hover ~ .link-input-btn {
 //   background: $rollover-purple;
 // }
-
-.link-input-btn {
-  height: 55px;
-  width: 480px;
-  border: 0px;
-  border-radius: 0 0 10px 10px;
-  margin-left: 15px;
-  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
-  color: white;
-  font-size: 20px;
-  font-family: $fun-body;
-  font-weight: 700;
-  // background: $bright-purple;
-  background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
-}
-
-.link-input-btn:hover {
-  background: $rollover-purple;
-}
-
-.link-input-btn:focus {
-    outline: none;
-}

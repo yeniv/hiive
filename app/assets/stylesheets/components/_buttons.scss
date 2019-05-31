@@ -1,0 +1,33 @@
+.link-input-btn {
+  height: 55px;
+  width: 480px;
+  border: 0px;
+  border-radius: 0 0 10px 10px;
+  // margin-left: 15px;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-size: 19px;
+  font-family: $fun-body;
+  font-weight: 700;
+  // background: $bright-purple;
+  background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
+  // transition: 0.5s;
+}
+
+.link-input-btn:hover {
+  background: $rollover-purple;
+  color: white;
+}
+
+.link-input-btn:focus {
+    outline: none;
+}
+
+.rounded-btn {
+  border-radius: 10px;
+  margin-left: 0;
+}
+
+.btn-100-percent {
+  width: 100%;
+}

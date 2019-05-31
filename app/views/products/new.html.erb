@@ -1,0 +1,37 @@
+<div class="container nav-padding flexbox text-header">
+
+  <div class="half-width">
+
+    <h2>🐌 add manually</h2>
+
+    <div class="new-card form-header">
+
+    <%= simple_form_for @product do |f| %>
+      <%= f.input :title, label: "title" %>
+      <%= f.input :brand, label: "brand" %>
+      <%= f.input :price, label: "price" %>
+      <%= f.input :description, label: "description" %>
+      <%= f.input :category, label: "category", collection: ["Categories", "To", "Go", "Here"]%>
+      <%= f.input :referal_link, label: 'referral link' %>
+      <%= f.input :seller, label: "seller" %>
+      <%= f.input :photo, label: "product photo" %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%#= f.button :submit, "Add product", class: "link-input-btn btn-100-percent" %>
+
+    </div>
+
+       <input type="submit" name="commit" value="add product" class="link-input-btn btn-100-percent" data-disable-with="Add product">
+
+      <% end %>
+    </div>
+
+    <div class="half-width">
+      <h2>⚡️ paste referral link(s)</h2>
+
+      <form action="/profile" id="submit-form" method="get" >
+      <textarea name="link" id="homepage-text-area" type="text" class="link-input" placeholder="Paste a link or twenty"></textarea>
+      <button type="submit" id="submit" class="link-input-btn">add product(s)</button>
+
+    </div>
+
+</div>
