@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
         new_product.save!
       end
     end
-    
+
     @products = Product.where(user: @user)
   end
 
