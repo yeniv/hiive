@@ -13,6 +13,10 @@
 }
 
 .text-header {
+  h1 {
+  color: $purple;
+  font-weight: 700;
+  }
   h2 {
   color: $purple;
   margin-bottom: 22px;
@@ -21,3 +25,4 @@
   padding-left: 5px;
   }
 }
+
