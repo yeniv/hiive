@@ -1,3 +1,27 @@
 <div class="container nav-padding">
 <h1>Discover under construction</h1>
 </div>
+
+<h1>Top 5 products</h1>
+<ul>
+  <%  @top_5_products.each do |product| %>
+  <li> <%= product.title %></li>
+  <% end %>
+</ul>
+
+
+<h2>3 newest creators</h2>
+
+<ul>
+  <% @newest_creators.each do |creator|  %>
+  <li><%= creator.first_name %> <%= creator.last_name %></li>
+  <% end %>
+</ul>
+
+
+<h2>5 Random products</h2>
+<ul>
+  <%  @random_products.each do |product| %>
+  <li> <%= product.title %></li>
+  <% end %>
+</ul>
