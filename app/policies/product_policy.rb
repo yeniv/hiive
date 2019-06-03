@@ -18,7 +18,7 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def scrape?
-    true
+    user ? true : false
   end
 
   def update?
