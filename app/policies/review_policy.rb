@@ -6,7 +6,7 @@ class ReviewPolicy < ApplicationPolicy
   end
 
   def create?
-    (product.user != current_user) && (user ? true : false)
+    (record.product.user != user) && (user ? true : false)
   end
 
   def destroy?

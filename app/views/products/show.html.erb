@@ -16,6 +16,21 @@
 
         </div>
 
+        <div>
+            <%= simple_form_for [@product, @review] do |r| %>
+            <%= r.input :description, label: "Review Description" %>
+            <%= r.input :rating, label: "Rating" %>
+            <input type="submit" value="Add Value" class="btn btn-warning">
+            <% end %>
+        </div>
     </div>
-
+    <div class="container">
+        <% @product_reviews.each do |review| %>
+            <div class="fast-review-styling">
+                <strong>Review Description: </strong><%= review.description %></br>
+                <strong>Rating: </strong><%= review.rating %></br>
+                <strong>User: </strong><%= review.user.first_name %>
+            </div>
+        <% end %>
+    </div>
 </div>
