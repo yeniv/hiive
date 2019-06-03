@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   # get '/profile/:id', to: 'profiles#public_profile', as: :public_profile
   post '/profile', to: 'products#scrape'
 
-  get '/:store_url', to: 'profiles#public_profile', as: :public_profile
-
   require "sidekiq/web"
   authenticate :user, lambda { |u| u.admin } do
-    mount Sidekiq::Web => '/admin/sidekiq'
+    mount Sidekiq::Web => '/sidekiq'
   end
+
+  get '/:store_url', to: 'profiles#public_profile', as: :public_profile
 end
