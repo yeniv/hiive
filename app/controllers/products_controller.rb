@@ -30,11 +30,12 @@ class ProductsController < ApplicationController
 
   def scrape
     authorize :product, :scrape?
+
     unless params[:link].nil?
       product_params = Scraper.validator(params[:link])
 
       product_params.each do |param|
-        ScrapeJob.perform_later(param)
+        ScrapeJob.perform_later(param, current_user)
       end
     end
     redirect_to private_profile_path
