@@ -37,6 +37,8 @@
           <div class="hiive-card-content">
           <p class="hiive-card-title"><%= product.title.truncate(67)%></p>
           <div class="d-flex justify-content-between">
+
+          <% if product.user != current_user%>
           <div class="like-button-<%= product.id %>">
 
             <% if product.likes.where(user: @current).empty? %>
@@ -52,6 +54,9 @@
               } %>
             <% end %>
           </div>
+          <% else %>
+            <div></div>
+          <% end %>
           <p class="hiive-card-price"><%= product.price %></p>
           </div>
           </div>

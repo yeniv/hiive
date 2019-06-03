@@ -6,7 +6,7 @@ class LikePolicy < ApplicationPolicy
   end
 
   def create?
-    user ? true : false
+    record.product.user != user
   end
 
   def destroy?

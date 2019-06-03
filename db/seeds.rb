@@ -11,6 +11,16 @@ User.delete_all
 
 puts "Creating fake Joao..."
 
+max = User.new(
+  email: "max.t@hiive.com",
+  password: "123456",
+  first_name: "Max",
+  last_name: "Teunissen",
+  user_type: "creator",
+  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
+  description: "Simply awesome."
+)
+
 joao = User.new(
   email: "joao@hiive.com",
   password: "123456",
