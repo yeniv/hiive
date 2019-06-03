@@ -24,6 +24,8 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     authorize @product
+    @review = Review.new
+    @product_reviews = Review.where(product_id: @product.id)
   end
 
   def new
