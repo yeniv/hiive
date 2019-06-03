@@ -55,4 +55,19 @@ class Scraper
     end
     product_params
   end
+
+  def self.single_link(text)
+    url_regex = /(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?/
+    validator(text).each do |link|
+      seller = link.match(url_regex)[2]
+      case seller
+      when 'amzn' || 'amazon'
+        new_product = Product.new(amazon_scraper(link))
+        new_product.user = User.last
+        new_product.save!
+      else
+        p "Sorry. Unable to auto-generate a link from #{seller}."
+      end
+    end
+  end
 end
