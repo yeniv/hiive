@@ -16,6 +16,9 @@ class ProductsController < ApplicationController
     else
       @products = policy_scope(Product)
     end
+    if params[:cat].present?
+      @products = @products.where(category: params[:cat])
+    end
   end
 
   def show

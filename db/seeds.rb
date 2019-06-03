@@ -90,6 +90,7 @@ bag = Product.new(
   brand: "Lowepro",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/tristan-gear/tristan-bag.jpg").open,
+  category: "Photography",
 )
 
 bag.user = tristan
@@ -107,6 +108,7 @@ main_camera = Product.new(
   brand: "Canon",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/tristan-gear/tristan-main-camera.jpg").open,
+  category: "Photography",
 )
 
 main_camera.user = tristan
@@ -125,6 +127,7 @@ vlog_cam = Product.new(
   brand: "Canon",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/tristan-gear/tristan-vlog-camera.jpg").open,
+  category: "Photography",
 )
 
 vlog_cam.user = tristan
@@ -143,6 +146,7 @@ backup_camera = Product.new(
   brand: "Canon",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/tristan-gear/tristan-backup-cam.jpg").open,
+  category: "Photography",
 )
 
 backup_camera.user = tristan
@@ -160,6 +164,7 @@ favorite_lens = Product.new(
   brand: "Canon",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/tristan-gear/tristan-lens.jpg").open,
+  category: "Photography",
 )
 
 favorite_lens.user = tristan
@@ -179,6 +184,7 @@ wheels = Product.new(
   brand: "Enve",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  category: "cycling"
 )
 
 wheels.user = joao
@@ -196,6 +202,7 @@ cycle_bag = Product.new(
   brand: "Lowepro",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  category: "Photography",
 )
 
 cycle_bag.user = joao
@@ -212,6 +219,7 @@ helmet = Product.new(
   brand: "Kask",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
+  category: "cycling",
 )
 
 helmet.user = joao
@@ -228,6 +236,7 @@ shimano_gear = Product.new(
   brand: "Shimano",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
+  category: "cycling"
 )
 
 shimano_gear.user = joao
@@ -247,6 +256,7 @@ chisel = Product.new(
   brand: "Narex",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-chisel.jpg").open,
+  category: "tools",
 )
 
 chisel.user = max_s
@@ -264,6 +274,7 @@ router = Product.new(
   brand: "Festool",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-festool.jpg").open,
+  category: "tools"
 )
 
 router.user = max_s
@@ -281,6 +292,7 @@ bevel = Product.new(
   brand: "CROWN",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-bevel.jpg").open,
+  category: "tools"
 )
 
 bevel.user = max_s
@@ -298,6 +310,7 @@ finish = Product.new(
   brand: "Tried & True Wood Finish",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-finish.jpg").open,
+  category: "tools"
 )
 
 finish.user = max_s

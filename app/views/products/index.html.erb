@@ -17,12 +17,23 @@
 
 
     <div class="cards">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
-            Photography          
-        </div>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
-            Tools
-        </div>          
+        <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
+                Photography        
+            </div>        
+        <% end %>
+
+        <%= link_to params.merge(cat: "tools").permit(:cat, :query) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
+                Tools
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "cycling").permit(:cat, :querry) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/cycling-category.jpg") %>')">
+                Cycling
+            </div>
+        <% end %>
     </div>
 
 
