@@ -5,14 +5,6 @@ class ProfilesController < ApplicationController
     @user = current_user
     authorize :profile, :private_profile?
 
-    unless params[:link].nil?
-      product_params = Scraper.validator(params[:link])
-
-      product_params.each do |param|
-        ScrapeJob.perform_later(param)
-      end
-    end
-
     @products = Product.where(user: @user)
   end
 

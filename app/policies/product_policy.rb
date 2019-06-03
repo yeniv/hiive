@@ -17,6 +17,10 @@ class ProductPolicy < ApplicationPolicy
     user ? true : false
   end
 
+  def scrape?
+    true
+  end
+
   def update?
     record.user == current_user
   end

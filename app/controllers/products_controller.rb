@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show,]
+  skip_before_action :verify_authenticity_token
 
   def index
     @products = policy_scope(Product)
@@ -25,6 +26,18 @@ class ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def scrape
+    authorize :product, :scrape?
+    unless params[:link].nil?
+      product_params = Scraper.validator(params[:link])
+
+      product_params.each do |param|
+        ScrapeJob.perform_later(param)
+      end
+    end
+    redirect_to private_profile_path
   end
 
   def destroy
