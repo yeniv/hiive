@@ -1,10 +1,3 @@
-    <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-        <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
-        <a data-dismiss="alert" aria-label="Close">
-          <i class="fas fa-times"></i>
-        </a>
-      </div>
-
 <div class="container profile-flex nav-padding profile-private">
 
   <div class="user-info">
@@ -14,7 +7,7 @@
           <span class="profile-url-highlight">Share your store:</span><br><a href="/<%= @user.store_url %>">hiive.buzz/<%= @user.store_url %></a>
         </h4>
       </div>
-    
+
       <div class="profile-user-card profile-headline">
         <h3><span class="profile-headline-highlight"> creator </span></h3>
         <div class="d-flex justify-content-center">
@@ -61,6 +54,13 @@
 
       </div>
   </div>
+</div>
+
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
 </div>
 
 <script>
