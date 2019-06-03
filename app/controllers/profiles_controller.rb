@@ -9,7 +9,7 @@ class ProfilesController < ApplicationController
   end
 
   def public_profile
-    @user = User.find(params[:id])
+    @user = User.find_by_store_url(params[:store_url].downcase)
     @current = current_user
     authorize :profile, :public_profile?
 
