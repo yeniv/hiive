@@ -16,6 +16,16 @@
     </form>
 
 
+    <div class="cards">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
+            Photography          
+        </div>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
+            Tools
+        </div>          
+    </div>
+
+
     <div class="display-grid-all-products-show">
         <% @products.each do |product| %>
         <div class="card-product p-show">
