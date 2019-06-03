@@ -2,7 +2,20 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @products = policy_scope(Product)
+    if params[:query].present?
+      sql_query = " \
+      products.title @@ :query \
+      OR products.description @@ :query \
+      OR products.brand @@ :query \
+      OR products.category @@ :query \
+      OR products.seller @@ :query \
+      OR users.first_name @@ :query \
+      OR users.last_name @@ :query \
+      "
+      @products = policy_scope(Product).joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @products = policy_scope(Product)
+    end
   end
 
   def show
