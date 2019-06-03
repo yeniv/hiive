@@ -2,7 +2,7 @@
   <ul>
     <% @profiles.each do |profile| %>
         <li>
-        <%= link_to profile.first_name, public_profile_path(profile) %>
+        <%= link_to profile.first_name, public_profile_path(profile.store_url) %>
         </li>
     <% end %>
 

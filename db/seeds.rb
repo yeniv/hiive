@@ -17,6 +17,7 @@ joao = User.new(
   first_name: "Joao",
   last_name: "Lobo",
   user_type: "creator",
+  store_url: "joao",
   photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
 )
@@ -30,6 +31,7 @@ max_s = User.new(
   first_name: "Max",
   last_name: "Salemans",
   user_type: "creator",
+  store_url: "max-s",
   photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
   description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!"
 )
@@ -43,6 +45,7 @@ max_t = User.new(
   first_name: "Max",
   last_name: "Teunissen",
   user_type: "shopper",
+  store_url: "max-s",
   #photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open
 )
 max_t.save!
@@ -55,6 +58,7 @@ tristan = User.new(
   first_name: "Tristan",
   last_name: "Viney",
   user_type: "creator",
+  store_url: "tristan",
   photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
   description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places."
 )
@@ -69,6 +73,7 @@ peter = User.new(
   first_name: "Peter",
   last_name: "McKinnon",
   user_type: "creator",
+  store_url: "peter",
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
   )
