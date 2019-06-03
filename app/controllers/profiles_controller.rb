@@ -6,13 +6,10 @@ class ProfilesController < ApplicationController
     authorize :profile, :private_profile?
 
     unless params[:link].nil?
-      product_params = Scraper.go(params[:link])
+      product_params = Scraper.validator(params[:link])
 
-      product_params.each do |params|
-        new_product = Product.new(params)
-        new_product.remote_photo_url = params[:photo]
-        new_product.user = @user
-        new_product.save!
+      product_params.each do |param|
+        ScrapeJob.perform_later(param)
       end
     end
 

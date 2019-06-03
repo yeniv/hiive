@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   get '/profiles', to: 'profiles#profiles', as: :creators
   get '/profile', to: 'profiles#private_profile', as: :private_profile
   get '/profile/:id', to: 'profiles#public_profile', as: :public_profile
+
+  require "sidekiq/web"
+  authenticate :user, lambda { |u| u.admin } do
+    mount Sidekiq::Web => '/sidekiq'
+  end
 end

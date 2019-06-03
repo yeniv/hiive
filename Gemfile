@@ -33,3 +33,5 @@ end
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'pundit'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
