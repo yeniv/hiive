@@ -1,5 +1,11 @@
-<div class="container profile-flex nav-padding">
 
+<div class="container profile-flex nav-padding">
+    <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+        <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
+        <a data-dismiss="alert" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </a>
+      </div>
   <div class="user-info user-info-left">
       <div class="profile-user-card profile-headline">
         <h3> <span class="profile-headline-highlight"> creator </span></h3>
