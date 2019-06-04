@@ -14,12 +14,13 @@ Rails.application.routes.draw do
   # get '/profile/:id', to: 'profiles#public_profile', as: :public_profile
   post '/profile', to: 'products#scrape'
 
+
   require "sidekiq/web"
   authenticate :user, lambda { |u| u.admin } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  get '/:store_url', to: 'profiles#public_profile', as: :public_profile
+  # get '/:store_url', to: 'profiles#public_profile', as: :public_profile
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
@@ -28,4 +29,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+
 end
