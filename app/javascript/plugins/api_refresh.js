@@ -7,9 +7,9 @@ const apiFetch = () => {
   fetch(`http://localhost:3000//api/v1/users/${user}/products`)
   .then(response => response.json())
   .then((data) => {
+    console.log(data);
     card_container.innerHTML = "";
     data.forEach((result) => {
-      console.log(result.id);
       const productCard = `
           <div class="col-4 hiive-card-container">
           <div class="hiive-card" id="${result.id}"">
