@@ -8,17 +8,48 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <%= f.input :first_name,
+                    required: true,
+                    input_html: { autocomplete: "first_name"}  %> 
+        <%= f.input :last_name,
+                    required: true,
+                    input_html: { autocomplete: "last_name"}   %>
         <%= f.input :email,
                     required: true,
                     autofocus: true,
-                    input_html: { autocomplete: "email" }%>
+                    input_html: { autocomplete: "email" }  %>
         <%= f.input :password,
                     required: true,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password" }   %>
         <%= f.input :password_confirmation,
                     required: true,
-                    input_html: { autocomplete: "new-password" } %>
+                    input_html: { autocomplete: "new-password" }   %>
+        <label class="form-control-label required" for="user_type">
+          User Type: 
+          <abbr title="required">
+            *
+          </abbr>
+        </label>
+        <div class="form-group radio_buttons optional user_user_type display-flex-radio-btn">
+          <input type="hidden" name="user[user_type]" value="">
+          <div class="form-check form-radio-btn-div">
+            <input class="form-check-input radio_buttons optional display-button-none" type="radio" value="Shopper" name="user[user_type]" id="user_user_type_shopper">
+            <label class="collection_radio_buttons scss-radio-btn-right" for="user_user_type_shopper">
+              Shopper
+            </label>
+          </div>
+          <div class="form-check form-radio-btn-div">
+            <input class="form-check-input radio_buttons optional display-button-none" type="radio" value="Creator" name="user[user_type]" id="user_user_type_creator">
+              <label class="collection_radio_buttons scss-radio-btn-left" for="user_user_type_creator">
+                Creator
+              </label>
+           </div>
+        </div>
+        <%= f.input :store_url,
+                    required: true %>
+        <%= f.input :description,
+                    required: true%>
       </div>
       <div class='sign-up-btn-aligned'>
         <div class="form-actions">
