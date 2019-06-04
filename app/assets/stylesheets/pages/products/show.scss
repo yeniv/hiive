@@ -8,46 +8,38 @@
 }
 .container-background {
     margin-top: 60px;
+    margin-bottom: 60px;
     background-color: white;
     padding: 25px 45px 45px 45px;
     border-radius: 10px;
 }
 
 .images-public-profile {
-
   height: 400px;
-  width: 100%;
+  width: 200%;
   margin: 0 auto;
-  // height: 280px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.buy-btn-scss {
-    width: 400px;
-    margin-bottom: 20px;
-    box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
-    background: #653080;
-    color: white;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-.buy-btn-scss:hover {
-    box-shadow: none;
-    background-color: #823ea3;
-    color: white;
+.buy-btn {
+  height: 55px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
+  color: white;
+  font-size: 19px;
+  font-family: $fun-body;
+  font-weight: 700;
+  background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
 }
 
 .reviews-container-scss {
-    padding: 0px;
-    border-radius: 10px;
-    background-color: white;
-    padding: 45px 45px 0px 45px;
-    margin-top: 25px;
-    display: grid;
-    margin-bottom: 50px;
+    width: 70%;
+    padding: 45px;
+    padding-bottom: 0px;
+    margin: auto;
 }
 
 .text-aligned-with-photo {
@@ -119,3 +111,4 @@
     margin-left: 130px;
     color: #653080;
 }
+

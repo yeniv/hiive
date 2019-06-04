@@ -15,12 +15,20 @@
     box-shadow: 0px 25px 40px 5px rgba(0, 0, 0, 0.1);
 
     position: relative;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin: 0 auto;
 }
 
-
+.images-prod {
+  height: 200px;
+  width: 80%;
+  margin: 0 auto;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 .btn-product-show {
     position: absolute;
     bottom: 5px;
@@ -52,7 +60,7 @@
     justify-content: center;
     bottom: 1%;
     left: 82%;
-    
+
 }
 
 .p-show{
@@ -100,7 +108,7 @@
 .cards {
     display: flex;
   }
-  
+
 .card-category:hover {
     box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -116,28 +124,28 @@
       grid-template-columns: 1fr;
     }
   }
-  
+
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
     .cards {
       grid-template-columns: 1fr;
     }
   }
-  
+
   // Medium devices (tablets, 768px and up)
   @media (min-width: 768px) {
     .cards {
       grid-template-columns: 1fr 1fr;
     }
   }
-  
+
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
     .cards {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
-  
+
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
     .cards {
