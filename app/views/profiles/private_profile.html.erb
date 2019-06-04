@@ -1,14 +1,15 @@
+<div class="container profile-flex nav-padding profile-private">
 
-<div class="container profile-flex nav-padding">
-    <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-        <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
-        <a data-dismiss="alert" aria-label="Close">
-          <i class="fas fa-times"></i>
-        </a>
+  <div class="user-info">
+
+      <div class="profile-headline">
+        <h4>
+          <span class="profile-url-highlight">Share your store:</span><br><a href="/<%= @user.store_url %>">hiive.buzz/<%= @user.store_url %></a>
+        </h4>
       </div>
-  <div class="user-info user-info-left">
+
       <div class="profile-user-card profile-headline">
-        <h3> <span class="profile-headline-highlight"> creator </span></h3>
+        <h3><span class="profile-headline-highlight"> creator </span></h3>
         <div class="d-flex justify-content-center">
         <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
         </div>
@@ -16,6 +17,7 @@
         <div class="hiive-card-content">
          <h2 class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </h2>
          <p class= "user-description"> <%= @user.description %></p>
+
         <p>Products: <%= @user.products.count %></p>
         <p> Reviews: <%= @user.reviews.count %></p>
         <p>Likes: <%= @user.likes.count %></p>
@@ -51,8 +53,14 @@
         <% end %>
 
       </div>
-    </div>
   </div>
+</div>
+
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
 </div>
 
 <script>
