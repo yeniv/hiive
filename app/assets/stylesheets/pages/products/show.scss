@@ -25,10 +25,13 @@
 }
 
 .images-public-profile {
-  width: 400px;
   height: 400px;
-  object-fit: cover;
-  flex: 0 0 400px;
+  width: 100%;
+  margin: 0 auto;
+  // height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .btn-width-radius{

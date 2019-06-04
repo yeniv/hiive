@@ -4,7 +4,8 @@
             <h1 class='product-title-public-profile'><strong><%= @product.title %></strong></h1>
         </div>
         <div class="text-aligned-with-photo">
-            <%= cl_image_tag @product.photo, width: 400, height: 400, crop: :fill, class: 'images-public-profile' %>
+          <div class="hiive-card-photo" style="background-image: url(<%= @product.photo %>)">
+          </div>
             <p class="font-family "><strong>Description: </strong><%= @product.description %></p>
 
         </div>
@@ -16,6 +17,7 @@
 
         </div>
 
+        <% unless @product.user == current_user %>
         <div>
             <%= simple_form_for [@product, @review] do |r| %>
             <%= r.input :description, label: "Review Description" %>
@@ -23,6 +25,8 @@
             <input type="submit" value="Add Value" class="btn btn-warning">
             <% end %>
         </div>
+        <% end %>
+
     </div>
     <div class="container">
         <% @product_reviews.each do |review| %>
