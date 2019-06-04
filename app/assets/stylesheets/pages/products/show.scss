@@ -5,74 +5,111 @@
     background: linear-gradient(321deg, #fcb42d 24%, #fcd04d 100%);
     padding-top: 45px;
     padding-bottom: 45px;
-
 }
 .container-background {
     margin-top: 60px;
     background-color: white;
-    padding: 45px;
+    padding: 25px 45px 45px 45px;
     border-radius: 10px;
-}
-
-.title-in-middle {
-    width: 100%;
-    text-align: center;
-}
-
-.buy-button-in-middle {
-    width: 100%;
-    text-align: center;
 }
 
 .images-public-profile {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  flex: 0 0 400px;
+    background-size: contain;
+    object-fit: cover;
 }
 
-.btn-width-radius{
-    width: 50%;
+.buy-btn-scss {
+    width: 400px;
+    margin-bottom: 20px;
+    box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
+    background: #653080;
+    color: white;
     border-radius: 10px;
-    background-color: $rollover-purple;
+    margin-top: 15px;
+}
+
+.buy-btn-scss:hover {
+    box-shadow: none;
+    background-color: #823ea3;
     color: white;
 }
 
-.font-family {
-    font-family: $body-font;
-    font-size: 18px;
-
+.reviews-container-scss {
+    padding: 0px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 45px 45px 0px 45px;
+    margin-top: 25px;
+    display: grid;
+    margin-bottom: 50px;
 }
 
 .text-aligned-with-photo {
     display: flex;
-    margin: 35px;
-
-
+    padding-right: 30px;
 }
-.text-aligned-with-photo p {
+
+.info-aligned-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-bottom-div {
+    display: flex;
+    align-items: flex-end;
+}
+
+.padding-margin-info-only {
     margin-left: 50px;
-
+    margin-top: 25px;
 }
 
-.margin-product-information {
-    margin: 35px;
-    width: 35%;
-    text-align: center;
-    margin-bottom: 100px;
-    bottom: 100px
-
-
+.width-review-input-show {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
 }
-.center{
-    margin-left: 50%;
+
+.width-input-show {
+    width: 75%;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #653080;
+    border-radius: 10px;
+    padding: 15px;
 }
-.rounded-btn{
-    border-radius: 50px;
+
+.add-review-btn {
+    box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
+    background: #653080;
+    color: white;
+    border-radius: 10px;
+    margin-top: 15px;
 }
 
 .fast-review-styling {
-    background-color: white;
-    margin-top: 15px;
-    padding: 20px;
+    width: 75%;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #653080;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-left: 130px;
+}
+
+.avatar-show-page {
+    border-radius: 50%;
+}
+
+.text-width-review {
+    width: 600px;
+}
+
+.h2-revies-show {
+    margin-left: 130px;
+    color: #653080;
 }
