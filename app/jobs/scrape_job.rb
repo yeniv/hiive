@@ -29,4 +29,3 @@ class ScrapeJob < ApplicationJob
     end
   end
 end
-
