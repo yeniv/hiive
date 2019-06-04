@@ -1,13 +1,10 @@
 const card_container = document.getElementById('api-refresh');
-const user = document.querySelector('.user-info').id
-
-// const product = document.querySelector('.hiive-card').id;
 
 const apiFetch = () => {
+  const user = document.querySelector('.user-info').id
   fetch(`http://localhost:3000//api/v1/users/${user}/products`)
   .then(response => response.json())
   .then((data) => {
-    console.log(data);
     card_container.innerHTML = "";
     data.forEach((result) => {
       const productCard = `
