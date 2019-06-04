@@ -1,16 +1,50 @@
-.flash {
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: white;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
-  border-radius: 4px;
-  margin: 8px;
+.flash-container {
+  position: absolute;
+  top: 90px;
+  right: 20px;
 }
 
+.flash-position {
+  position: relative;
+  width: 300px;
+}
+
+.flash {
+  padding: 16px 24px;
+  font-family: $fun-body;
+  font-size: 15px;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
+  // border-radius: 10px;
+  margin: 8px;
+  // border: 1px solid rgb(230, 230, 230);
+  // top: 100px;
+  // right: 100px;
+  z-index: 10;
+  color: rgb(100 ,100 ,100 );
+  button {
+    margin-left: 3px;
+  }
+  // border-bottom:2px solid $purple;
+  animation-name: fadeOut;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.flash.fadeout {
+  opacity: 0;
+  transition: all ease 1.2s;
+}
+
+.flash-purple {
+  border: 2px solid $rollover-purple;
+
+}
 .flash-success {
-  border: 2px solid #1EDD88;
+  border: 2px solid #90ee90;
 }
 
 .flash-warning {
@@ -18,5 +52,19 @@
 }
 
 .flash-danger {
-  border: 2px solid #FD1015;
+  border: 2px solid #DB0036;
 }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+        opacity: 0;
+  }
+}
+

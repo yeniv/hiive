@@ -1,3 +1,6 @@
+<% flash.now[:notice] = "🎉 flash test 1" %>
+<% flash.now[:alert] = "⚠️ flash test 2 that is really really long what is goping on here?" %>
+
 <div class="container profile-flex nav-padding profile-private">
 
   <div class="user-info">
@@ -56,20 +59,9 @@
   </div>
 </div>
 
-<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+<!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
   <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
   <a data-dismiss="alert" aria-label="Close">
     <i class="fas fa-times"></i>
   </a>
-</div>
-
-<script>
-<!--
-function timedRefresh(timeoutPeriod) {
-  setTimeout("location.reload(true);",timeoutPeriod);
-}
-
-window.onload = timedRefresh(2000);
-
-//   -->
-</script>
+</div> -->
