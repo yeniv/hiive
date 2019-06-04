@@ -8,6 +8,8 @@ class PagesController < ApplicationController
   end
 
   def discover
+    @users = User.all
+    @all_likes = @users.sort_by{|item| item.product_likes.count }.first(5)
   end
 
   private
