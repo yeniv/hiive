@@ -7,6 +7,7 @@ const apiFetch = () => {
   .then((data) => {
     card_container.innerHTML = "";
     data.forEach((result) => {
+      console.log(result.price)
       const productCard = `
           <div class="col-4 hiive-card-container">
           <div class="hiive-card" id="${result.id}"">
@@ -16,7 +17,7 @@ const apiFetch = () => {
 
           <div class="hiive-card-content">
           <p class="hiive-card-title">${result.title}</p>
-          <p class="hiive-card-price">${result.price}</p>
+          <p class="hiive-card-price">${(result.price == '') ? 'currently unavailable' : result.price }</p>
           </div>
           </div>
 
