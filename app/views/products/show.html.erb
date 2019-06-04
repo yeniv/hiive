@@ -25,6 +25,7 @@
                 <input type="submit" value="Add Value" class="btn add-review-btn">
                 <% end %>
             </div>
+
         </div>
     </div>
 </div>
@@ -37,9 +38,24 @@
             <strong>Rating: </strong><%= review.rating %></br>
             <strong>User: </strong><%= review.user.first_name %>
         </div>
+
+        <% unless @product.user == current_user %>
+
         <div>
             <%= cl_image_tag review.user.photo, width: 90, height: 90, crop: :fill, class: 'avatar-show-page' %>
         </div>
+        <% end %>
+
     </div>
-    <% end %>
+
+    <div class="container">
+        <% @product_reviews.each do |review| %>
+            <div class="fast-review-styling">
+                <strong>Review Description: </strong><%= review.description %></br>
+                <strong>Rating: </strong><%= review.rating %></br>
+                <strong>User: </strong><%= review.user.first_name %>
+            </div>
+        <% end %>
+    </div>
+
 </div>

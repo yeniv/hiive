@@ -10,11 +10,12 @@
 }
 
 .hiive-card-photo {
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
   height: 280px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   border-radius: 10px 10px 0 0;
   // border: 5px solid white;
 }

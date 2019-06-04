@@ -14,8 +14,14 @@
 }
 
 .images-public-profile {
-    background-size: contain;
-    object-fit: cover;
+
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  // height: 280px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .buy-btn-scss {
