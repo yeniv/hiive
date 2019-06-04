@@ -1,6 +1,3 @@
-<% flash.now[:notice] = "🎉 flash test 1" %>
-<% flash.now[:alert] = "⚠️ flash test 2 that is really really long what is goping on here?" %>
-
 <div class="container profile-flex nav-padding profile-private">
 
   <div class="user-info">
@@ -51,17 +48,10 @@
           </div>
           </div>
             <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
-            <%= button_to "remove", product_path(product), method: :delete, data: { confirm: "Erm... are you sure?" }, class: "col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" %>
+            <%= button_to "remove", product_path(product), method: :delete, data: { confirm: "Are you sure you want to delete #{product.title}?"}, class: "col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" %>
           </div>
         <% end %>
 
       </div>
   </div>
 </div>
-
-<!-- <div class="flash flash-success alert alert-dismissible fade show" role="alert">
-  <span><strong>Welcome <%= @user.first_name %></strong> 🎉 you successfully signed in, only you can see your private profile page.</span>
-  <a data-dismiss="alert" aria-label="Close">
-    <i class="fas fa-times"></i>
-  </a>
-</div> -->

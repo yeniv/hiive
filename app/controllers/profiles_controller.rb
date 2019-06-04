@@ -6,6 +6,8 @@ class ProfilesController < ApplicationController
     authorize :profile, :private_profile?
 
     @products = Product.where(user: @user)
+
+    flash[:notice] = "👋 Hi #{@user.first_name}, this is your private profile. You're the only one who has access to this page. Enjoy!" if @user.products.empty?
   end
 
   def public_profile

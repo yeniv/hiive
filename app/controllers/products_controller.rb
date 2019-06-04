@@ -41,7 +41,9 @@ class ProductsController < ApplicationController
 
     if @product.save
       redirect_to private_profile_path
+      flash[:notice] = "🎉 #{@product.title} added to your store!"
     else
+      flash[:alert] = "⚡️ We need a little more info. Please complete all highlighted product fields!"
       render :new
     end
   end
@@ -64,6 +66,7 @@ class ProductsController < ApplicationController
     authorize @product
     @product.destroy
     redirect_to private_profile_path(current_user)
+    flash[:alert] = "⚡️ #{@product.title} was removed from your store!"
   end
 
   private

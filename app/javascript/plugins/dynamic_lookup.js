@@ -13,5 +13,4 @@ lookups.addEventListener("keyup", function() {
       cards[i].style.display = "none";
     }
   }
-  console.log("hellddo");
 });

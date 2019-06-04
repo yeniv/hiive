@@ -9,10 +9,10 @@ class ReviewsController < ApplicationController
 
     if @review.save
       redirect_to product_path(product)
-      flash[:notice] = "Review added succesfully"
+      flash[:notice] = "🎉 thanks for the review!"
     else
       redirect_back(fallback_location: root_path)
-      flash[:alert] = "Review was not added, please try again"
+      flash[:alert] = "⚡️ hmmmm, something went wrong. Please try adding your review again."
     end
   end
 
@@ -20,6 +20,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to product_path
+    flash[:notice] = "☠️ review deleted!"
   end
 
   private

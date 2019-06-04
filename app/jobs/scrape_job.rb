@@ -15,7 +15,9 @@ class ScrapeJob < ApplicationJob
       new_product.user = user # current_user
       new_product.remote_photo_url = product_params[:photo]
       new_product.save!
+      # flash[:notice] = "🎉 #{new_product.title.truncate(30)} automatically added to your store!"
     else
+      # flash[:alert] = " ⚠️ Sorry, we can't automatically add products from #{seller} yet. Please add manually"
       p "Sorry. Unable to auto-generate a link from #{seller}."
     end
   end
