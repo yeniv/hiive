@@ -11,6 +11,7 @@
 
 .flash {
   padding: 16px 24px;
+  padding-right: 10px;
   font-family: $fun-body;
   font-size: 15px;
   display: flex;
@@ -28,9 +29,13 @@
     outline: none;
   }
   animation-name: fadeOut;
-  animation-delay: 3.5s;
-  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-duration: 1.5s;
   animation-fill-mode: forwards;
+  p {
+    margin: 0px;
+    padding: 0px;
+  }
 }
 
 .flash-purple {

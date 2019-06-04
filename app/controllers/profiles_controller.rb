@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
 
     @products = Product.where(user: @user)
 
-    flash.now[:notice] = "👋 Hi #{@user.first_name}, this is your private profile. You're the only one who has access to this page. Enjoy!" if @user.products.empty?
+    flash.now[:notice] = "👋 Hi #{@user.first_name}! Welcome to is your new store. Add some products to get started." if @user.products.empty?
   end
 
   def public_profile
