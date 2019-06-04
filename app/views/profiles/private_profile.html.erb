@@ -1,6 +1,6 @@
 <div class="container profile-flex nav-padding profile-private">
 
-  <div class="user-info">
+  <div class="user-info" id="<%= current_user.id %>">
 
       <div class="profile-headline">
         <h4>
@@ -30,28 +30,8 @@
   <div class="user-center">
 
     <div class="container">
-      <div class="row">
-
-       <% @products.each do |product| %>
-          <div class="col-4 hiive-card-container">
-
-          <div class="hiive-card">
-
-          <%#= cl_image_tag product.photo, width: 250, height: 250, crop: :fill, class: 'images-prod' %>
-
-          <div class="hiive-card-photo" style="background-image: url(<%= product.photo %>)";>
-          </div>
-
-          <div class="hiive-card-content">
-          <p class="hiive-card-title"><%= product.title.truncate(70)%></p>
-          <p class="hiive-card-price"><%= product.price %></p>
-          </div>
-          </div>
-            <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
-            <%= button_to "remove", product_path(product), method: :delete, data: { confirm: "Erm... are you sure?" }, class: "col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" %>
-          </div>
-        <% end %>
-
+      <div class="row" id="api-refresh">
+      <!-- API call via the above id="api-refresh" -->
       </div>
   </div>
 </div>
@@ -63,13 +43,3 @@
   </a>
 </div>
 
-<script>
-<!--
-function timedRefresh(timeoutPeriod) {
-  setTimeout("location.reload(true);",timeoutPeriod);
-}
-
-window.onload = timedRefresh(2000);
-
-//   -->
-</script>
