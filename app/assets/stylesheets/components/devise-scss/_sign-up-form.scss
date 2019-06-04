@@ -9,8 +9,9 @@
     width: 600px;
     padding: 35px 25px;
     box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.1);
-    border-radius: 4.5px;
+    border-radius: 10px;
     font-family: 'Chivo', sans-serif;
+    margin-bottom: 50px;
 }
 
 .h2-sign-up-scss {
@@ -29,24 +30,79 @@
 .btn-width-log-in-sign-up-form {
     width: 100px;
     // border: solid;
-    // border-width: 0.5px;
-    // border-radius: 2px;
-    background-color: #F4FDFF;
+    border-width: 0.2px;
+    border-radius: 10px;
+    background-color: #653080;
     box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
+    color: white;
 }
 
 .btn-width-log-in-sign-up-form:hover {
-    // border: none;
-    background-color: #e5fcff;
     box-shadow: none;
+    background-color: #823ea3;
+    color: white;
 }
 
 .btn-sign-up {
     box-shadow: 0px 9px 22px -9px rgba(0,0,0,0.1);
-    background-color: #d8faff;
+    background: #653080;
+    color: white;
+    border-radius: 10px;
 }
 
 .btn-sign-up:hover {
     box-shadow: none;
-    background-color: #cff6fc;
+    background-color: #823ea3;
+    color: white;
+}
+
+input#user_user_type_shopper:checked ~ label {
+    background: #823EA3;
+    color: white;
+    box-shadow: inset 0px 9px 22px -9px rgba(0,0,0,0.1);
+
+}
+
+input#user_user_type_creator:checked ~ label {
+    background: #823EA3;
+    color: white;
+    box-shadow: inset 0px 9px 22px -9px rgba(0,0,0,0.1);
+}
+
+.display-button-none {
+    display: none;
+}
+
+.scss-radio-btn-right {
+    border: solid;
+    border-color: #d2d2d2;
+    border-radius: 2px;
+    border-width: 0.5px;
+    padding: 8px 18px 8px 18px;
+}
+
+.scss-radio-btn-right:hover {
+    cursor: pointer;
+}
+
+.display-flex-radio-btn {
+    display: flex;
+}
+
+.scss-radio-btn-left {
+    border: solid;
+    border-color: #d2d2d2;
+    border-radius: 2px;
+    border-width: 0.5px;
+    padding: 8px 18px 8px 18px;
+    margin-left: 20px;
+}
+
+.scss-radio-btn-left:hover {
+    cursor: pointer;
+}
+
+.form-radio-btn-div {
+    padding: 0px;
+    margin: 0px;
 }
