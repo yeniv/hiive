@@ -48,7 +48,7 @@
           </div>
           </div>
             <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
-            <%= button_to "remove", product_path(product), method: :delete, data: { confirm: "Are you sure you want to delete #{product.title}?"}, class: "col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" %>
+            <%= button_to "remove", product_path(product), method: :delete, class: "col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" %>
           </div>
         <% end %>
 
