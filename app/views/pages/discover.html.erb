@@ -1,7 +1,15 @@
 <div class="container nav-padding">
 <h1>Discover under construction</h1>
 </div>
-
+<h1>Top 5 creators</h1>
+    <div>
+      <% @all_likes.each do |user|  %>
+      <div class="new-card flexed">
+        <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+          <%= user.first_name %>
+      </div>
+      <% end %>
+    </div>
 <h1>Top 5 products</h1>
 <ul>
   <%  @top_5_products.each do |product| %>

@@ -23,4 +23,12 @@ Rails.application.routes.draw do
 
 
   get '/:store_url', to: 'profiles#public_profile', as: :public_profile
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :users, only: [ :show_products ] do
+        resources :products, only: [:index]
+      end
+    end
+  end
 end
