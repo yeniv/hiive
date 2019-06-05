@@ -22,6 +22,33 @@
     background-size: contain;
 }
 
+.creators-tip {
+    display: inline-block;
+    background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: -8px;
+    z-index: -1;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 900;
+    text-align: center;
+    z-index: 10;
+}
+
+.creators-tip + p {
+  display: inline;
+  padding-left: 20px;
+  font-size: 35px;
+  color: #6D3889;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
 .buy-btn {
     height: 42px;
     width: 400px;
@@ -118,7 +145,7 @@
 }
 
 .buy-btn-center {
-    width: 400px; 
+    width: 400px;
 }
 
 .review-in-the-middle {
