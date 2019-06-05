@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
-    row-gap: 50px;
+    row-gap: 35px;
     justify-content: center;
     // margin-left: 80px; # give a css property to align items in the center + js hoover, imports and onlick
 }
@@ -29,6 +29,7 @@
   background-position: center;
   background-size: contain;
 }
+
 .btn-product-show {
     position: absolute;
     bottom: 5px;
@@ -36,12 +37,14 @@
     width: 106px;
     border-radius: 7px;
 }
+
 .product-title-public-profile {
     font-family: 'Overpass', sans-serif;
 }
+
 .description-show {
-    margin: 5px 5px 50px 5px;
-    font-family: sans-serif
+    margin: 5px;
+    font-family: $fun-body;
 }
 
 .details-btn-product-public-profile {
@@ -51,6 +54,7 @@
     width: 106px;
     border-radius: 7px;
 }
+
 .avatar-for-show-product{
     border-radius: 50%;
     position: absolute;
@@ -60,13 +64,11 @@
     justify-content: center;
     bottom: 1%;
     left: 82%;
-
 }
 
 .p-show{
-    width: 300px;
+    width: 250px;
     height: 300px;
-
 }
 
 .card-product:hover {
@@ -102,6 +104,7 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-decoration: none;
   }
 
 .cards {
@@ -109,15 +112,31 @@
     justify-content: space-between;
   }
 
-.card-category:hover {
-    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    text-decoration-line: none;
-  }
-
-  .somethin-something:hover {
-    text-decoration-line: none;
+.cards a {
+  text-decoration: none;
 }
+
+.card-category:hover {
+    box-shadow: 0px 0px 40px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.one-line {
+  height: 45px;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-badge {
+  display: inline-block;
+  border-radius: 20px;
+  background-color: $purple;
+  color: $white;
+  padding: 3px 8px;
+  margin: 0 auto;
+}
+
   // Smallest device
   @media (min-width: 100px) and (max-width: 575px) {
     .cards {
