@@ -1,40 +1,48 @@
-<div class="container nav-padding">
-</div>
-<h1>Top 5 creators</h1>
-<div class="flexed ml mb">
-  <% @all_likes.each do |user|  %>
-  <div class="new-card flexed mr">
-    <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-    <%= user.first_name %>
-    <%= user.last_name %>
+<div class=" nav-padding allpage">
+  <div class=" allpage">
+  <h1>Top 5 creators</h1>
+  <div class=" flexed">
+    <div class="row">
+    <% @all_likes.each do |user|  %>
+    <div class="col">
+    <div class="new-card mr">
+      <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+    <p> <%= user.first_name %>
+      <%= user.last_name %></p>
+    </div>
   </div>
-  <% end %>
-</div>
-
-<h1>Top 5 products</h1>
-<div class="new-card flexed mb">
-  <% @top_5_products.each do |product| %>
-    <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-    <%= product.title %>
-  <% end %>
-</div>
-
-<div class="new-card mb">
-  <h2>3 newest creators</h2>
-  <ul>
-    <% @newest_creators.each do |creator|  %>
-    <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-    <li><%= creator.first_name %> <%= creator.last_name %></li>
     <% end %>
-  </ul>
-</div>
+  </div>
+  </div>
 
-<div class="new-card">
+  <h1>Top 5 products</h1>
+  <div class="flexed mb">
+    <% @top_5_products.each do |product| %>
+    <div class="new-card  mr">
+      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+      <p><%= product.title %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <h1>3 newest creators</h1>
+  <div class="flexed mb">
+    <% @newest_creators.each do |creator|%>
+    <div class="new-card mb mr">
+      <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+     <p> <%= creator.first_name %>
+      <%= creator.last_name %></p>
+    </div>
+    <% end %>
+  </div>
+
   <h2>5 Random products</h2>
-  <ul>
+  <div class="flexed mb">
     <%  @random_products.each do |product| %>
-    <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-    <li> <%= product.title %></li>
+    <div class="new-card mr">
+      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+     <p> <%= product.title %></p>
+    </div>
     <% end %>
-  </ul>
+  </div>
 </div>
