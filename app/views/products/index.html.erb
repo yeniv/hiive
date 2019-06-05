@@ -1,16 +1,18 @@
 <div class="container nav-padding" id="browse-page">
-    <form novalidate="novalidate" class="simple_form search" action="/products" accept-charset="UTF-8" method="get"><input id="myFilter"
+
+  <form novalidate="novalidate" class="" action="/products" accept-charset="UTF-8" method="get"><input id=""
             name="utf8" type="hidden" value="&#x2713;" />
-        <div class="search-form-control form-group">
+
+        <div class="search-div">
             <%= form_tag product_path(:id), method: :get do %>
                 <%= text_field_tag :query,
                 params[:query],
-                class: "form-control",
-                placeholder: "🔎Type to anything that comes to mind"
+                class: "search-bar",
+                placeholder: ""
                 %>
             <% end %>
-            <button name="button" type="submit" class="link-input-btn" style="width: 100%">
-                <i class="fas fa-search"></i> Search
+            <button name="button" type="submit" class="search-btn">
+                <i class="fas fa-search"></i>&nbsp search products
             </button>
         </div>
     </form>
