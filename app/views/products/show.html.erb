@@ -2,6 +2,10 @@
   <div class="container container-background">
     <div class="text-aligned-with-photo">
         <div>
+            <div class="mt-4 text-center">
+              <p class="creators-tip"> <%= @product.user.first_name  %>'s</p>
+              <p>tip</p>
+            </div>
             <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)"></div>
             <div class="buy-btn-center"><%= button_to "Buy", @product.referal_link, class: 'buy-btn rounded-btn'%></div>
         </div>
@@ -10,7 +14,7 @@
             <div class="mb-2"><strong>Description: </strong><%= @product.description %></div>
             <div class="mb-2"><strong>Brand: </strong><%= @product.brand %></div>
             <div class="mb-2"><strong>Product Seller: </strong><%= @product.seller %></div>
-            <div class="mb-2"><strong>Price: </strong><%= @product.price %>€</div>
+            <div class="mb-2"><strong>Price: </strong><%= @product.price %></div>
         </div>
     </div>
   </div>
