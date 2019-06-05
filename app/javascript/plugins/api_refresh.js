@@ -2,12 +2,11 @@ const card_container = document.getElementById('api-refresh');
 
 const apiFetch = () => {
   const user = document.querySelector('.user-info').id
-  fetch(`http://localhost:3000//api/v1/users/${user}/products`)
+  fetch(`${location.origin}//api/v1/users/${user}/products`)
   .then(response => response.json())
   .then((data) => {
     card_container.innerHTML = "";
     data.forEach((result) => {
-      console.log(result.price)
       const productCard = `
           <div class="col-4 hiive-card-container">
           <div class="hiive-card" id="${result.id}"">
@@ -32,5 +31,5 @@ const apiFetch = () => {
 
 if (card_container) {
   apiFetch();
-  setInterval((apiFetch), 1000);
+  setInterval((apiFetch), 300);
 };
