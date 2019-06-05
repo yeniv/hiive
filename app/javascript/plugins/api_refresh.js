@@ -1,15 +1,13 @@
 const card_container = document.getElementById('api-refresh');
-const user = document.querySelector('.user-info').id
-
-// const product = document.querySelector('.hiive-card').id;
 
 const apiFetch = () => {
+  const user = document.querySelector('.user-info').id
   fetch(`http://localhost:3000//api/v1/users/${user}/products`)
   .then(response => response.json())
   .then((data) => {
-    console.log(data);
     card_container.innerHTML = "";
     data.forEach((result) => {
+      console.log(result.price)
       const productCard = `
           <div class="col-4 hiive-card-container">
           <div class="hiive-card" id="${result.id}"">
@@ -19,7 +17,7 @@ const apiFetch = () => {
 
           <div class="hiive-card-content">
           <p class="hiive-card-title">${result.title}</p>
-          <p class="hiive-card-price">${result.price}</p>
+          <p class="hiive-card-price">${(result.price == '') ? 'currently unavailable' : result.price }</p>
           </div>
           </div>
 

@@ -1,4 +1,4 @@
-<div class="container nav-padding">
+<div class="container nav-padding" id="browse-page">
     <form novalidate="novalidate" class="simple_form search" action="/products" accept-charset="UTF-8" method="get"><input id="myFilter"
             name="utf8" type="hidden" value="&#x2713;" />
         <div class="search-form-control form-group">
@@ -19,8 +19,8 @@
     <div class="cards">
         <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
-                Photography        
-            </div>        
+                Photography
+            </div>
         <% end %>
 
         <%= link_to params.merge(cat: "tools").permit(:cat, :query) do %>
@@ -42,9 +42,10 @@
         <div class="card-product p-show" >
             <%= link_to product_path(product) do %>
             <div class="btn-hoover"> </div>
-            <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+            <div class="images-prod" style="background-image: url(<%= product.photo %>)">
+            </div>
             <p hidden class="lookup"><%= product.brand + product.price + product.seller + product.description + product.user.first_name + product.user.last_name %></p>
-            <% end %>        
+            <% end %>
             <p class="description-show"> Recomended by: <%= product.user.first_name %></p>
             <%= cl_image_tag product.user.photo, width: 50, height: 50, crop: :fill, class: '.images-prod avatar-for-show-product' %>
 
