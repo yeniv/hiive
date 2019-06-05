@@ -4,14 +4,34 @@
 
 .mr{
     margin-right: 3%;
+    height: 277px;
+    
 }
 
 .ml{
-    margin-left: 2%;
+    margin-left: 11%;
 }
 .mb{
     margin-bottom: 2%;
 }
 .maxw{
     max-width: 100%;
+}
+
+.wrappeer{
+overflow: hidden;
+}
+
+.central{
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+.roundcorner{
+    border-radius: 10%
+}
+
+.ml-creator{
+    margin-left: 25%;
 }
