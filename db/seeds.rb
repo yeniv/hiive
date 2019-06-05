@@ -9,71 +9,78 @@ User.delete_all
 
 # CREATE USERS
 
-puts "Creating fake Joao..."
+puts "Creating fake Caesy..."
 
-max = User.new(
-  email: "max.t@hiive.com",
+casey = User.new(
+  email: "casey@hiive.com",
   password: "123456",
-  first_name: "Max",
-  last_name: "Teunissen",
+  first_name: "casey",
+  last_name: "neistat",
+  store_url: "casey",
   user_type: "creator",
-  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
-  description: "Simply awesome."
+  photo: Pathname.new("./app/assets/images/caesey-gear/1_yn3yekLM4yUM2Tr2TXEhvw.jpg").open,
+  description: "Hi, I live in New York City and love YouTube."
 )
+casey.save!
 
-joao = User.new(
-  email: "joao@hiive.com",
+puts "Creating fake GCN.."
+
+gcn = User.new(
+  email: "GCN@hiive.com",
   password: "123456",
-  first_name: "Joao",
-  last_name: "Lobo",
+  first_name: "Global",
+  last_name: "Cycling Network",
   user_type: "creator",
-  store_url: "joao",
-  photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
+  store_url: "GCN",
+  photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
 )
-joao.save!
+gcn.save!
 
-puts "Creating fake Max S..."
+puts "Creating fake Dave-lee..."
 
-max_s = User.new(
-  email: "max.s@hiive.com",
+dave = User.new(
+  email: "dave@hiive.com",
   password: "123456",
-  first_name: "Max",
-  last_name: "Salemans",
+  first_name: "dave",
+  last_name: "lee",
   user_type: "creator",
-  store_url: "max-s",
-  photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
-  description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!"
+  store_url: "dave-lee",
+  photo: Pathname.new("app/assets/images/dave-gear/23347476_1986850841533000_5657334637437911040_n.jpg").open,
+  description: "Hey everyone! My name is Dave and I make quality videos about useful tech.
+  If you're into that kinda stuff, subscribe!"
 )
-max_s.save!
+dave.save!
 
-puts "Creating fake Max T..."
+puts "Creating fake Peachy..."
 
-max_t = User.new(
-  email: "max.t@hiive.com",
+peachy = User.new(
+  email: "peachy@hiive.com",
   password: "123456",
-  first_name: "Max",
-  last_name: "Teunissen",
-  user_type: "shopper",
-  store_url: "max-s",
-  #photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open
-)
-max_t.save!
-
-puts "Creating fake Tristan..."
-
-tristan = User.new(
-  email: "tristan@hiive.com",
-  password: "123456",
-  first_name: "Tristan",
-  last_name: "Viney",
+  first_name: "peachy",
+  last_name: ".",
   user_type: "creator",
-  store_url: "tristan",
-  photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
-  description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places."
+  store_url: "peachy",
+  photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
+  description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm. 
+  "
 )
+peachy.save!
 
-tristan.save!
+puts "Creating fake Sierra..."
+
+sierra = User.new(
+  email: "sierra@hiive.com",
+  password: "123456",
+  first_name: "sierra",
+  last_name: "Schultzzie",
+  user_type: "creator",
+  store_url: "sierra",
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
+  description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
+  "
+)
+sierra.save!
 
 puts "Creating fake Peter..."
 
@@ -89,9 +96,42 @@ peter = User.new(
   )
 
 peter.save!
+
+puts "Creating fake steve..."
+
+steve = User.new(
+  email: "steve@live.com",
+  password: "123456",
+  first_name: "steve",
+  last_name: "ramsey",
+  user_type: "creator",
+  store_url: "steve",
+  photo: Pathname.new("app/assets/images/steveramsey-gear/unnamed.jpg").open,
+  description: "Woodworking for Mere Mortals is dedicated to the Weekend Woodworker who doesn't have an enormous shop space and a ton of expensive tools.
+  Learn how you can set up a woodworking shop for under $1000."
+  )
+
+steve.save!
+
+puts "Creating fake therapy..."
+
+unbox = User.new(
+  email: "unbox@live.com",
+  password: "123456",
+  first_name: "Unbox",
+  last_name: "Therapy",
+  user_type: "creator",
+  store_url: "Unbox-therapy",
+  photo: Pathname.new("app/assets/images/unboxtherapy-gear/DSZWeIfVoAAzn3J.jpg").open,
+  description: "Where products get naked.
+   Here you will find a variety of videos showcasing the coolest products on the planet. From the newest smartphone to surprising gadgets and technology you never knew existed. It's all here on Unbox Therapy."
+  )
+
+unbox.save!
+
 # CREATE PRODUCTS
 
-puts "Creating Tristan's gear"
+puts "Creating Caesey gear"
 
 bag = Product.new(
   referal_link: "http://amzn.to/2m8jnaT",
@@ -108,7 +148,7 @@ bag = Product.new(
   category: "Photography",
 )
 
-bag.user = tristan
+bag.user = casey
 bag.save!
 
 main_camera = Product.new(
@@ -126,7 +166,7 @@ main_camera = Product.new(
   category: "Photography",
 )
 
-main_camera.user = tristan
+main_camera.user = casey
 main_camera.save!
 
 vlog_cam = Product.new(
@@ -145,7 +185,7 @@ vlog_cam = Product.new(
   category: "Photography",
 )
 
-vlog_cam.user = tristan
+vlog_cam.user = casey
 vlog_cam.save!
 
 backup_camera = Product.new(
@@ -164,7 +204,7 @@ backup_camera = Product.new(
   category: "Photography",
 )
 
-backup_camera.user = tristan
+backup_camera.user = casey
 backup_camera.save!
 
 favorite_lens = Product.new(
@@ -182,7 +222,7 @@ favorite_lens = Product.new(
   category: "Photography",
 )
 
-favorite_lens.user = tristan
+favorite_lens.user = casey
 favorite_lens.save!
 
 puts "Creating Joao's gear"
@@ -202,7 +242,7 @@ wheels = Product.new(
   category: "cycling"
 )
 
-wheels.user = joao
+wheels.user = gcn
 wheels.save!
 
 cycle_bag = Product.new(
@@ -216,11 +256,11 @@ cycle_bag = Product.new(
                 ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
   brand: "Lowepro",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
   category: "Photography",
 )
 
-cycle_bag.user = joao
+cycle_bag.user = gcn
 cycle_bag.save!
 
 helmet = Product.new(
@@ -237,7 +277,7 @@ helmet = Product.new(
   category: "cycling",
 )
 
-helmet.user = joao
+helmet.user = gcn
 helmet.save!
 
 shimano_gear = Product.new(
@@ -254,7 +294,7 @@ shimano_gear = Product.new(
   category: "cycling"
 )
 
-shimano_gear.user = joao
+shimano_gear.user = gcn
 shimano_gear.save!
 
 puts "Creating Max Gear"
@@ -274,7 +314,7 @@ chisel = Product.new(
   category: "tools",
 )
 
-chisel.user = max_s
+chisel.user = steve
 chisel.save!
 
 router = Product.new(
@@ -292,7 +332,7 @@ router = Product.new(
   category: "tools"
 )
 
-router.user = max_s
+router.user = steve
 router.save!
 
 bevel = Product.new(
@@ -310,7 +350,7 @@ bevel = Product.new(
   category: "tools"
 )
 
-bevel.user = max_s
+bevel.user = steve
 bevel.save!
 
 finish = Product.new(
@@ -328,8 +368,296 @@ finish = Product.new(
   category: "tools"
 )
 
-finish.user = max_s
+finish.user = steve
 finish.save!
+
+puts "Creating unbox gear"
+
+moft = Product.new(
+  referal_link: "https://www.kickstarter.com/projects/1780235500/moft-worlds-first-invisible-laptop-stand?ref=project_link",
+  title: "Invisible Laptop Stand",
+  price: "19",
+  description: "We set out to make sure every road warrior can work absolutely anywhere with ease and comfort. That's where MOFT comes in. It’s lightweight, portable, convenient, patented and feels invisible ——that it is MOFT invisible stand.",
+  brand: "Moft",
+  seller: "Kickstarter",
+  photo: Pathname.new("app/assets/images/unboxtherapy-gear/1423e89c83013872247c277b62bf4f26_original.jpg").open,
+  category: "technology"
+)
+
+moft.user = unbox
+moft.save!
+
+charger = Product.new(
+  referal_link: "https://www.amazon.com/Innergie-Adapter-US-PowerDelivery-Technology-USB-World-Small/dp/B07GBYVF4Q/ref=as_li_ss_tl?keywords=innergie+adapter&qid=1554811845&s=gateway&sr=8-1-spons&psc=1&linkCode=sl1&tag=socialtech109-20&linkId=7718caf6f5e42dd278b229a5cc5cf9f8&language=en_US",
+  title: 'MacBook Pro Charger, Innergie USB C Charger, 60W US Laptop Adapter, for MacBook 12"/ MacBook Air 2018/ iPad Pro 2018, Supports USB PD, Worlds Smallest USB-C Power Adapter with Foldable Plugs [60C]',
+  price: "$109.95",
+  description: 'WORLD SMALLEST CHARGER: Innergie 60C is the worlds smallest 60W power adapter, which fits perfectly inside your pocket, purse and etc. Just the size of a 55cc shot glass (1.18” x 2.36”) with ultra-light weight (88g).
+  60W USB PD: Innergie 60C is equipped with advanced PD technology, Providing max 20V 3A power output and can fully charge your iPhone 8/8 Plus/ X up to 50% in 30 minutes, and MacBook series in 1.5hours.
+  BROAD COMPATIBILITY: Innergie 60C supports and automatically detects 5V, 9V, 12V, 15V, or 20V output, enabling fast charging from laptop, tablet, smartphone to 6000+ devices, including MacBook 12", MacBook Pro 2015 later, MacBook Air 2018, iPad Pro 2018ASUS ZenBook 3/ HP Spectre x360/ Lenovo Thinkpad X1 Carbon/ iPhone 8/8 Plus/X/ Nintendo Switch/ GoPro HERO5/6.
+  PACK LIGHT & TRAVEL EASILY: Contains a folding plug which provides the portability; It can be easily packed and be brought around for traveling or business trips.
+  INNERSHIELD PROTECTION : Your safety is our first priority. Built-In InnerShield provides absolute protection for your device from over-current, over-power, over-voltage, over temperature, and short-circuiting.',
+  brand: "Innergie",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/unboxtherapy-gear/71-U+U5F7kL._SL1500_.jpg").open,
+  category: "technology",
+)
+
+charger.user = unbox
+charger.save!
+
+razer = Product.new(
+  referal_link: "https://www.amazon.com/Razer-Blade-Gaming-Laptop-2019/dp/B07QYCZ3P5/ref=as_li_ss_tl?&keywords=razer+blade+15+2019&qid=1559319615&s=gateway&sr=8-3&th=1&linkId=0fd03daba82794620a5bcc9630ff6eff&language=en_US",
+  title: "Razer Blade 15 Gaming Laptop 2019",
+  price: "$2,599.99 ",
+  description: "Zero Compromise Powerhouse: Built for gaming and creative work in a 0.7 thin CNC aluminum unibody with high-performance, vapor chamber cooling
+  Futureproof Design: Thunderbolt 3 capable, compatible with Razer Core external GPU enclosures for additional power; supports dual-channel memory and SSD upgradability
+  Perfect Display for Work or Play: An edge-to-edge, 100% sRGB, factory-calibrated matte screen with a 240Hz refresh rate offers the best experience for both creative tasks or intense gaming sessions
+  Biometric Security: Supports Windows Hello instant facial unlock
+  Customizable RGB Individual Key Lighting: Includes 16.8 million colors available with multiple preset profiles
+  Summary: 9th Gen Intel Core i7 9750H 6 core processor w/ 2.6GHz/4.5GHz (base/max turbo), NVIDIA Geforce 2070 RTX Max-Q, 15.6 FHD 240Hz matte display, 16GB RAM, 512GB SSD",
+  brand: "Razer-blade",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/unboxtherapy-gear/718p3BW93vL._SL1500_.jpg").open,
+  category: "technology",
+)
+
+razer.user = unbox
+razer.save!
+
+lenovo = Product.new(
+  referal_link: "https://www.amazon.com/Lenovo-ThinkPad-Performance-Windows-20KH002JUS/dp/B079J4H1P2/ref=sr_1_4?keywords=lenovo+x1+carbon&linkCode=sl2&linkId=4d407a6468f06ea955e37d37f0342d4e&qid=1559744422&s=gateway&sr=8-4",
+  title: "Lenovo ThinkPad X1 Carbon Laptop",
+  price: "$1,299.99",
+  description: "Brand Lenovo, Model 20KH002JUS
+  Product Type: Ultrabook, Processor Manufacturer: Intel, Processor Type: Core i7, Processor Generation: 8th Gen, Processor Model: i7-8650U, Processor Speed: 1.90 GHz, Processor Core: Quad-core (4 Core), Standard Memory: 16 GB, Memory Technology: LPDDR3, Solid State Drive Capacity: 512 GB, Screen Size: 14, Display Screen Type: LCD,
+  Display Screen Technology: In-plane Switching (IPS) Technology, Screen Resolution: 1920 x 1080, Touchscreen: Yes, Graphics Controller Manufacturer: Intel, Graphics Controller Model: UHD Graphics 620, Graphics Memory Technology: LPDDR3, Graphics Memory Accessibility: Shared, Wireless LAN: Yes, Wireless LAN Standard: IEEE 802.11a/b/g/n/ac, Ethernet Technology: Ethernet, Bluetooth: Yes,
+  Front Camera/Webcam: Yes, Finger Print Reader: Yes, HDMI: Yes, Total Number of USB Ports: 4, Number of USB 3.0 Ports: 2, USB Type-C: Yes, USB Type-C Detail: 2 USB Type C, Network (RJ-45): Yes, Operating System Platform: Windows, Operating System: Windows 10 Pro (English), Operating System Architecture: 64-bit,
+  Keyboard Localization: English (US), Number of Batteries: 1, Number of Cells: 3-cell, Input Voltage: 120 V AC, Input Voltage: 230 V AC, Color: Black, Height: 0.6", Width: 8.5", Depth: 12.7, Weight (Approximate): 2.49 lb, Package Contents: ThinkPad X1 Carbon 6th Gen 20KH002JUS Ultrabook, Lithium Polymer Battery, AC Adapter, Limited Warranty: 3 Yea",
+  brand: "lenovo",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/unboxtherapy-gear/71wJJL7q8nL._SL1500_.jpg").open,
+  category: "technology"
+)
+
+lenovo.user = unbox
+lenovo.save!
+
+puts "Creating seirra gear"
+
+wheels = Product.new(
+  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Enve 4.5 Clincher Wheelset",
+  price: "$2900",
+  description: "Custom built product- Please allow 2 business days production before shipping.
+                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
+                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
+                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
+                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
+  brand: "Enve",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  category: "cycling"
+)
+
+wheels.user = gcn
+wheels.save!
+
+cycle_bag = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
+  price: "$124.95",
+  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
+                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
+                Create limitless set-ups with a robust, SlipLock compatible strap system
+                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
+                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
+  brand: "Lowepro",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
+  category: "Photography",
+)
+
+cycle_bag.user = gcn
+cycle_bag.save!
+
+helmet = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Kask Protone Helmet",
+  price: "$181.42",
+  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
+                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
+                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
+                Reinforced frame protects the shell from secondary impacts",
+  brand: "Kask",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
+  category: "cycling",
+)
+
+helmet.user = gcn
+helmet.save!
+
+shimano_gear = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
+  price: "$223",
+  description: "HG-EV 11-speed cassette sprocket
+                Rider tuned wider gearing options
+                Includes lock ring
+                Made in Japan",
+  brand: "Shimano",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
+  category: "cycling"
+)
+
+shimano_gear.user = gcn
+shimano_gear.save!
+
+puts "Creating Joao's gear"
+
+wheels = Product.new(
+  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Enve 4.5 Clincher Wheelset",
+  price: "$2900",
+  description: "Custom built product- Please allow 2 business days production before shipping.
+                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
+                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
+                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
+                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
+  brand: "Enve",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  category: "cycling"
+)
+
+wheels.user = gcn
+wheels.save!
+
+cycle_bag = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
+  price: "$124.95",
+  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
+                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
+                Create limitless set-ups with a robust, SlipLock compatible strap system
+                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
+                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
+  brand: "Lowepro",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
+  category: "Photography",
+)
+
+cycle_bag.user = gcn
+cycle_bag.save!
+
+helmet = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Kask Protone Helmet",
+  price: "$181.42",
+  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
+                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
+                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
+                Reinforced frame protects the shell from secondary impacts",
+  brand: "Kask",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
+  category: "cycling",
+)
+
+helmet.user = gcn
+helmet.save!
+
+shimano_gear = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
+  price: "$223",
+  description: "HG-EV 11-speed cassette sprocket
+                Rider tuned wider gearing options
+                Includes lock ring
+                Made in Japan",
+  brand: "Shimano",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
+  category: "cycling"
+)
+
+shimano_gear.user = gcn
+shimano_gear.save!
+
+puts "Creating Joao's gear"
+
+wheels = Product.new(
+  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Enve 4.5 Clincher Wheelset",
+  price: "$2900",
+  description: "Custom built product- Please allow 2 business days production before shipping.
+                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
+                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
+                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
+                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
+  brand: "Enve",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
+  category: "cycling"
+)
+
+wheels.user = gcn
+wheels.save!
+
+cycle_bag = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
+  price: "$124.95",
+  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
+                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
+                Create limitless set-ups with a robust, SlipLock compatible strap system
+                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
+                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
+  brand: "Lowepro",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
+  category: "Photography",
+)
+
+cycle_bag.user = gcn
+cycle_bag.save!
+
+helmet = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "Kask Protone Helmet",
+  price: "$181.42",
+  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
+                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
+                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
+                Reinforced frame protects the shell from secondary impacts",
+  brand: "Kask",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
+  category: "cycling",
+)
+
+helmet.user = gcn
+helmet.save!
+
+shimano_gear = Product.new(
+  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
+  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
+  price: "$223",
+  description: "HG-EV 11-speed cassette sprocket
+                Rider tuned wider gearing options
+                Includes lock ring
+                Made in Japan",
+  brand: "Shimano",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
+  category: "cycling"
+)
+
+shimano_gear.user = gcn
+shimano_gear.save!
+
 
 puts "Creating reviews ..."
 
