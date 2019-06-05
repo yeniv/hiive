@@ -30,8 +30,9 @@
 
 .hiive-card-title {
   text-align: center;
+  font-size: 15px;
   width: 95%;
-  height: 42px;
+  height: 43px;
   white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -41,8 +42,8 @@
   color: $bright-purple;
   text-align: right;
   padding-right: 10px;
-  padding-bottom: 2px;
-  font-size: 20px;
+  padding-bottom: 4px;
+  font-size: 19px;
 }
 
 .hiive-card-btn {

@@ -16,7 +16,7 @@ const apiFetch = () => {
 
           <div class="hiive-card-content">
           <p class="hiive-card-title">${result.title}</p>
-          <p class="hiive-card-price">${(result.price == '') ? 'currently unavailable' : result.price }</p>
+          <p class="hiive-card-price">${(result.price == '') ? 'discontinued' : result.price }</p>
           </div>
           </div>
 

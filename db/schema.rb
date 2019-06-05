@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_162513) do
+ActiveRecord::Schema.define(version: 2019_06_05_163317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,13 +65,13 @@ ActiveRecord::Schema.define(version: 2019_06_05_162513) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "social_media", force: :cascade do |t|
+  create_table "socials", force: :cascade do |t|
     t.bigint "user_id"
     t.string "url"
     t.string "site"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_social_media_on_user_id"
+    t.index ["user_id"], name: "index_socials_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -101,5 +101,5 @@ ActiveRecord::Schema.define(version: 2019_06_05_162513) do
   add_foreign_key "products", "users"
   add_foreign_key "reviews", "products"
   add_foreign_key "reviews", "users"
-  add_foreign_key "social_media", "users"
+  add_foreign_key "socials", "users"
 end

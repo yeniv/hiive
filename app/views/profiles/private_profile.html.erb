@@ -1,35 +1,28 @@
 <div class="container profile-flex nav-padding profile-private">
-
   <div class="user-info" id="<%= current_user.id %>">
-
-      <div class="profile-headline">
-        <h4>
-          <span class="profile-url-highlight">Share your store:</span><br><a href="/<%= @user.store_url %>">hiive.buzz/<%= @user.store_url %></a>
+    <div class="profile-user-card profile-headline">
+      <div class="d-flex justify-content-center">
+      <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+      </div>
+       <h3>
+        <span class="profile-headline-highlight"><%= @user.first_name %></span>
+        <span class="profile-headline-highlight"><%= @user.last_name %></span>
+       </h3>
+      <div class="profile-user-content">
+        <h5> <%= @user.creator_type %></h5>
+        <p class= ""> <%= @user.description %></p>
+      </div>
+      <div class="profile-headline profile-share-url">
+       <!-- <h2>⚡️</h2> -->
+       <h4>
+         <span class="profile-url-highlight">Share your store</span>
+         <span class="profile-url-highlight"><a href="/<%= @user.store_url %>">hiive.buzz/<%= @user.store_url %></a></span>
         </h4>
       </div>
-
-      <div class="profile-user-card profile-headline">
-        <h3><span class="profile-headline-highlight"> creator </span></h3>
-        <div class="d-flex justify-content-center">
-        <%= cl_image_tag @user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
-        </div>
-
-        <div class="hiive-card-content">
-         <h2 class="text-center mt-3"> <%= @user.first_name %> <%= @user.last_name %> </h2>
-         <p class= "user-description"> <%= @user.description %></p>
-
-        <p>Products: <%= @user.products.count %></p>
-        <p> Reviews: <%= @user.reviews.count %></p>
-        <p>Likes: <%= @user.likes.count %></p>
-        <p> Follow here: </p>
-
-      </div>
-     </div>
+   </div>
   </div>
-
   <div class="user-center">
     <div class="container">
-
       <div class="row" id="api-refresh">
       <!-- API call via the above id="api-refresh" -->
       </div>

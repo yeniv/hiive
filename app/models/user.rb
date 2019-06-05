@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :product_likes, through: :products, source: :user
+  has_many :socials
 
   validates :first_name, presence: true
   validates :last_name, presence: true
