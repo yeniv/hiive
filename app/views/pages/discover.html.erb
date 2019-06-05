@@ -22,77 +22,78 @@
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "running").permit(:cat, :querry) do %>
-            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/running-category.jpg") %>')">
-                Running
+        <%= link_to params.merge(cat: "clothing").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/clothing-category.jpg") %>')">
+                Clothing
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "music").permit(:cat, :querry) do %>
-            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/instrument-category.jpg") %>')">
-                Music
+        <%= link_to params.merge(cat: "lifestyle").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/lifestyle-category.jpg") %>')">
+                Lifestyle
             </div>
         <% end %>
       </div>
     </div>
 
-
-  <div class=" allpage">
+  <div class="container category-cards-middle">
     <h1>Top 5 creators</h1>
-    <div class=" ml mb flexed">
+    <div class="card-5-creators">
       <div class="row">
         <% @all_likes.each do |user|  %>
-        <div class="col">
-          <div class="new-card mr wrappeer roundcorner">
+        <div class="col single-creator">
             <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p class="wrappeer"> <%= user.first_name %>
+            <p class="wrappeer text-top-creators"> <%= user.first_name %>
               <%= user.last_name %></p>
-          </div>
         </div>
         <% end %>
       </div>
     </div>
+  </div>
 
-    <h1>Top 5 products</h1>
-    <div class=" mb flexed">
-      <div class="row">
-        <% @top_5_products.each do |product| %>
-        <div class="col">
-          <div class="new-card mr wrappeer roundcorner">
-            <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p class="wrappeer"><%= product.title %></p>
-          </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
-
+  <div class="container category-cards-middle">
     <h1>3 newest creators</h1>
-    <div class="mb flexed ml-creator">
+    <div class="card-5-creators">
       <div class="row">
         <% @newest_creators.each do |creator|%>
-        <div class="col ">
-          <div class="new-card mr wrappeer roundcorner">
+        <div class="col single-creator">
             <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p> <%= creator.first_name %>
+            <p class="wrappeer text-top-creators"> <%= creator.first_name %>
               <%= creator.last_name %></p>
-          </div>
         </div>
         <% end %>
       </div>
     </div>
+  </div>
 
-
+  <div class="container category-cards-middle">
     <h2>5 Random products</h2>
-    <div class="mb flexed">
+    <div class="card-5-creators">
       <div class="row">
         <%  @random_products.each do |product| %>
-        <div class="col">
-          <div class="new-card mr wrappeer roundcorner">
-            <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p> <%= product.title %></p>
-          </div>
+        <div class="col single-product">
+            <div class="div-heigth">
+              <%= cl_image_tag product.photo, width: 500, height: 500, class: 'images-product-rand' %>
+            </div>
+            <div class="text-5-products-top">
+              <p class="text-top-creators"> <%= product.title %></p>
+            </div>
         </div>
         <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container category-cards-middle">
+      <h1>Top 5 products</h1>
+      <div class="card-5-creators">
+        <div class="row">
+          <% @top_5_products.each do |product| %>
+          <div class="col single-creator">
+              <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+              <p class="wrappeer text-top-creators"><%= product.title %></p>
+          </div>
+          <% end %>
+        </div>
       </div>
     </div>
