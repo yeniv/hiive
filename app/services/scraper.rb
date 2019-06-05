@@ -24,6 +24,7 @@ class Scraper
       product_params[:title] = html_doc.search('#title').text.strip
       product_params[:price] = html_doc.search('#price .priceBlockBuyingPriceString').text.strip
       product_params[:brand] = html_doc.search('#bylineInfo').text.strip
+      product_params[:category] = html_doc.search('#wayfinding-breadcrumbs_container li')[1].text.strip
       product_params[:seller] = "Amazon"
 
       description = []
