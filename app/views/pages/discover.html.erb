@@ -1,35 +1,48 @@
-<div class="container nav-padding">
-<h1>Discover under construction</h1>
-</div>
-<h1>Top 5 creators</h1>
-    <div>
-      <% @all_likes.each do |user|  %>
-      <div class="new-card flexed">
-        <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-          <%= user.first_name %>
-      </div>
-      <% end %>
+<div class=" nav-padding allpage">
+  <div class=" allpage">
+  <h1>Top 5 creators</h1>
+  <div class=" flexed">
+    <div class="row">
+    <% @all_likes.each do |user|  %>
+    <div class="col">
+    <div class="new-card mr">
+      <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+    <p> <%= user.first_name %>
+      <%= user.last_name %></p>
     </div>
-<h1>Top 5 products</h1>
-<ul>
-  <%  @top_5_products.each do |product| %>
-  <li> <%= product.title %></li>
-  <% end %>
-</ul>
+  </div>
+    <% end %>
+  </div>
+  </div>
 
+  <h1>Top 5 products</h1>
+  <div class="flexed mb">
+    <% @top_5_products.each do |product| %>
+    <div class="new-card  mr">
+      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+      <p><%= product.title %></p>
+    </div>
+    <% end %>
+  </div>
 
-<h2>3 newest creators</h2>
+  <h1>3 newest creators</h1>
+  <div class="flexed mb">
+    <% @newest_creators.each do |creator|%>
+    <div class="new-card mb mr">
+      <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+     <p> <%= creator.first_name %>
+      <%= creator.last_name %></p>
+    </div>
+    <% end %>
+  </div>
 
-<ul>
-  <% @newest_creators.each do |creator|  %>
-  <li><%= creator.first_name %> <%= creator.last_name %></li>
-  <% end %>
-</ul>
-
-
-<h2>5 Random products</h2>
-<ul>
-  <%  @random_products.each do |product| %>
-  <li> <%= product.title %></li>
-  <% end %>
-</ul>
+  <h2>5 Random products</h2>
+  <div class="flexed mb">
+    <%  @random_products.each do |product| %>
+    <div class="new-card mr">
+      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+     <p> <%= product.title %></p>
+    </div>
+    <% end %>
+  </div>
+</div>
