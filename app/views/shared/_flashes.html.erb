@@ -1,7 +1,9 @@
 <div class="flash-container">
 <% if notice %>
   <div class="flash flash-position flash-purple alert fade show alert-dismissible" role="alert">
-    <%= notice %>
+    <div class="flash-text">
+      <%= notice %>
+    </div>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -9,7 +11,9 @@
 <% end %>
 <% if alert %>
   <div class="flash flash-position flash-danger alert fade show alert-dismissible" role="alert">
-    <%= alert %>
+    <div class="flash-text">
+      <%= alert %>
+    </div>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>

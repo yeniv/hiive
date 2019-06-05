@@ -22,7 +22,7 @@ const apiFetch = () => {
           </div>
 
           <form class="button_to" method="get" action="/products/${result.id}"><input class="col-6 hiive-card-btn hiive-card-btn-left" type="submit" value="more info"></form>
-          <form class="button_to" method="post" action="/products/${result.id}"><input type="hidden" name="_method" value="delete"><input data-confirm="Erm... are you sure?" class="col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" type="submit" value="remove"></form>
+          <form class="button_to" method="post" action="/products/${result.id}"><input type="hidden" name="_method" value="delete"><input class="col-6 hiive-card-btn hiive-card-btn-right hiive-card-btn-delete" type="submit" value="remove"></form>
           </div>`;
 
       card_container.insertAdjacentHTML("afterbegin", productCard);

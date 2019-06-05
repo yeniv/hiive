@@ -20,8 +20,9 @@
   // border: 5px solid white;
 }
 .hiive-card-content {
-  padding: 15px 10px 10px 10px;
-  color: $bright-purple;
+  padding: 5px 10px 10px 10px;
+  // color: $bright-purple;
+  color: $text-gray;
   font-weight: 600;
   font-family: $fun-body;
 }
@@ -36,6 +37,7 @@
 }
 
 .hiive-card-price {
+  color: $bright-purple;
   text-align: right;
   padding-right: 10px;
   font-size: 22px;
