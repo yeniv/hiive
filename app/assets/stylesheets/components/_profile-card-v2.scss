@@ -1,26 +1,27 @@
 .hiive-card-container {
-  padding: 7px;
+  padding: 8px;
 }
 
 .hiive-card {
-  height: 390px;
+  height: 320px;
   background: white;
   border-radius: 10px 10px 0 0;
   box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.08);
 }
 
 .hiive-card-photo {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
-  height: 280px;
+  height: 220px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   border-radius: 10px 10px 0 0;
+  margin-bottom: 4px;
   // border: 5px solid white;
 }
 .hiive-card-content {
-  padding: 5px 10px 10px 10px;
+  padding: 5px 8px;
   // color: $bright-purple;
   color: $text-gray;
   font-weight: 600;
@@ -29,8 +30,8 @@
 
 .hiive-card-title {
   text-align: center;
-  width: 100%;
-  height: 45px;
+  width: 95%;
+  height: 42px;
   white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -40,7 +41,8 @@
   color: $bright-purple;
   text-align: right;
   padding-right: 10px;
-  font-size: 22px;
+  padding-bottom: 2px;
+  font-size: 20px;
 }
 
 .hiive-card-btn {
@@ -48,7 +50,7 @@
   border: 0px;
   box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.05);
   color: white;
-  font-size: 19px;
+  font-size: 17px;
   font-family: $fun-body;
   font-weight: 700;
   float: left;
@@ -74,5 +76,3 @@
   border-radius: 0 0 10px 0;
 
 }
-
-
