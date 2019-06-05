@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  mount ActionCable.server => '/cable'
+
+
   get '/:store_url', to: 'profiles#public_profile', as: :public_profile
 
   namespace :api, defaults: { format: :json } do

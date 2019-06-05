@@ -15,6 +15,5 @@ if (page) {
       } else {
         cards[i].style.display = "none";
       }
-    }
-  });
-}
+  }
+});
