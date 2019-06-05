@@ -1,5 +1,12 @@
 <div class="container nav-padding" id="browse-page">
 
+  <div class="">
+    <h1 class="search-headline">
+    browse products used the<br>
+    <span class="search-headline-highlight"> world's best creators</span>
+  </h1>
+  </div>
+
   <form novalidate="novalidate" class="" action="/products" accept-charset="UTF-8" method="get"><input id=""
             name="utf8" type="hidden" value="&#x2713;" />
 
@@ -12,44 +19,10 @@
                 %>
             <% end %>
             <button name="button" type="submit" class="search-btn">
-                <i class="fas fa-search"></i>&nbsp search products
+                <i class="fas fa-search"></i> search
             </button>
         </div>
     </form>
-
-
-    <div class="cards">
-        <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
-                Photography
-            </div>
-        <% end %>
-
-        <%= link_to params.merge(cat: "tools").permit(:cat, :query) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
-                Tools
-            </div>
-        <% end %>
-
-        <%= link_to params.merge(cat: "cycling").permit(:cat, :querry) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/cycling-category.jpg") %>')">
-                Cycling
-            </div>
-        <% end %>
-
-        <%= link_to params.merge(cat: "running").permit(:cat, :querry) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/running-category.jpg") %>')">
-                Running
-            </div>
-        <% end %>
-
-        <%= link_to params.merge(cat: "music").permit(:cat, :querry) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/instrument-category.jpg") %>')">
-                Music
-            </div>
-        <% end %>
-    </div>
-
 
     <div class="display-grid-all-products-show" id="myItems">
         <% @products.each do |product| %>
