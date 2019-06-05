@@ -38,49 +38,61 @@
 
 
   <div class=" allpage">
-  <h1>Top 5 creators</h1>
-  <div class=" flexed">
-    <div class="row">
-    <% @all_likes.each do |user|  %>
-    <div class="col">
-    <div class="new-card mr">
-      <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-    <p> <%= user.first_name %>
-      <%= user.last_name %></p>
+    <h1>Top 5 creators</h1>
+    <div class=" ml mb flexed">
+      <div class="row">
+        <% @all_likes.each do |user|  %>
+        <div class="col">
+          <div class="new-card mr wrappeer roundcorner">
+            <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+            <p class="wrappeer"> <%= user.first_name %>
+              <%= user.last_name %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
-  </div>
-    <% end %>
-  </div>
-  </div>
 
-  <h1>Top 5 products</h1>
-  <div class="flexed mb">
-    <% @top_5_products.each do |product| %>
-    <div class="new-card  mr">
-      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-      <p><%= product.title %></p>
+    <h1>Top 5 products</h1>
+    <div class=" mb flexed">
+      <div class="row">
+        <% @top_5_products.each do |product| %>
+        <div class="col">
+          <div class="new-card mr wrappeer roundcorner">
+            <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+            <p class="wrappeer"><%= product.title %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
 
-  <h1>3 newest creators</h1>
-  <div class="flexed mb">
-    <% @newest_creators.each do |creator|%>
-    <div class="new-card mb mr">
-      <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-     <p> <%= creator.first_name %>
-      <%= creator.last_name %></p>
+    <h1>3 newest creators</h1>
+    <div class="mb flexed ml-creator">
+      <div class="row">
+        <% @newest_creators.each do |creator|%>
+        <div class="col ">
+          <div class="new-card mr wrappeer roundcorner">
+            <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+            <p> <%= creator.first_name %>
+              <%= creator.last_name %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
 
-  <h2>5 Random products</h2>
-  <div class="flexed mb">
-    <%  @random_products.each do |product| %>
-    <div class="new-card mr">
-      <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-     <p> <%= product.title %></p>
+
+    <h2>5 Random products</h2>
+    <div class="mb flexed">
+      <div class="row">
+        <%  @random_products.each do |product| %>
+        <div class="col">
+          <div class="new-card mr wrappeer roundcorner">
+            <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
+            <p> <%= product.title %></p>
+          </div>
+        </div>
+        <% end %>
+      </div>
     </div>
-    <% end %>
-  </div>
-</div>
