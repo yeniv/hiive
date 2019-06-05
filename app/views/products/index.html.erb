@@ -34,6 +34,18 @@
                 Cycling
             </div>
         <% end %>
+
+        <%= link_to params.merge(cat: "running").permit(:cat, :querry) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/running-category.jpg") %>')">
+                Running
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "music").permit(:cat, :querry) do %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/instrument-category.jpg") %>')">
+                Music
+            </div>
+        <% end %>
     </div>
 
 

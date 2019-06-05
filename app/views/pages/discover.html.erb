@@ -1,4 +1,42 @@
 <div class=" nav-padding allpage">
+  <div class=" container category-cards-middle">
+    <div class="title-categories">
+        <h1 class="title-aligned">Top 5 Categories: </h1>
+    </div>
+    <div class="cards display-of-cards">
+        <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
+                Photography
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "tools").permit(:cat, :query) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
+                Tools
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "cycling").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/cycling-category.jpg") %>')">
+                Cycling
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "running").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/running-category.jpg") %>')">
+                Running
+            </div>
+        <% end %>
+
+        <%= link_to params.merge(cat: "music").permit(:cat, :querry) do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/instrument-category.jpg") %>')">
+                Music
+            </div>
+        <% end %>
+      </div>
+    </div>
+
+
   <div class=" allpage">
     <h1>Top 5 creators</h1>
     <div class=" ml mb flexed">
