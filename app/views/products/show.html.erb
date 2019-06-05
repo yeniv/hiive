@@ -1,47 +1,44 @@
 <div class="background-colors">
   <div class="container container-background">
-    <div class="text-center mb-4">
-      <h1 class=''><strong><%= @product.title %></strong></h1>
-    </div>
-
     <div class="text-aligned-with-photo">
-      <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)">
-      </div>
-      <div class="pl-4">
-        <div class="mb-2"><strong>Description: </strong><%= @product.description %></div>
-        <div class="mb-2"><strong>Brand: </strong><%= @product.brand %></div>
-        <div class="mb-2"><strong>Product Seller: </strong><%= @product.seller %></div>
-        <div class="mb-2"><strong>Price: </strong><%= @product.price %>€</div>
-        <div class="text-center"><%= button_to "Buy", @product.referal_link, class: 'buy-btn rounded-btn mt-5'%></div>
-      </div>
+        <div>
+            <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)"></div>
+            <div class="buy-btn-center"><%= button_to "Buy", @product.referal_link, class: 'buy-btn rounded-btn'%></div>
+        </div>
+        <div class="ml-5 mt-4">
+            <h1 class=''><strong><%= @product.title %></strong></h1>
+            <div class="mb-2"><strong>Description: </strong><%= @product.description %></div>
+            <div class="mb-2"><strong>Brand: </strong><%= @product.brand %></div>
+            <div class="mb-2"><strong>Product Seller: </strong><%= @product.seller %></div>
+            <div class="mb-2"><strong>Price: </strong><%= @product.price %>€</div>
+        </div>
     </div>
+  </div>
+</div>
 
+<div class="container review-in-the-middle">
     <% unless @product.user == current_user %>
-
-    <div class="reviews-container-scss">
-      <%= simple_form_for [@product, @review] do |r| %>
-      <%= r.input :description, label: "Review Description" %>
-      <%= r.input :rating, label: "Rating", collection: [1, 2, 3, 4, 5] %>
-      <input type="submit" value="Add Value" class="btn btn-warning">
-      <% end %>
-    </div>
-
+        <div class="reviews-container-scss">
+        <h2>Write a review!</h2>
+        <%= simple_form_for [@product, @review] do |r| %>
+        <%= r.input :description, label: "Review Description" %>
+        <%= r.input :rating, label: "Rating", collection: [1, 2, 3, 4, 5] %>
+        <input type="submit" value="Add Review" class=" btn add-review-btn rounded-btn">
+        <% end %>
+        </div>
     <% end %>
-  </div>
-
-
-  <div class="container">
-    <div class="container-background">
-    <% @product_reviews.each do |review| %>
-    <div class="fast-review-styling">
-      <div class="text-width-review">
-        <strong>Review Description: </strong><%= review.description %></br>
-        <strong>Rating: </strong><%= review.rating %></br>
-        <strong>User: </strong><%= review.user.first_name %>
-        <%= cl_image_tag review.user.photo, width: 90, height: 90, crop: :fill, class: 'avatar-show-page text-right' %>
-      </div>
+    <div class="every-review-under-eachother">
+        <% @product_reviews.each do |review| %>
+            <div class="fast-review-styling">
+                <div class="text-width-review">
+                    <strong>Review Description: </strong><%= review.description %></br>
+                    <strong>Rating: </strong><%= review.rating %></br>
+                    <strong>User: </strong><%= review.user.first_name %>
+                </div>
+                <div>
+                    <%= cl_image_tag review.user.photo, width: 90, height: 90, crop: :fill, class: 'avatar-show-page text-right' %>
+                </div>
+            </div>
+        <% end %>
     </div>
-    <% end %>
-    </div>
-  </div>
 </div>
