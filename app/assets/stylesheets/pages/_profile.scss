@@ -2,40 +2,68 @@
   display: flex;
   height: 100vh;
   margin-top: 45px;
-  // width: 1400px;
-  // margin: 0 auto;
 }
 .profile-content {
   display: flex;
 }
 .user-info {
   width: 20%;
+  padding: 0;
 }
 .user-center {
   width: 80%;
-  // padding-bottom: 50px;
-  // background-color: blue;
 }
-
 .like-heart {
   color: #C70039;
   padding-left: 10px;
   padding-top: 3px;
   font-size: 25px;
 }
-
 .profile-user-card {
   margin-top: 7px;
   margin-right: 15px;
-  // background-color: rgba(255, 255, 255, 0.5);
-  // border-top: 1px solid $purple;
 }
-
 .profile-title {
   text-align: center;
   margin: 40px 0 55px 0;
 }
-
+.profile-user-content {
+  color: #6e6e6e;
+  font-size: 14px;
+  font-weight: 400;
+  background: white;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: -100px;
+  padding-top: 115px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  padding-bottom: 1px;
+  h5 {
+    font-weight: bold;
+    padding: 10px 0;
+  }
+}
+.profile-share-url {
+  text-align: center;
+  background: white;
+  border-radius: 4px;
+  padding: 14px 0 8px 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+}
+.profile-user-content-highlight {
+  background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
+  padding: 4px 10px;
+  font-family: $home-page-headline;
+  font-weight: 400;
+  color: white;
+  width: fit-content;
+  margin-top: 10px;
+}
+.profile-content-details {
+  p {
+  }
+}
 .profile-headline {
   h1 {
   font-family: $home-page-headline;
@@ -49,43 +77,59 @@
   font-family: $home-page-headline;
   color: white;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-  font-size: 45px;
+  font-size: 28px;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
+  margin-top: -85px;
+  padding-left: 15px;
   }
   h4 {
     font-family: $home-page-headline;
-    color: white;
+    color: $white;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    font-size: 24px;
-    font-weight: 600;
+    line-height: 42px;
+    font-size: 16px;
+    font-weight: 500;
     text-align: center;
     text-decoration: none;
-    margin-top: 7px;
-    padding-bottom: 15px;
     a {
-      color: white;
+      color: $orange;
+      font-size: 20px;
     }
-  }
 }
-
+.profile-about-user-text {
+  padding-left: 0px;
+}
+.profile-about-avatar {
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  border: 5px solid white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+.user-description {
+   padding: 0 4px;
+}
+.profile-social-media-links {
+}
 .profile-url-highlight {
   background: $rollover-purple;
   background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
-  padding: 0px 8px;
-  // padding-right: 15px;
-  // margin-right: -12px;
+  padding: 0;
+  padding: 10px 8px;
 }
 .profile-url:hover {
   background-color: $rollover-purple;
 }
-
 .profile-headline-highlight {
   background: $rollover-purple;
   background: linear-gradient(145deg, rgba(130,62,163,1) 0%, $bright-purple 100%);
-  padding-left: 15px;
   padding-right: 15px;
-  margin-right: -12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 8px;
 }
 .profile-headline-purple {
   color: $rollover-purple;
@@ -94,9 +138,9 @@
   padding-right: 15px;
   margin-right: -12px;
 }
-
 @media (min-width: 1200px) {
   .profile-flex {
       max-width: 1250px;
   }
+}
 }
