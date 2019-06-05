@@ -60,9 +60,13 @@
             </div>
             <p hidden class="lookup"><%= product.brand + product.price + product.seller + product.description + product.user.first_name + product.user.last_name %></p>
             <% end %>
-            <p class="description-show"> Recomended by: <%= product.user.first_name %></p>
-            <%= cl_image_tag product.user.photo, width: 50, height: 50, crop: :fill, class: '.images-prod avatar-for-show-product' %>
-
+            <div class="position-relative">
+              <p class="description-show one-line"><%= product.title %></p>
+              <% if product.category %>
+                <p class="description-show category-badge"><%= product.category.capitalize %></p>
+              <% end %>
+              <%#= cl_image_tag product.user.photo, width: 50, height: 50, crop: :fill, class: ' avatar-for-show-product' %>
+            </div>
         </div>
 
 
