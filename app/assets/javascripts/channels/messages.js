@@ -1,4 +1,6 @@
-App.messages = App.cable.subscriptions.create('ProductFlashesChannel', {
+const current_user_id = document.querySelector('#current_user_id').dataset.id;
+
+App.messages = App.cable.subscriptions.create({ channel: 'ProductFlashesChannel', user_id: current_user_id }, {
   received: function(data) {
     let message = data.message
     let flash_color = data.flash_color
