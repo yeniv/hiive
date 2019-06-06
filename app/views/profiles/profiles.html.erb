@@ -1,10 +1,20 @@
-<div class="container nav-padding">
-  <ul>
+<div class="container nav-padding everything-in-middle">
+  <span class="creators-title-aligned">top 5 creators</span>
+  <div class="display-grid-creators">
     <% @profiles.each do |profile| %>
-        <li>
-        <%= link_to profile.first_name, public_profile_path(profile.store_url) %>
-        </li>
+      <%= link_to "#{profile.store_url}" do %>
+        <div class="profile-user-card-creators profile-headline">
+          <!-- <h3> <span class="profile-headline-highlight"> creator </span></h3> -->
+          <%= cl_image_tag profile.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+          <h3>
+            <span class="profile-headline-highlight-discover"><%= profile.first_name %></span></br>
+            <span class="profile-headline-highlight-discover"><%= profile.last_name %></span></br>
+            <div class="adding-margin-creators">
+              <span><%= profile.creator_type %></span>
+            </div>
+          </h3>      
+        </div>
+      <% end %> 
     <% end %>
-
-    </ul>
+  </div>
 </div>

@@ -26,7 +26,7 @@
     background-size: cover;
     background-position: center;
     width: 200px;
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +39,8 @@
 }
 
 .card-category-discover-page:hover {
-    text-decoration: underline;
-    text-decoration-color: blue;
+    transition: 0.2s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 .title-aligned {
     // margin-left: 10px;
@@ -178,13 +178,12 @@
     justify-content: space-between;
 }
 
-.profile-user-card-discover:hover {
-    text-decoration: underline;
-    text-decoration-color: blue;
-    text-decoration-line: 10px;
-    // line-height: 5px;
-}
 
 span.profile-headline-highlight-discover {
     padding: 2px 7px;
+}
+
+.profile-headline .profile-about-avatar:hover {
+    transition: 0.2s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
