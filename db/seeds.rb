@@ -1078,7 +1078,7 @@ alexa = Product.new(
   category: "technology",
 )
 
-alexa.user = max_t
+alexa.user = roman
 alexa.save!
 
 sigma_lens = Product.new(
@@ -1092,7 +1092,7 @@ sigma_lens = Product.new(
   category: "photography",
 )
 
-sigma_lens.user = max_t
+sigma_lens.user = roman
 sigma_lens.save!
 
 rolex = Product.new(
@@ -1109,7 +1109,7 @@ rolex = Product.new(
   category: "lifestyle",
 )
 
-rolex.user = max_t
+rolex.user = roman
 rolex.save!
 
 wallet = Product.new(
@@ -1127,7 +1127,7 @@ wallet = Product.new(
   category: "lifestyle",
 )
 
-wallet.user = max_t
+wallet.user = roman
 wallet.save!
 
 pink_shoe = Product.new(
