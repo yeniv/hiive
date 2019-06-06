@@ -31,5 +31,5 @@ const apiFetch = () => {
 
 if (card_container) {
   apiFetch();
-  setInterval((apiFetch), 700);
+  setInterval((apiFetch), 600);
 };
