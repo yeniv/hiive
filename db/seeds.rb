@@ -1078,7 +1078,7 @@ alexa = Product.new(
   category: "technology",
 )
 
-alexa.user = max_t
+alexa.user = roman
 alexa.save!
 
 sigma-lens = Product.new(
@@ -1092,7 +1092,7 @@ sigma-lens = Product.new(
   category: "photography",
 )
 
-sigma-lens.user = max_t
+sigma-lens.user = roman
 sigma_lens.save!
 
 rolex = Product.new(
@@ -1109,7 +1109,7 @@ rolex = Product.new(
   category: "lifestyle",
 )
 
-rolex.user = max_t
+rolex.user = roman
 rolex.save!
 
 wallet = Product.new(
@@ -1127,7 +1127,7 @@ wallet = Product.new(
   category: "lifestyle",
 )
 
-wallet.user = max_t
+wallet.user = roman
 wallet.save!
 
 pink-shoe = Product.new(
@@ -1145,7 +1145,7 @@ pink-shoe = Product.new(
   category: "clothing",
 )
 
-pink-shoe.user = joao
+pink-shoe.user = roman
 pink-shoe.save!
 
 backpack = Product.new(
@@ -1159,7 +1159,7 @@ backpack = Product.new(
   category: "lifestyle",
 )
 
-backpack.user = tristan
+backpack.user = roman
 backpack.save!
 
 puts "Creating reviews ..."
