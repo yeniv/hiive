@@ -258,7 +258,7 @@ roman = User.new(
   description: "Hi,i give advice, and talk about the design and all the work put into everyday things!",
   creator_type: "Podcaster",
 )
-casey.save!
+roman.save!
 
 puts "Creating fake GCN.."
 
