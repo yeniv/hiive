@@ -20,7 +20,7 @@ class ScrapeJob < ApplicationJob
         message: "<p>🎉 <strong>#{new_product.title}</strong> successfully added to your store!</p>",
         flash_color: "purple"
         # p "#{new_product.title} added to #{user.first_name}"
-      else
+      # else
 
       end
     else
