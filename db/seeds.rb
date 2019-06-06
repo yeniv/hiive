@@ -85,7 +85,7 @@ casey = User.new(
   store_url: "casey",
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/caesey-gear/1_yn3yekLM4yUM2Tr2TXEhvw.jpg").open,
-  description: "Hi, I live in New York City and love YouTube."
+  description: "Hi, I live in New York City and love YouTube.",
   creator_type: "Travel blogger"
 )
 casey.save!
@@ -100,7 +100,7 @@ gcn = User.new(
   user_type: "creator",
   store_url: "GCN",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
-  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
+  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!",
   creator_type: "Professial Cyclist"
 )
 gcn.save!
@@ -116,7 +116,7 @@ dave = User.new(
   store_url: "dave-lee",
   photo: Pathname.new("app/assets/images/dave-gear/23347476_1986850841533000_5657334637437911040_n.jpg").open,
   description: "Hey everyone! My name is Dave and I make quality videos about useful tech.
-  If you're into that kinda stuff, subscribe!"
+  If you're into that kinda stuff, subscribe!",
   creator_type: "Tech reviewer"
 )
 dave.save!
@@ -132,7 +132,7 @@ peachy = User.new(
   store_url: "peachy",
   photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
   description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm. 
-  "
+  ",
   creator_type: "Makeup artist"
 )
 peachy.save!
@@ -148,7 +148,7 @@ sierra = User.new(
   store_url: "sierra",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
   description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
-  "
+  ",
   creator_type: "Lifstyle blogger"
 )
 sierra.save!
@@ -163,10 +163,11 @@ peter = User.new(
   user_type: "creator",
   store_url: "peter",
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
-  description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
-  )
+  description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee.",
   creator_type: "Photography"
 
+  )
+  
 peter.save!
 
 puts "Creating fake steve..."
@@ -180,7 +181,8 @@ steve = User.new(
   store_url: "steve",
   photo: Pathname.new("app/assets/images/steveramsey-gear/unnamed.jpg").open,
   description: "Woodworking for Mere Mortals is dedicated to the Weekend Woodworker who doesn't have an enormous shop space and a ton of expensive tools.
-  Learn how you can set up a woodworking shop for under $1000."
+  Learn how you can set up a woodworking shop for under $1000.",
+  creator_type: "Wood enthusiast"
   )
 
 steve.save!
@@ -196,7 +198,8 @@ unbox = User.new(
   store_url: "Unbox-therapy",
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/DSZWeIfVoAAzn3J.jpg").open,
   description: "Where products get naked.
-   Here you will find a variety of videos showcasing the coolest products on the planet. From the newest smartphone to surprising gadgets and technology you never knew existed. It's all here on Unbox Therapy."
+   Here you will find a variety of videos showcasing the coolest products on the planet. From the newest smartphone to surprising gadgets and technology you never knew existed. It's all here on Unbox Therapy.",
+  creator_type: "Teach reviewer"
   )
 
 unbox.save!
@@ -297,7 +300,7 @@ favorite_lens = Product.new(
 favorite_lens.user = casey
 favorite_lens.save!
 
-puts "Creating Joao's gear"
+puts "Creating GCN's gear"
 
 wheels = Product.new(
   referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
@@ -317,23 +320,6 @@ wheels = Product.new(
 wheels.user = gcn
 wheels.save!
 
-cycle_bag = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
-  price: "$124.95",
-  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
-                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
-                Create limitless set-ups with a robust, SlipLock compatible strap system
-                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
-                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
-  brand: "Lowepro",
-  seller: "Amazon",
-  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
-  category: "Photography",
-)
-
-cycle_bag.user = gcn
-cycle_bag.save!
 
 helmet = Product.new(
   referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
@@ -864,7 +850,7 @@ r9 = Review.new(
   rating: 4,
 )
 
-r9.product = cycle_bag
+r9.product = bag
 r9.user = tristan
 r9.save!
 
