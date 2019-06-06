@@ -9,16 +9,6 @@ User.delete_all
 
 puts "Creating fake Joao..."
 
-max = User.new(
-  email: "max.t@hiive.com",
-  password: "123456",
-  first_name: "max",
-  last_name: "teunissen",
-  user_type: "shopper",
-  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
-  description: "Simply awesome.",
-)
-
 joao = User.new(
   email: "joao@hiive.com",
   password: "123456",
@@ -55,6 +45,7 @@ max_t = User.new(
   user_type: "shopper",
   store_url: "max-s",
   photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
+  description: "Simply awesome.",
 )
 max_t.save!
 
@@ -84,22 +75,10 @@ casey = User.new(
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/caesey-gear/1_yn3yekLM4yUM2Tr2TXEhvw.jpg").open,
   description: "Hi, I live in New York City and love YouTube.",
-  creator_type: "travel blogger",
+  creator_type: "youtuber",
 )
 casey.save!
-puts "Creating fake Boiler..."
-broom = User.new(
-  email: "broom@hiive.com",
-  password: "123456",
-  first_name: "boiler",
-  last_name: "room",
-  store_url: "Broom",
-  user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/boilerroomjpg.jpg").open,
-  description: "Taking techno music to the masses",
-  creator_type: "dj",
-)
-broom.save!
+
 puts "Creating fake report..."
 food = User.new(
   email: "food@hiive.com",
@@ -110,9 +89,12 @@ food = User.new(
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/DZ8z7TqW4AAUlXK.jpg").open,
   description: "I review all the fasfood i can get my hands on",
-  creator_type: "food reviewer",
+
+  creator_type: "foodie",
+
 )
 food.save!
+
 puts "Creating fake professor poliakoff..."
 professor = User.new(
   email: "poliakoff@hiive.com",
@@ -126,6 +108,7 @@ professor = User.new(
   creator_type: "teacher",
 )
 professor.save!
+
 puts "Creating fake dave ramsey..."
 
 daver = User.new(
@@ -141,12 +124,14 @@ daver = User.new(
 )
 daver.save!
 
+puts "Creating fake pewdiepie..."
+
 puts "Creating fake felix..."
 pewds = User.new(
   email: "pewds@hiive.com",
   password: "123456",
-  first_name: "felix",
-  last_name: "kjellberg",
+  first_name: "Felix",
+  last_name: "PewDiePie",
   store_url: "pewds",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/pewdiepie-mental-health.jpg").open,
@@ -170,17 +155,12 @@ joe = User.new(
 )
 joe.save!
 
-
-
-
-
-
-puts "Creating fake Capitan joe..."
+puts "Creating fake Captain joe..."
 capitan = User.new(
   email: "capitan@hiive.com",
   password: "123456",
-  first_name: "capitan",
-  last_name: "joe",
+  first_name: "Captain",
+  last_name: "Joe",
   store_url: "Cjoe",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (1).jpg").open,
@@ -188,6 +168,7 @@ capitan = User.new(
   creator_type: "pilot",
 )
 capitan.save!
+
 puts "Creating fake Classy vlog..."
 classy = User.new(
   email: "classy@hiive.com",
@@ -198,7 +179,8 @@ classy = User.new(
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (2).jpg").open,
   description: "Hi, we are Danish ,and out blog is about our daily life in Lisbon ",
-  creator_type: "travel blogger",
+  creator_type: "travel",
+
 )
 classy.save!
 
@@ -212,9 +194,12 @@ bald = User.new(
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (3).jpg").open,
   description: "Hi, i travel in eastern europe, and show my daily life in this gloomy part of the world",
-  creator_type: "travel blogger",
+
+  creator_type: "travel",
+
 )
 bald.save!
+
 puts "Creating fake georgia..."
 georgia = User.new(
   email: "georgia@hiive.com",
@@ -225,7 +210,7 @@ georgia = User.new(
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (4).jpg").open,
   description: "I give advice to woman about relashionship behaiviour",
-  creator_type: "life choach",
+  creator_type: "lifestyle",
 )
 georgia.save!
 
@@ -240,9 +225,10 @@ mark = User.new(
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed.jpg").open,
   description: "Hi, I currently travelling the world and tasting the best food",
-  creator_type: "food reviewer",
+  creator_type: "foodie",
 )
 mark.save!
+
 puts "Creating fake roman..."
 roman = User.new(
   email: "roman@hiive.com",
@@ -258,7 +244,6 @@ roman = User.new(
 roman.save!
 
 puts "Creating fake GCN.."
-
 gcn = User.new(
   email: "GCN@hiive.com",
   password: "123456",
@@ -268,7 +253,7 @@ gcn = User.new(
   store_url: "gcn",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!",
-  creator_type: "professial cyclist",
+  creator_type: "cycling",
 )
 gcn.save!
 
@@ -284,12 +269,11 @@ dave = User.new(
   photo: Pathname.new("app/assets/images/dave-gear/23347476_1986850841533000_5657334637437911040_n.jpg").open,
   description: "Hey everyone! My name is Dave and I make quality videos about useful tech.
   If you're into that kinda stuff, subscribe!",
-  creator_type: "tech reviewer",
+  creator_type: "tech",
 )
 dave.save!
 
 puts "Creating fake Peachy..."
-
 peachy = User.new(
   email: "peachy@hiive.com",
   password: "123456",
@@ -316,7 +300,7 @@ sierra = User.new(
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
   description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
   ",
-  creator_type: "lifestyle blogger",
+  creator_type: "lifestyle",
 )
 sierra.save!
 
@@ -331,8 +315,7 @@ peter = User.new(
   store_url: "peter",
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee.",
-  creator_type: "photography",
-
+  creator_type: "photographer",
 )
 
 peter.save!
@@ -349,7 +332,7 @@ steve = User.new(
   photo: Pathname.new("app/assets/images/steveramsey-gear/unnamed.jpg").open,
   description: "Woodworking for Mere Mortals is dedicated to the Weekend Woodworker who doesn't have an enormous shop space and a ton of expensive tools.
   Learn how you can set up a woodworking shop for under $1000.",
-  creator_type: "wood enthusiast",
+  creator_type: "wood worker",
 )
 
 steve.save!
@@ -366,7 +349,7 @@ unbox = User.new(
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/DSZWeIfVoAAzn3J.jpg").open,
   description: "Where products get naked.
    Here you will find a variety of videos showcasing the coolest products on the planet. From the newest smartphone to surprising gadgets and technology you never knew existed. It's all here on Unbox Therapy.",
-  creator_type: "tech reviewer",
+  creator_type: "tech",
 )
 
 unbox.save!
