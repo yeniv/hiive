@@ -7,8 +7,6 @@ Review.delete_all
 Product.delete_all
 User.delete_all
 
-# CREATE USERS
-
 puts "Creating fake Joao..."
 
 max = User.new(
@@ -301,7 +299,7 @@ peachy = User.new(
   user_type: "creator",
   store_url: "peachy",
   photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
-  description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm. 
+  description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm.
   ",
   creator_type: "Makeup artist",
 )
@@ -808,8 +806,8 @@ pincel = Product.new(
   referal_link: "https://www.amazon.com/BS-MALL-Synthetic-Cosmetics-Foundation-Blending/dp/B071K5RTRT/ref=sr_1_21_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-21-spons&psc=1",
   title: "Premium Synthetic Kabuki Makeup Brush Set Cosmetics",
   price: "$9.99",
-  description: "BS-MALL Makeup Brushes Provides Assortment of Makeup Brushes - Kabuki, Foundation, & Eye Shadow Brushes; Lip Liner, Blush & Powder Brushes. 
-  Shop BS-MALL's array of makeup brushes, cosmetic tools and applicators to ensure perfect results. Find beauty tools for face,eyelashes, eyebrows and more. 
+  description: "BS-MALL Makeup Brushes Provides Assortment of Makeup Brushes - Kabuki, Foundation, & Eye Shadow Brushes; Lip Liner, Blush & Powder Brushes.
+  Shop BS-MALL's array of makeup brushes, cosmetic tools and applicators to ensure perfect results. Find beauty tools for face,eyelashes, eyebrows and more.
   Our makeup brushes have bold handle for easy use. Highest quality material, high density bristle, high quality Synthetic fiber hair,Does Not SHED.",
   brand: "BS-MALL",
   seller: "Amazon",
@@ -932,7 +930,7 @@ r1 = Review.new(
 )
 
 r1.product = main_camera
-r1.user = max_s
+r1.user = dave
 r1.save!
 
 r2 = Review.new(
@@ -941,7 +939,7 @@ r2 = Review.new(
 )
 
 r2.product = favorite_lens
-r2.user = joao
+r2.user = sierra
 r2.save!
 
 r3 = Review.new(
@@ -960,7 +958,7 @@ r3 = Review.new(
 )
 
 r3.product = main_camera
-r3.user = joao
+r3.user = gcn
 r3.save!
 
 r4 = Review.new(
@@ -972,7 +970,7 @@ r4 = Review.new(
 )
 
 r4.product = bag
-r4.user = max_s
+r4.user = max_t
 r4.save!
 
 r5 = Review.new(
@@ -981,7 +979,7 @@ r5 = Review.new(
 )
 
 r5.product = helmet
-r5.user = max_s
+r5.user = dave
 r5.save!
 
 r6 = Review.new(
@@ -999,7 +997,7 @@ r7 = Review.new(
 )
 
 r7.product = shimano_gear
-r7.user = tristan
+r7.user = gcn
 r7.save!
 
 r8 = Review.new(
@@ -1008,7 +1006,7 @@ r8 = Review.new(
 )
 
 r8.product = shimano_gear
-r8.user = max_s
+r8.user = joao
 r8.save!
 
 r9 = Review.new(
@@ -1019,7 +1017,7 @@ r9 = Review.new(
 )
 
 r9.product = bag
-r9.user = tristan
+r9.user = casey
 r9.save!
 
 r10 = Review.new(
@@ -1038,7 +1036,7 @@ r11 = Review.new(
 )
 
 r11.product = chisel
-r11.user = tristan
+r11.user = unbox
 r11.save!
 
 r12 = Review.new(
@@ -1047,7 +1045,7 @@ r12 = Review.new(
 )
 
 r12.product = router
-r12.user = tristan
+r12.user = max_s
 r12.save!
 
 r13 = Review.new(
@@ -1057,7 +1055,7 @@ r13 = Review.new(
 )
 
 r13.product = finish
-r13.user = joao
+r13.user = casey
 r13.save!
 
 puts "All seeds created successfully!"
