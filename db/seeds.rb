@@ -109,6 +109,23 @@ professor = User.new(
 )
 professor.save!
 
+
+puts "Creating fake professor h3h3..."
+
+h3h3 = User.new(
+  email: "h3h3@hiive.com",
+  password: "123456",
+  first_name: "ethan",
+  last_name: "hilla",
+  store_url: "h&H",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/EthanRegular.png").open,
+  description: "I make jokes about funny videos, in also do podcasts",
+  creator_type: "podcaster",
+)
+h3h3.save!
+
+
 puts "Creating fake dave ramsey..."
 
 daver = User.new(
@@ -503,6 +520,147 @@ shimano_gear = Product.new(
 
 shimano_gear.user = gcn
 shimano_gear.save!
+
+wheel = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/hope-tech-enduro-pro-4-mtb-rear-wheel/rp-prod145803",
+  title: "hope wheel, carbon spokes",
+  price: "$223",
+  description: "The Hope Tech Enduro - Pro 4 MTB Rear Wheel features a Hope Pro 4 hub built into a Hope Tech Enduro rim. The rim is manufactured from strong and durable T6-6061 aluminium and comes with a triple wall rim cavity for maximum trail resiliency.",
+  brand: "hope",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (1).png").open,
+  category: "cycling",
+)
+
+wheel.user = gcn
+wheel.save!
+
+cinelli = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/cinelli-zydeco-rainbow-frameset-2019/rp-prod185431",
+  title: "Cinelli Zydeco Rainbow Frameset 2019",
+  price: "$699",
+  description: "This sleek, rainbow-coloured frameset is ideal for off-road and gravel racing, but can easily also fit the needs of a strong road bike. Sporting a triple-butted alloy frame construction and a reinforced carbon fibre fork, this frameset offers excellent rigidity and strength to give you reliable stability over any rough surface.",
+  brand: "cinelli",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download.png").open,
+  category: "cycling",
+)
+
+cinelli.user = gcn
+cinelli.save!
+
+bike1 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/brand-x-road-bike-2019/rp-prod165484",
+  title: "Brand-X Road Bike 2019",
+  price: "$229",
+  description: "The Brand-X road bike provides superb value for money. Sporting a full Shimano Tourney 7-speed drivetrain and a durable aluminium frame, the Brand-X road bike is built with reliability in mind.
+
+  Reliable Shimano 7-Speed Drivetrain
+  The Shimano Tourney 7-speed drivetrain is always reliable. With little maintenance required, this Shimano Tourney drivetrain will shift through the gears to find a comfortable cadence to match the terrain. The compact chainset is supported by a set of forged alloy double cranks for strength and durability at a lightweight.
+  
+  Alloy QR Wheelset
+  The large 700x25C wheels offer great strength and are more than capable of withstanding rough city roads. Rolling on Kenda 700x25C tyres will provide a touch of comfort.",
+  brand: "Brand-x",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (2).png").open,
+  category: "cycling",
+)
+
+bike1.user = gcn
+bike1.save!
+
+bike2 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/de-rosa-idol-7000-fsa-team35-road-bike-2018/rp-prod180553",
+  title: "De Rosa Idol 7000 FSA Team35 Road Bike 2018",
+  price: "$1599.99",
+  description: "Combining stunning looks with an unrivalled build and ride quality, this sleek and speedy road bike by De Rosa is as pleasing to ride as it is on the eye. Boasting a full carbon construction, it swoops across every road route with poise and prowess, thanks to its Shimano 105 drivetrain and Vision Team 35 Comp wheels. Well-balanced and beautifully crafted, no modern road bike deserves to be worshipped more than this immense, Italian-made Idol.
+
+  ",
+  brand: "Derosa",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (3).png").open,
+  category: "cycling",
+)
+
+bike2.user = gcn
+bike2.save!
+
+bike3 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/cube-attain-road-bike-2019/rp-prod181793",
+  title: "Cube Attain Road Bike 2019",
+  price: "$650",
+  description: "Combining comfort, quality and composure from the road to rougher routes, this excellent Attain model has the geometry and spec to take you everywhere in style. Speedy and silent running, this super-light, aluminium-framed roadie is well-equipped for CX riding, as well as day-long adventures on the flats. Kitted out with top-end Shimano Claris 2x8 componentry, a full-carbon race fork and Cube RA 0.8 wheels, no road is off limits on this classy and quick Cube.",
+  brand: "Cube",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (4).png").open,
+  category: "cycling",
+)
+
+bike3.user = gcn
+bike3.save!
+
+bike4 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/colnago-clx-evo-ultegra-2019-road-bike/rp-prod183829",
+  title: "Colnago CLX Evo (Ultegra - 2019) Road Bike",
+  price: "$3599",
+  description: "The Colnago CLX Evo is created to provide the best performance imaginable and will have you racing with sublime efficiency and confidence. It features a Carbon frameset at its core and a Shimano Ultegra 11 speed groupset within its arsenal, this race-weapon provides the performance to leave race pack behind as you seize your ambition on the podium.",
+  brand: "colnago",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (5).png").open,
+  category: "cycling",
+)
+
+bike4.user = gcn
+bike4.save!
+
+bike5 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/marin-four-corners-adventue-road-bike-2019/rp-prod186802",
+  title: "Marin Four Corners Adventue Road Bike 2019",
+  price: "$£529.99",
+  description: "The Four Corners is a highly capable commuter, adventure and touring bike, which is ready to be your reliable and comfortable companion on every journey.",
+  brand: "marin",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (6).png").open,
+  category: "cycling",
+)
+
+bike5.user = gcn
+bike5.save!
+
+bike6 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/vitus-escarpe-vr-mountain-bike-nx-eagle-2019/rp-prod179068",
+  title: "Vitus Escarpe VR Mountain Bike (NX Eagle) 2019",
+  price: "$1799.99",
+  description: "Whether you love pushing to your limits on your local trails or taking on epic day-long rides, the full-suspension Escarpe is the perfect all-around trail bike. Combining modern low, long and slack geometry with the latest features and technologies, it’s ready to take your riding ability to the next level.
+
+  Designed to offer the ideal blend of balance, fun and efficiency, this super-capable Escarpe VR Mountain Bike (NX Eagle 1x12) offers a massive 150mm travel, front and rear, from its RockShox forks and shock to swallow up the roughest terrain. There’s also SRAM NX Eagle 1x12 gearing, SRAM Guide R disc brakes, plus dropper post routing and ISCG 05 chainguide mounts to make it ready for upgrades. Finishing off this trail-ready ride is a Boost wheelset with 2.6” wide Maxxis 3C tyres, which are both tubeless ready for the ultimate high-grip handling, so you can carve up the singletrack.
+  
+  ",
+  brand: "vitus",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (7).png").open,
+  category: "cycling",
+)
+
+bike6.user = gcn
+bike6.save!
+
+bike7 = Product.new(
+  referal_link: "https://www.chainreactioncycles.com/vitus-sommet-crx-mountain-bike-xt-1x11-2019/rp-prod179052",
+  title: "Vitus Sommet CRX Mountain Bike (XT- 1x11) 2019",
+  price: "$3149",
+  description: "Carbon-built for high-end stiffness, responsiveness and low-weight, this take on Vitus’ iconic Sommet is built around a T7-HM-UD Carbon Fibre frame and features the long, slack and low geometry favoured by 4-time Red Bull Fox Hunt winner, Colin Ross.
+  ",
+  brand: "vitus",
+  seller: "ChainReactionCycles",
+  photo: Pathname.new("app/assets/images/gcnn/download (8).png").open,
+  category: "cycling",
+)
+
+bike7.user = gcn
+bike7.save!
+
+
 
 puts "Creating steve Gear"
 
