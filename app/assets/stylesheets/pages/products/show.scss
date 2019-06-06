@@ -4,6 +4,7 @@
 .background-colors {
     background: linear-gradient(321deg, #fcb42d 24%, #fcd04d 100%);
     padding-top: 45px;
+    font-family: $fun-body;
 }
 .container-background {
     margin-top: 60px;
@@ -22,31 +23,50 @@
     background-size: contain;
 }
 
+.strong-purple strong {
+  color: #6D3889;
+}
+
+
 .creators-tip {
-    display: inline-block;
+    display: inline;
     background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
     padding-left: 5px;
     padding-right: 5px;
     margin-right: -8px;
+    margin-left: 20px;
     z-index: -1;
     color: white;
     font-family: "Montserrat", sans-serif;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 45px;
+    font-size: 35px;
     line-height: 55px;
     font-weight: 900;
     text-align: center;
     z-index: 10;
 }
-
+a:hover {
+  text-decoration: none;
+}
 .creators-tip + p {
   display: inline;
-  padding-left: 20px;
-  font-size: 35px;
+  font-size: 27px;
   color: #6D3889;
   font-family: "Montserrat", sans-serif;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   font-weight: 700;
+}
+
+.testlink {
+  margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.testlink:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .buy-btn {
@@ -70,6 +90,9 @@
     background-color: white;
     padding: 15px;
     border-radius: 10px;
+    h2 {
+      color: #6D3889;
+    }
 }
 
 .text-aligned-with-photo {
@@ -125,18 +148,45 @@
     padding: 15px;
     margin-bottom: 20px;
     background-color: white;
-    display: flex;
-    justify-content: space-between;
 }
 
 .avatar-show-page {
     border-radius: 50%;
     margin-left: 15px;
+    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-creator-show-page {
+    border-radius: 50%;
+    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
 }
 
 .text-width-review {
-    width: 540px;
+    width: 100%;
     word-wrap: break-word;
+    strong {
+      color: #6D3889;
+    }
+}
+
+.review-username {
+  color: #653080;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.review-date {
+  color: #653080;
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.rating {
+  padding-right: 20px;
+  font-size: 20px;
 }
 
 .h2-revies-show {
@@ -153,12 +203,12 @@
     justify-content: space-between;
     padding: 0px;
     height: 310px;
+    font-family: $fun-body;
 }
 
 .every-review-under-eachother {
     display: grid;
     grid-template-columns: 1fr;
-    // overflow: scroll;
     height: 310px;
     margin-bottom: 275px;
     border-radius: 10px;

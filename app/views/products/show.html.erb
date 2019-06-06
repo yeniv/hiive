@@ -1,48 +1,90 @@
 <div class="background-colors">
   <div class="container container-background">
     <div class="text-aligned-with-photo">
-        <div>
-            <div class="mt-4 text-center">
-              <p class="creators-tip"> <%= @product.user.first_name  %>'s</p>
-              <p>tip</p>
-            </div>
-            <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)"></div>
-            <div class="buy-btn-center"><%= button_to "Buy", @product.referal_link, class: 'buy-btn rounded-btn'%></div>
+      <div>
+        <div class="mt-4">
+          <p class="mb-0">recommended by:</p>
+
+          <%= link_to public_profile_path(@product.user.store_url) do %>
+          <div class="d-flex justify-content-start align-items-center">
+            <%= cl_image_tag @product.user.photo, width: 70, height: 70, crop: :fill, class: 'avatar-creator-show-page' %>
+            <span class="creators-tip">
+              <%= @product.user.first_name %> <%= @product.user.last_name %>
+            </span>
+          </div>
+          <% end %>
+
+
+
+          <% if @product.user != current_user%>
+          <div class="text-right like-button-<%= @product.id %>">
+
+            <% if @product.likes.where(user: @current).empty? %>
+            <%= render partial: "likes/like", locals: {
+              product: @product
+            } %>
+            <% else %>
+            <%= render partial: "likes/unlike", locals: {
+              product: @product,
+              like: @product.likes.find_by_user_id(current_user.id)
+            } %>
+            <% end %>
+
+          </div>
+          <% end %>
+
         </div>
-        <div class="ml-5 mt-4">
-            <h1 class=''><strong><%= @product.title %></strong></h1>
-            <div class="mb-2"><strong>Description: </strong><%= @product.description %></div>
-            <div class="mb-2"><strong>Brand: </strong><%= @product.brand %></div>
-            <div class="mb-2"><strong>Product Seller: </strong><%= @product.seller %></div>
-            <div class="mb-2"><strong>Price: </strong><%= @product.price %></div>
-        </div>
+        <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)"></div>
+        <div class="buy-btn-center"><%= button_to "Purchase from " + @product.seller, @product.referal_link, class: 'buy-btn rounded-btn'%></div>
+
+      </div>
+      <div class="strong-purple ml-5 mt-4">
+        <h1 class=''><strong><%= @product.title %></strong></h1>
+        <div class="mb-2"><%= @product.description %></div>
+        <div class="mb-2"><strong>Brand: </strong><%= @product.brand %></div>
+        <div class="mb-2"><strong>Product Seller: </strong><%= @product.seller %></div>
+        <div class="mb-2"><strong>Price: </strong><%= @product.price %></div>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="container review-in-the-middle">
-    <% unless @product.user == current_user %>
-        <div class="reviews-container-scss">
-        <h2>Write a review!</h2>
-        <%= simple_form_for [@product, @review] do |r| %>
-        <%= r.input :description, label: "Review Description" %>
-        <%= r.input :rating, label: "Rating", collection: [1, 2, 3, 4, 5] %>
-        <input type="submit" value="Add Review" class=" btn add-review-btn rounded-btn">
-        <% end %>
-        </div>
+  <% unless @product.user == current_user %>
+  <div class="reviews-container-scss">
+    <h2 class="strong-purple">Write a review!</h2>
+    <%= simple_form_for [@product, @review] do |r| %>
+    <%= r.input :description, label: "Review Description" %>
+    <%= r.input :rating, label: "Rating", collection: [1, 2, 3, 4, 5] %>
+    <input type="submit" value="Add Review" class=" btn add-review-btn rounded-btn">
     <% end %>
-    <div class="every-review-under-eachother">
-        <% @product_reviews.each do |review| %>
-            <div class="fast-review-styling">
-                <div class="text-width-review">
-                    <strong>Review Description: </strong><%= review.description %></br>
-                    <strong>Rating: </strong><%= review.rating %></br>
-                    <strong>User: </strong><%= review.user.first_name %>
-                </div>
-                <div>
-                    <%= cl_image_tag review.user.photo, width: 90, height: 90, crop: :fill, class: 'avatar-show-page text-right' %>
-                </div>
-            </div>
-        <% end %>
+  </div>
+  <% end %>
+  <div class="every-review-under-eachother">
+    <% @product_reviews.each do |review| %>
+    <div class="fast-review-styling">
+      <div class="d-flex justify-content-between">
+        <div class="">
+          <%= cl_image_tag review.user.photo, width: 45, height: 45 , crop: :fill, class: 'avatar-show-page text-right' %>
+          <span class="review-username"><%= review.user.first_name %></span>
+
+          <p class="ml-1 mt-2 mb-1"> </p>
+        </div>
+
+        <div class="rating">
+          <span class="d-block">
+            <% review.rating.times do %>
+            🐝
+            <% end %>
+          </span>
+          <p class="review-date"><%= review.created_at.day %>-<%= review.created_at.month %>-<%= review.created_at.year %></p>
+        </div>
+
+      </div>
+      <div class="text-width-review pl-1 pr-1">
+        <%= review.description %></br>
+      </div>
     </div>
+    <% end %>
+  </div>
 </div>
