@@ -1060,7 +1060,111 @@ samsung = Product.new(
 samsung.user = dave
 samsung.save!
 
+alexa = Product.new(
+  referal_link: "https://www.amazon.com/dp/B0792KTHKJ/ref=gbps_img_s-5_21b9_f9b32084?smid=ATVPDKIKX0DER&pf_rd_p=28320233-63b3-4284-8e9c-b70e247421b9&pf_rd_s=slot-5&pf_rd_t=701&pf_rd_i=gb_main&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=NEWMFE2NN1JC3H7YZFCK",
+  title: "Alexa smart speaker",
+  price: "$29.99",
+  description: "Our most popular smart speaker. Now with a fabric design and improved speaker for richer and louder sound.
+  Voice control your music. Stream songs from Amazon Music, Apple Music, Spotify, Sirius XM, and others. You can also listen to audiobooks from Audible.
+  Bigger, better sound. Pair with a second Echo Dot (3rd gen) for rich, stereo sound. Fill your home with music with compatible Echo devices in different rooms.
+  Ready to help. Ask Alexa to play music, answer questions, read the news, check the weather, set alarms, control compatible smart home devices, and more.
+  Connect with others. Call almost anyone hands-free. Instantly drop in on other rooms in your home or make an announcement to every room with a compatible Echo device.
+  Use another speaker. Connect to your own speakers over Bluetooth or with a 3.5 mm audio cable.
+  Alexa has skills. With 50,000+ skills, Alexa is always getting smarter and adding new skills like tracking fitness, playing games, and more.
+  Voice control your smart home. Turn on lights, adjust thermostats, lock doors, and more with compatible connected devices.",
+  brand: "Amazon",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/max-gear/alexa-photo.jpg").open,
+  category: "technology",
+)
+
+alexa.user = max_t
+alexa.save!
+
+sigma-lens = Product.new(
+  referal_link: "https://www.amazon.com/Sigma-200-500mm-Ultra-Telephoto-Nikon-Cameras/dp/B0013DAPNU/ref=sr_1_2?keywords=Sigma+200-500mm+ultra+telephoto+zoom+lens+for+Nikon+DSLR+cameras&qid=1559831727&s=gateway&sr=8-2",
+  title: "Sigma 200-500mm f/2.8 APO EX DG Ultra-Telephoto Zoom Lens for Nikon DSLR Cameras",
+  price: "$25,999.00",
+  description: "Ultra telephoto zoom lens; fast aperture of F2.8 at the 500mm and F5.6 at the 1000mm focal length.",
+  brand: "Sigma",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/max-gear/expensive-lens.jpg").open,
+  category: "photography",
+)
+
+sigma-lens.user = max_t
+sigma_lens.save!
+
+rolex = Product.new(
+  referal_link: "https://www.amazon.com/Rolex-Rainbow-EVEROSE-Diamond-116695SATS/dp/B078N4392Q/ref=sr_1_15?keywords=rolex&qid=1559832083&s=apparel&sr=1-15",
+  title: "ROLEX Rainbow Yacht Master EVEROSE Diamond Dial 116695SATS",
+  price: "$135,000.00",
+  description: "Brand, Seller, or Collection Name:	Rolex
+  Part Number	116695SATS
+  Display Type	Analog
+  Movement.",
+  brand: "Rolex",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/peachy-gear/roley.jpg").open,
+  category: "lifestyle",
+)
+
+rolex.user = max_t
+rolex.save!
+
+wallet = Product.new(
+  referal_link: "https://www.amazon.com/TUMI-Nassau-Billfold-Whiskey-Burnished/dp/B07MPW98NY/ref=sr_1_2?pf_rd_i=19006153011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=5fe5821d-10bc-4d6e-a8d7-b69018016555&pf_rd_r=JVG2W13VAVQ1HJYFHP1Z&pf_rd_s=merchandised-search-2&pf_rd_t=101&qid=1559832413&s=apparel&sr=1-2",
+  title: "TUMI - Nassau Double Billfold Wallet with RFID ID Lock for Men - Whiskey Burnished",
+  price: "$155.00",
+  description: "Leather,Nappa
+  Imported
+  INTERIOR FEATURES: ID window; double bill compartment; 4 card pockets; 2 slip pockets; RFID ID lock
+  MATERIALS: Textured Leather
+  DIMENSIONS: Dimensions in inches 3" x 5" x 1"; weight 0.15 lbss",
+  brand: "TUMI",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/max-gear/wallet.jpg").open,
+  category: "lifestyle",
+)
+
+wallet.user = max_t
+wallet.save!
+
+pink-shoe = Product.new(
+  referal_link: "https://www.amazon.com/L-L-Surprise-Sneakers-Athletic/dp/B07JFDQH3B?ref_=Oct_DLandingS_PC_e2af349c_1&smid=A3FHA054XVVQPZ",
+  title: "L.O.L Surprise Girls Sneakers, Light Up Fashion and Athletic Shoes with Strap, Queen Bee Deva MC Swag and Rocker, Little Girl/Big Girl size 8 to 3, Ages 3 to 10",
+  price: "$23.13",
+  description: "STYLISH & FUN: Queen Bee and Deva, or MC Swag and Rocker on a beautiful, virbrant pink and white sneakers. Kids can enjoy LOL Surprise in style!
+  LIGHT UP: These LOL Surprise sneakers light up! With every step, your child will see their favorite LOL Surprise characters light up.
+  INDOOR & OUTDOOR: Kids can enjoy their sneakers both indoor and outdoor- at home, in the park, and at school! Non-Marking bottoms are perfect for any surface
+  EASY TO PUT ON – Kids can slip their foot into their sneakers, and adjust the strap to their liking. No laces, no problem! Strap provides a more comfortable fit for your child’s foot. Easy to slip on, easy to slip off. No more worrying that your child will trip over their laces!
+  KIDS SIZING: Sizing is available for Little Girl and Big Girl size 8 to 2. Perfect for ages 2 to 8",
+  brand: "L.O.L",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/pinkshoe.jpg").open,
+  category: "clothing",
+)
+
+pink-shoe.user = joao
+pink-shoe.save!
+
+backpack = Product.new(
+  referal_link: "https://www.amazon.com/North-Face-Borealis-Backpack-Black/dp/B0764J1FV5/ref=sr_1_4?crid=11O9QDHC3FKM4&keywords=the+north+face+backpack&qid=1559833093&s=gateway&sprefix=the+north+face+back%2Caps%2C270&sr=8-4",
+  title: "The North Face Borealis Men's Outdoor Backpack",
+  price: "$79.67",
+  description: "The North Face Borealis Men's Outdoor Backpack",
+  brand: "The north face",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/seededC/backpack.jpg").open,
+  category: "lifestyle",
+)
+
+backpack.user = tristan
+backpack.save!
+
 puts "Creating reviews ..."
+
+
 
 r1 = Review.new(
   description: "Hands down the best DSLR you will ever use! I purchased the 1Dx Mark ii for its incredible image quality & high frame rates for both still images & video. It’s ability to take 120 FPS video at 1080p is totally legit & well worth the money!
