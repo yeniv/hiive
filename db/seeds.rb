@@ -9,6 +9,72 @@ User.delete_all
 
 # CREATE USERS
 
+puts "Creating fake Joao..."
+
+max = User.new(
+  email: "max.t@hiive.com",
+  password: "123456",
+  first_name: "Max",
+  last_name: "Teunissen",
+  user_type: "shopper",
+  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
+  description: "Simply awesome."
+)
+
+joao = User.new(
+  email: "joao@hiive.com",
+  password: "123456",
+  first_name: "Joao",
+  last_name: "Lobo",
+  user_type: "shopper",
+  store_url: "joao",
+  photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
+  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
+)
+joao.save!
+
+puts "Creating fake Max S..."
+
+max_s = User.new(
+  email: "max.s@hiive.com",
+  password: "123456",
+  first_name: "Max",
+  last_name: "Salemans",
+  user_type: "shopper",
+  store_url: "max-s",
+  photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
+  description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!"
+)
+max_s.save!
+
+puts "Creating fake Max T..."
+
+max_t = User.new(
+  email: "max.t@hiive.com",
+  password: "123456",
+  first_name: "Max",
+  last_name: "Teunissen",
+  user_type: "shopper",
+  store_url: "max-s",
+  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open
+)
+max_t.save!
+
+puts "Creating fake Tristan..."
+
+tristan = User.new(
+  email: "tristan@hiive.com",
+  password: "123456",
+  first_name: "Tristan",
+  last_name: "Viney",
+  user_type: "shopper",
+  store_url: "tristan",
+  photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
+  description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places."
+)
+
+tristan.save!
+
 puts "Creating fake Caesy..."
 
 casey = User.new(
@@ -20,6 +86,7 @@ casey = User.new(
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/caesey-gear/1_yn3yekLM4yUM2Tr2TXEhvw.jpg").open,
   description: "Hi, I live in New York City and love YouTube."
+  creator_type: "Travel blogger"
 )
 casey.save!
 
@@ -34,6 +101,7 @@ gcn = User.new(
   store_url: "GCN",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
+  creator_type: "Professial Cyclist"
 )
 gcn.save!
 
@@ -49,6 +117,7 @@ dave = User.new(
   photo: Pathname.new("app/assets/images/dave-gear/23347476_1986850841533000_5657334637437911040_n.jpg").open,
   description: "Hey everyone! My name is Dave and I make quality videos about useful tech.
   If you're into that kinda stuff, subscribe!"
+  creator_type: "Tech reviewer"
 )
 dave.save!
 
@@ -58,12 +127,13 @@ peachy = User.new(
   email: "peachy@hiive.com",
   password: "123456",
   first_name: "peachy",
-  last_name: ".",
+  last_name: "P",
   user_type: "creator",
   store_url: "peachy",
   photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
   description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm. 
   "
+  creator_type: "Makeup artist"
 )
 peachy.save!
 
@@ -79,6 +149,7 @@ sierra = User.new(
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
   description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
   "
+  creator_type: "Lifstyle blogger"
 )
 sierra.save!
 
@@ -94,6 +165,7 @@ peter = User.new(
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee."
   )
+  creator_type: "Photography"
 
 peter.save!
 
@@ -512,7 +584,7 @@ zoom = Product.new(
   ",
   brand: "zoom",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/71mwthf7DQL._SL1500_ (1).jpg").open,
   category: "technology"
 )
 
@@ -532,7 +604,7 @@ showpo = Product.new(
   - Cropped Length: 22cm/ 8.66in
   - Exposed Zipper On The Center Back
   - Adjustable Straps
-  - Medium Stretch'
+  - Medium Stretch',
   brand: "showpo",
   seller: "showpo",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
@@ -548,7 +620,7 @@ puts "Creating peachy's gear"
 paris = Product.new(
   referal_link: "https://www.amazon.com/LOreal-Paris-Cosmetics-Voluminous-Paradise/dp/B07DBGRCYN/ref=sr_1_2_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-2-spons&th=1",
   title: "L'Oreal Paris Makeup Lash Paradise Mascara",
-  price: "$14"
+  price: "$14",
   description: "VOLUMIZING AND LENGTHENING MASCARA: This volumizing and lengthening mascara delivers a full lash fringe that’s feathery soft, with no flaking, no smudging, and no clumping. Just voluptuous volume and intense length
   L'OREAL PARIS MASCARA: Get the long, full eyelashes you love with our best mascaras and primers. Choose from our innovative volumizing formulas and variety of brushes",
   brand: "L'oreal",
@@ -627,79 +699,74 @@ puts "Creating dave's gear"
 pixel = Product.new(
   referal_link: "https://www.amazon.com/gp/product/B07HKP9Y8H/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=dav0d2-20&creative=9325&linkCode=as2&creativeASIN=B07HKP9Y8H&linkId=683a0a344c2c03416c768d41e0173c3c",
   title: "Google Pixel 3 64GB - Just Black (Renewed)",
-  price: "$428.9Stunning 5.5 FHD+ flexible OLED at 443ppi display on Corning Gorilla Glass 5
+  price: "$428.9",
+  description:"Stunning 5.5 FHD+ flexible OLED at 443ppi display on Corning Gorilla Glass 5
   Change the way you take pictures with the Pixel 3s 12.2MP dual-pixel rear-facing camera and 8MP wide-angle and normal FoV cameras dual front-facing camera
   Take better night pics with Night Sight. You’ll never want to use your flash again. Night Sight brings out all the best details and colors that get lost in the dark. Only on Pixel.",
-  brand: "L'oreal",
+  brand: "Google",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/peachy-gear/81W3DU17N1L._SX522_.jpg").open,
-  category: "lifestyle"
+  photo: Pathname.new("app/assets/images/dave-gear/51i26XWLGFL._SL1000_.jpg").open,
+  category: "technology"
 )
 
 pixel.user = dave
 pixel.save!
 
-pompom = Product.new(
-  referal_link: "https://www.amazon.com/BEAKEY-Foundation-Blending-Flawless-Multi-colored/dp/B01F36JEXE/ref=sr_1_12?keywords=makeup&qid=1559809511&s=gateway&sr=8-12",
-  title: 'Makeup Sponge Set Blender Beauty Foundation Blending Sponge',
-  price: "$8.99",
-  description: 'Makeup sponges for all kinds of cosmetics, foundation, BB cream, powder, concealer, isolation, liquid, etc
-  Made from non-latex material, soft feeling, well bouncy beauty sponge, easy to distinguish
-  Beauty makeup blender sponge gives you a perfect makeup application, avoid the waste of cosmetics
-  Wet and dry use, blending sponge turns bigger when wet, dab it evenly to form a gorgeous makeup
-  Attention: BEAKEY-US trademark registration number 5280096. 100% money back guarantee. Plz identify the legit BEAKEY products with special BEAKEY brand logo on package. ONLY sold by BEAKEY SELLER. Refer to the 7th main pic for real BEAKEY PRODUCTS.',
-  brand: "Beakey",
+asus = Product.new(
+  referal_link: "https://www.amazon.com/ASUS-IPS-Type-GeForce-Gigabit-TUF505DU-EB74/dp/B07QQB6DC1/ref=sr_1_1?camp=1789&creative=9325&keywords=GA502&linkCode=xm2&linkId=5447bc85e547e4cfa87948c02061ae93&qid=1559810471&s=gateway&sr=8-1",
+  title: 'ASUS TUF (2019) Gaming Laptop',
+  price: "$1,099.00",
+  description: 'Nvidia GeForce GTX 1660 Ti 6GB graphics
+  Quad-core AMD Ryzen 7 3750H Processor
+  15.6” FHD (1920x1080) 120Hz IPS-Type Display
+  256GB NVMe SSD + 1TB HDD | 16GB DDR4 RAM | Windows 10 Home
+  Durable MIL-STD-810 military standard construction
+  Dual fans with anti-dust technology | Backlit keyboard rated for 20-million keystroke durability',
+  brand: "Asus",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/peachy-gear/61b-R9LbtdL._SX522_.jpg").open,
-  category: "lifestyle",
+  photo: Pathname.new("app/assets/images/dave-gear/81pG6xR8dnL._SL1500_.jpg").open,
+  category: "technology",
 )
 
-pompom.user = peachy
-pompom.save!
+asus.user = dave
+asus.save!
 
-pincel = Product.new(
-  referal_link: "https://www.amazon.com/BS-MALL-Synthetic-Cosmetics-Foundation-Blending/dp/B071K5RTRT/ref=sr_1_21_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-21-spons&psc=1",
-  title: "Premium Synthetic Kabuki Makeup Brush Set Cosmetics",
+razerp = Product.new(
+  referal_link: "https://www.amazon.com/Razer-Phone-New-Smartphone-Snapdragon/dp/B07H9V6PHZ/ref=sr_1_1?camp=1789&creative=9325&keywords=zenfone+6&linkCode=xm2&linkId=de0e4e6e6c965f015d3b258f2c22617e&qid=1559810476&s=gateway&sr=8-1",
+  title: "Razer Phone 2",
   price: "$9.99",
-  description: "BS-MALL Makeup Brushes Provides Assortment of Makeup Brushes - Kabuki, Foundation, & Eye Shadow Brushes; Lip Liner, Blush & Powder Brushes. 
-  Shop BS-MALL's array of makeup brushes, cosmetic tools and applicators to ensure perfect results. Find beauty tools for face,eyelashes, eyebrows and more. 
-  Our makeup brushes have bold handle for easy use. Highest quality material, high density bristle, high quality Synthetic fiber hair,Does Not SHED.",
-  brand: "BS-MALL",
+  description: "LIMITED TIME OFFER: Promotional discount available for a limited time.
+  120Hz ULTRAMOTION QHD DISPLAY: the fastest mobile gaming display, now brighter
+  QUALCOMM SNAPDRAGON 845: With a custom vapor chamber cooling system
+  DUAL FRONT-FACING STEREO SPEAKERS: Featuring Dolby Atomos and a THX Certified DAC
+  WIRELESS FAST CHARGING: With large internal 4, 000 mAh battery
+  NETFLIX READY: View content in HDR and Dolby Digital Plus 5. 1
+  STORAGE: 8GB RAM / 64GB storage + micro SD Slot (up to 2TB)",
+  brand: "Razer",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/peachy-gear/718YMreZcHL._SX522_.jpg").open,
-  category: "lifestyle",
+  photo: Pathname.new("app/assets/images/dave-gear/81KE0PK21-L._SL1500_.jpg").open,
+  category: "technology",
 )
 
-pincel.user = peachy
-pincel.save!
+razerp.user = dave
+razerp.save!
 
-rmv = Product.new(
-  referal_link: "https://www.amazon.com/MS-DEAR-Color-Removal-Sponge-Solutions/dp/B06W5PMXV9/ref=sr_1_27?keywords=makeup&qid=1559809511&s=gateway&sr=8-27&th=1",
-  title: "Color Removal Sponge",
-  price: "$5.99",
-  description: "Even you use high-pigment eye shadow, you just ran the brush back and forth across the sponge a few times, and then ran it across the sponge a few more times, it really remove all remaining color on the brush quickly and effectively, so that you can immediately use it for another color and that helps speed up your makeup process.",
-  brand: "MS.dear",
+samsung = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B07C65XFBB/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=dav0d2-20&creative=9325&linkCode=as2&creativeASIN=B07C65XFBB&linkId=036f69966ce2e585f5739da024f189a4",
+  title: "Samsung Galaxy S9",
+  price: "$359",
+  description: "Super Speed Dual Pixel Camera with Rear Dual Camera
+  Infinity Display: edge-to-edge immersive screen, enhancing your entertainment experience**
+  IP68 rating: withstands splashes, spills, and rain so it can take a dip, worry-free***
+  Internal Memory 64 GB. Expandable Storage up to 400GB****",
+  brand: "Samsung",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/peachy-gear/71QQ41TtiqL._SX522_.jpg").open,
-  category: "lifestyle"
+  photo: Pathname.new("app/assets/images/dave-gear/41KOSseOOdL._SL1000_.jpg").open,
+  category: "technology"
 )
 
-rmv.user = peachy
-rmv.save!
-
-box = Product.new(
-  referal_link: "https://www.amazon.com/Prism-Makeup-ROSEMARRY-Pigmented-Eyeshadow/dp/B07RLN3XSD/ref=sr_1_30?keywords=makeup&qid=1559809511&s=gateway&sr=8-30&th=1",
-  title: "Prism Makeup ROSEMARRY ",
-  price: "$12.99",
-  description: "【MATTE AND SHIMMER COLORS】PRISM MAKEUP ROSEMARRY eyeshadow palette with 18 shades, including luminous, natural matte colors and shimmer. Great colour combination: gorgeous shimmering bronze, eye popping copper and warm ballet pink. Super creamy, velvety soft and smooth, easy to layer and blend. Great for exploring colors and makeup artistry",
-  brand: "Prism makeup",
-  seller: "Amazon",
-  photo: Pathname.new("app/assets/images/peachy-gear/71Rt-4ZI5HL._SX522_.jpg").open,
-  category: "lifestyle"
-)
-
-box.user = peachy
-box.save!
+samsung.user = dave
+samsung.save!
 
 puts "Creating reviews ..."
 
