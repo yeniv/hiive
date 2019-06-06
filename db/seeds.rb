@@ -224,7 +224,7 @@ georgia = User.new(
   password: "123456",
   first_name: "Feorgia",
   last_name: "Free",
-  store_url: "casey",
+  store_url: "georgia",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (4).jpg").open,
   description: "I give advice to woman about relashionship behaiviour",
@@ -252,13 +252,13 @@ roman = User.new(
   password: "123456",
   first_name: "roman",
   last_name: "mards",
-  store_url: "casey",
+  store_url: "roman",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/ut_roman_1_intro.jpg").open,
   description: "Hi,i give advice, and talk about the design and all the work put into everyday things!",
   creator_type: "Podcaster",
 )
-casey.save!
+roman.save!
 
 puts "Creating fake GCN.."
 
