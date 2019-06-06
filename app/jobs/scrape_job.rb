@@ -9,8 +9,8 @@ class ScrapeJob < ApplicationJob
 
     if amazon_check
       product_params = Scraper.amazon_scraper(link)
-      user_exists = User.find_by_id(user_id).nil?
-      return if product_params.nil? || user_exists
+      # user_exists = User.find_by_id(user_id).nil?
+      return if product_params.nil? # || user_exists
 
       new_product = Product.new(product_params)
       new_product.user_id = user_id
