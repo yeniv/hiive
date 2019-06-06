@@ -94,7 +94,7 @@
     text-decoration: none;
     a {
       color: $orange;
-      font-size: 20px;
+      font-size: 18px;
     }
 }
 .profile-about-user-text {
@@ -137,6 +137,18 @@
   padding-left: 15px;
   padding-right: 15px;
   margin-right: -12px;
+}
+.profile-social-media {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 10px 20px;
+  a {
+    font-size: 26px;
+    color: $text-gray;
+  }
+  a:hover {
+    color: $rollover-purple;
+  }
 }
 @media (min-width: 1200px) {
   .profile-flex {
