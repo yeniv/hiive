@@ -1,34 +1,34 @@
 <div class=" nav-padding allpage">
   <div class=" container category-cards-middle">
     <div class="title-categories">
-        <span class="title-aligned">Top 5 Categories : </span>
+        <span class="title-aligned">Top 5 Categories</span>
     </div>
     <div class="cards display-of-cards">
-        <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
+        <%= link_to "products?cat=Photography" do %>
             <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/photography-category.jpg") %>')">
                 Photography
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "tools").permit(:cat, :query) do %>
+        <%= link_to "products?cat=tools" do %>
             <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
                 Tools
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "cycling").permit(:cat, :querry) do %>
+        <%= link_to "products?cat=cycling" do %>
             <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/cycling-category.jpg") %>')">
                 Cycling
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "clothing").permit(:cat, :querry) do %>
+        <%= link_to "products?cat=clothing" do %>
             <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/clothing-category.jpg") %>')">
                 Clothing
             </div>
         <% end %>
 
-        <%= link_to params.merge(cat: "lifestyle").permit(:cat, :querry) do %>
+        <%= link_to "products?cat=lifestyle" do %>
             <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/lifestyle-category.jpg") %>')">
                 Lifestyle
             </div>
@@ -38,27 +38,21 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned">Top 5 creators :</span>
+      <span class="title-aligned">Top 5 creators</span>
     </div>
     <div class="card-5-creators">
-      <div class="row">
+      <div class="row profiles-in-middle">
         <% @all_likes.each do |user|  %>
-          <div class="user-info-discover user-info-left">
-            <div class="profile-user-card profile-headline">
-              <!-- <h3> <span class="profile-headline-highlight"> creator </span></h3> -->
-              <div class="d-flex justify-content-center">
-              <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+          <%= link_to "#{user.store_url}" do %>
+              <div class="profile-user-card-discover profile-headline">
+                <!-- <h3> <span class="profile-headline-highlight"> creator </span></h3> -->
+                <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+                <h3>
+                  <span class="profile-headline-highlight-discover"><%= user.first_name %></span></br>
+                  <span class="profile-headline-highlight-discover"><%= user.last_name %></span>
+                </h3>      
               </div>
-              <h3>
-                <span class="profile-headline-highlight"><%= user.first_name %></span>
-                <span class="profile-headline-highlight"><%= user.last_name %></span>
-              </h3>
-              <div class="profile-user-content-discover">
-                <h5> <%= user.creator_type %></h5>
-                <p class= ""> <%= user.description %></p>
-              </div>
-            </div>
-          </div>
+          <% end %>
         <% end %>
       </div>
     </div>
@@ -66,7 +60,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >4 Random products :</span>
+      <span class="title-aligned" >4 Random products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
@@ -115,7 +109,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >Top 4 products :</span>
+      <span class="title-aligned" >Top products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
