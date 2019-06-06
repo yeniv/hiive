@@ -102,7 +102,7 @@
           </div>
           </div>
           </div>
-            <%= button_to "buy", product.referal_link, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
+            <%= button_to "buy", product.referal_link, :formtarget => "_blank", class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
             <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-right' %>
           </div>
         <% end %>
@@ -151,7 +151,7 @@
           </div>
           </div>
           </div>
-            <%= button_to "buy", product.referal_link, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
+            <%= button_to "buy", product.referal_link, :formtarget => "_blank", class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
             <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-right' %>
           </div>
         <% end %>
