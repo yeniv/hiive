@@ -89,8 +89,8 @@ casey = User.new(
   creator_type: "Travel blogger",
 )
 casey.save!
-
-  broom = User.new(
+puts "Creating fake Boiler..."
+broom = User.new(
   email: "broom@hiive.com",
   password: "123456",
   first_name: "boiler",
@@ -102,7 +102,7 @@ casey.save!
   creator_type: "Dj",
 )
 broom.save!
-
+puts "Creating fake report..."
 food = User.new(
   email: "food@hiive.com",
   password: "123456",
@@ -115,7 +115,7 @@ food = User.new(
   creator_type: "Food reviewer",
 )
 food.save!
-
+puts "Creating fake professor poliakoff..."
 professor = User.new(
   email: "poliakoff@hiive.com",
   password: "123456",
@@ -128,7 +128,7 @@ professor = User.new(
   creator_type: "Teacher",
 )
 professor.save!
-
+puts "Creating fake dave ramsey..."
 
 daver = User.new(
   email: "dave_ramsay@hiive.com",
@@ -142,7 +142,7 @@ daver = User.new(
   creator_type: "Podcaster",
 )
 daver.save!
-
+puts "Creating fake piewdiepie..."
 pewds = User.new(
   email: "pewds@hiive.com",
   password: "123456",
@@ -155,6 +155,7 @@ pewds = User.new(
   creator_type: "Gamer",
 )
 pewds.save!
+puts "Creating fake joe rogan..."
 
 joe = User.new(
   email: "joe@hiive.com",
@@ -167,9 +168,8 @@ joe = User.new(
   description: "I am the biggest podcaster in the world, and a MMA jiujitsu fighter",
   creator_type: "Podcaster",
 )
-
 joe.save!
-
+puts "Creating fake Capitan joe..."
 capitan = User.new(
   email: "capitan@hiive.com",
   password: "123456",
@@ -182,7 +182,7 @@ capitan = User.new(
   creator_type: "Pilot",
 )
 capitan.save!
-
+puts "Creating fake Classy vlog..."
 classy = User.new(
   email: "classy@hiive.com",
   password: "123456",
@@ -195,7 +195,7 @@ classy = User.new(
   creator_type: "Travel blogger",
 )
 classy.save!
-
+puts "Creating fake blad and bankrupt..."
 bald = User.new(
   email: "bald@hiive.com",
   password: "123456",
@@ -208,7 +208,7 @@ bald = User.new(
   creator_type: "Travel blogger",
 )
 bald.save!
-
+puts "Creating fake georgia..."
 georgia = User.new(
   email: "georgia@hiive.com",
   password: "123456",
@@ -221,7 +221,7 @@ georgia = User.new(
   creator_type: "Life choach",
 )
 georgia.save!
-
+puts "Creating fake mark..."
 mark = User.new(
   email: "mark@hiive.com",
   password: "123456",
@@ -234,7 +234,7 @@ mark = User.new(
   creator_type: "Food reviewer",
 )
 mark.save!
-
+puts "Creating fake roman..."
 roman = User.new(
   email: "roman@hiive.com",
   password: "123456",
@@ -247,7 +247,6 @@ roman = User.new(
   creator_type: "Podcaster",
 )
 casey.save!
-
 
 puts "Creating fake GCN.."
 
