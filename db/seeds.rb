@@ -224,7 +224,7 @@ georgia = User.new(
   password: "123456",
   first_name: "Feorgia",
   last_name: "Free",
-  store_url: "casey",
+  store_url: "georgia",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (4).jpg").open,
   description: "I give advice to woman about relashionship behaiviour",
