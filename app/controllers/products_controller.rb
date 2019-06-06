@@ -50,14 +50,20 @@ class ProductsController < ApplicationController
 
   def scrape
     authorize :product, :scrape?
+    user_id = current_user.id
 
-    unless params[:link].nil?
-      product_params = Scraper.validator(params[:link])
+    # old scraper that is fucked
+    # unless params[:link].nil?
+    #   product_params = Scraper.validator(params[:link])
+    #   product_params.each do |param|
+    #     # ScrapeJob.perform_later(param, current_user.id)
+    #     ScrapeJob.perform_later(param, user_id)
+    #   end
+    # end
 
-      product_params.each do |param|
-        ScrapeJob.perform_later(param, current_user.id)
-      end
-    end
+    # new scraper i really hope works
+##
+    HailMaryScraperJob.perform_later(params[:link], user_id) unless params[:link].nil?
     redirect_to private_profile_path
   end
 
@@ -65,7 +71,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     authorize @product
     @product.destroy
-    redirect_to private_profile_path(current_user)
+    # redirect_to private_profile_path(current_user)
     flash[:alert] = "⚡️ #{@product.title} was removed from your store!"
   end
 
