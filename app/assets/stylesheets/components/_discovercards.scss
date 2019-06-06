@@ -18,7 +18,8 @@
 
 .display-of-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
 .card-category-discover-page {
@@ -38,7 +39,14 @@
 }
 
 .title-aligned {
-    margin-left: 10px;
+    // margin-left: 10px;
+    background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 900;
 }
 
 .single-creator {
@@ -50,7 +58,7 @@
     text-align: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    // background-color: white;
     box-shadow: 0px 5px 26px 0px rgba(0,0,0,0.1);
 
 }
@@ -104,4 +112,41 @@
     align-items: flex-start;
     box-shadow: 0px 5px 26px 0px rgba(0,0,0,0.1);
     background-color: white;
+}
+
+.profile-user-content-discover {
+    color: #6e6e6e;
+    font-size: 14px;
+    font-weight: 400;
+    background: white;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: -100px;
+    padding-top: 115px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 1px;
+    height: 350px;
+}
+
+.user-info-discover {
+    width: 20%;
+    padding: 0;
+    margin-left: 15px;
+}
+
+.hive-card-container-discover {
+    padding: 8px;
+    margin: 15px 0px 0px 7px;
+}
+
+.hiive-card-photo-discover {
+    width: 100%;
+    margin: 0 auto;
+    height: 220px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 4px;
+    margin-top: 15px;
 }
