@@ -11,9 +11,16 @@
       <div class="profile-user-content">
         <h5> <%= @user.creator_type %></h5>
         <p class= ""> <%= @user.description %></p>
+
+          <div class="profile-social-media">
+            <a href="#"><i class="fab fa-youtube"></i></a></li>
+            <a href="#"><i class="fab fa-instagram"></i></a></li>
+            <a href="#"><i class="fab fa-twitter"></i></a></li>
+            <a href="#"><i class="fab fa-facebook"></i></a></li>
+          </div>
+
       </div>
       <div class="profile-headline profile-share-url">
-       <!-- <h2>⚡️</h2> -->
        <h4>
          <span class="profile-url-highlight">Share your store</span>
          <span class="profile-url-highlight"><a href="/<%= @user.store_url %>">hiive.buzz/<%= @user.store_url %></a></span>
