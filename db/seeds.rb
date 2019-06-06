@@ -1120,7 +1120,7 @@ wallet = Product.new(
   Imported
   INTERIOR FEATURES: ID window; double bill compartment; 4 card pockets; 2 slip pockets; RFID ID lock
   MATERIALS: Textured Leather
-  DIMENSIONS: Dimensions in inches 3" x 5" x 1"; weight 0.15 lbss",
+  DIMENSIONS: Dimensions in inches 3 x 5 x 1 weight 0.15 lbss",
   brand: "TUMI",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/max-gear/wallet.jpg").open,
