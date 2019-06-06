@@ -55,7 +55,7 @@ class ProductsController < ApplicationController
       product_params = Scraper.validator(params[:link])
 
       product_params.each do |param|
-        ScrapeJob.set(wait: 5.seconds).perform_later.(param, current_user.id)
+        ScrapeJob.perform_later(param, current_user.id)
       end
     end
     redirect_to private_profile_path
