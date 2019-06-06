@@ -1,7 +1,7 @@
 <div class=" nav-padding allpage">
   <div class=" container category-cards-middle">
     <div class="title-categories">
-        <span class="title-aligned">Top 5 Categories</span>
+        <span class="title-aligned">top 5 Categories</span>
     </div>
     <div class="cards display-of-cards">
         <%= link_to "products?cat=Photography" do %>
@@ -38,7 +38,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned">Top 5 creators</span>
+      <span class="title-aligned">top 5 creators</span>
     </div>
     <div class="card-5-creators">
       <div class="row profiles-in-middle">
@@ -50,6 +50,9 @@
                 <h3>
                   <span class="profile-headline-highlight-discover"><%= user.first_name %></span></br>
                   <span class="profile-headline-highlight-discover"><%= user.last_name %></span>
+                  <div class="adding-margin-creators">
+                      <span><%= user.creator_type %></span>
+                  </div>
                 </h3>      
               </div>
           <% end %>
@@ -60,7 +63,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >4 Random products</span>
+      <span class="title-aligned" >4 random products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
@@ -109,7 +112,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >Top products</span>
+      <span class="title-aligned" >top products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
@@ -130,7 +133,7 @@
 
             <% if product.likes.where(user: @current).empty? %>
 
-              <%= render partial: "likes/like", locals: {
+              <%= render partzial: "likes/like", locals: {
                 product: product
               } %>
 
