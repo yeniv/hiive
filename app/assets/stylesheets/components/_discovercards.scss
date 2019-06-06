@@ -38,6 +38,10 @@
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+.card-category-discover-page:hover {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
 .title-aligned {
     // margin-left: 10px;
     background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
@@ -47,6 +51,7 @@
     font-size: 45px;
     line-height: 55px;
     font-weight: 900;
+    padding: 2px 7px;
 }
 
 .single-creator {
@@ -149,4 +154,37 @@
     border-radius: 10px 10px 0 0;
     margin-bottom: 4px;
     margin-top: 15px;
+}
+
+.profile-headline-highlight-discover {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 28px;
+    font-weight: 900;
+    text-align: left;
+    margin-top: -85px;
+    background-color: #823ea3
+}
+
+.profile-user-card-discover {
+    margin-top: 20px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.profiles-in-middle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-user-card-discover:hover {
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-line: 10px;
+    // line-height: 5px;
+}
+
+span.profile-headline-highlight-discover {
+    padding: 2px 7px;
 }
