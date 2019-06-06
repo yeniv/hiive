@@ -31,7 +31,7 @@
             <div class="btn-hoover"> </div>
             <div class="images-prod" style="background-image: url(<%= product.photo %>)">
             </div>
-            <p hidden class="lookup"><%= product.brand + product.price + product.seller + product.description + product.user.first_name + product.user.last_name %></p>
+            <p hidden class="lookup"><%= product.brand + product.price + product.seller + product.description + product.user.first_name + product.user.last_name + product.title + product.category%></p>
             <% end %>
             <div class="position-relative">
               <p class="description-show one-line"><%= product.title %></p>
