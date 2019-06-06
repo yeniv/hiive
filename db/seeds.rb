@@ -143,18 +143,20 @@ daver = User.new(
 )
 daver.save!
 puts "Creating fake piewdiepie..."
-pewds = User.new(
+
+  pewds = User.new(
   email: "pewds@hiive.com",
   password: "123456",
   first_name: "Felix",
   last_name: "piewdiepie",
-  store_url: "casey",
+  store_url: "pewds",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/pewdiepie-mental-health.jpg").open,
   description: "I make kid friendly jokes",
   creator_type: "Gamer",
 )
 pewds.save!
+
 puts "Creating fake joe rogan..."
 
 joe = User.new(
@@ -169,6 +171,12 @@ joe = User.new(
   creator_type: "Podcaster",
 )
 joe.save!
+
+
+
+
+
+
 puts "Creating fake Capitan joe..."
 capitan = User.new(
   email: "capitan@hiive.com",
@@ -195,7 +203,9 @@ classy = User.new(
   creator_type: "Travel blogger",
 )
 classy.save!
+
 puts "Creating fake blad and bankrupt..."
+
 bald = User.new(
   email: "bald@hiive.com",
   password: "123456",
@@ -221,7 +231,9 @@ georgia = User.new(
   creator_type: "Life choach",
 )
 georgia.save!
+
 puts "Creating fake mark..."
+
 mark = User.new(
   email: "mark@hiive.com",
   password: "123456",
@@ -256,7 +268,7 @@ gcn = User.new(
   first_name: "GC",
   last_name: "Network",
   user_type: "creator",
-  store_url: "GCN",
+  store_url: "gcn",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!",
   creator_type: "Professial Cyclist",
