@@ -34,7 +34,7 @@
 
         </div>
         <div class="images-public-profile" style="background-image: url(<%= @product.photo %>)"></div>
-        <div class="buy-btn-center"><%= button_to "Purchase from " + @product.seller, @product.referal_link, class: 'buy-btn rounded-btn'%></div>
+        <div class="buy-btn-center"><%= button_to "Purchase from " + @product.seller, @product.referal_link, formtarget: "_blank", class: 'buy-btn rounded-btn'%></div>
 
       </div>
       <div class="strong-purple ml-5 mt-4">
