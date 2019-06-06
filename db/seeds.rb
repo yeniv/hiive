@@ -297,7 +297,7 @@ shimano_gear = Product.new(
 shimano_gear.user = gcn
 shimano_gear.save!
 
-puts "Creating Max Gear"
+puts "Creating steve Gear"
 
 chisel = Product.new(
   referal_link: "https://www.amazon.com/dp/B0165WKKY2/?cv_ct_id=amzn1.idea.MUCBTHY2XFPZ&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
@@ -432,7 +432,7 @@ lenovo = Product.new(
   Product Type: Ultrabook, Processor Manufacturer: Intel, Processor Type: Core i7, Processor Generation: 8th Gen, Processor Model: i7-8650U, Processor Speed: 1.90 GHz, Processor Core: Quad-core (4 Core), Standard Memory: 16 GB, Memory Technology: LPDDR3, Solid State Drive Capacity: 512 GB, Screen Size: 14, Display Screen Type: LCD,
   Display Screen Technology: In-plane Switching (IPS) Technology, Screen Resolution: 1920 x 1080, Touchscreen: Yes, Graphics Controller Manufacturer: Intel, Graphics Controller Model: UHD Graphics 620, Graphics Memory Technology: LPDDR3, Graphics Memory Accessibility: Shared, Wireless LAN: Yes, Wireless LAN Standard: IEEE 802.11a/b/g/n/ac, Ethernet Technology: Ethernet, Bluetooth: Yes,
   Front Camera/Webcam: Yes, Finger Print Reader: Yes, HDMI: Yes, Total Number of USB Ports: 4, Number of USB 3.0 Ports: 2, USB Type-C: Yes, USB Type-C Detail: 2 USB Type C, Network (RJ-45): Yes, Operating System Platform: Windows, Operating System: Windows 10 Pro (English), Operating System Architecture: 64-bit,
-  Keyboard Localization: English (US), Number of Batteries: 1, Number of Cells: 3-cell, Input Voltage: 120 V AC, Input Voltage: 230 V AC, Color: Black, Height: 0.6", Width: 8.5", Depth: 12.7, Weight (Approximate): 2.49 lb, Package Contents: ThinkPad X1 Carbon 6th Gen 20KH002JUS Ultrabook, Lithium Polymer Battery, AC Adapter, Limited Warranty: 3 Yea",
+  Keyboard Localization: English (US), Number of Batteries: 1, Number of Cells: 3-cell, Input Voltage: 120 V AC, Input Voltage: 230 V AC, Color: Black, Height: 0.6, Width 8.5, Depth: 12.7, Weight (Approximate): 2.49 lb, Package Contents: ThinkPad X1 Carbon 6th Gen 20KH002JUS Ultrabook, Lithium Polymer Battery, AC Adapter, Limited Warranty: 3 Yea",
   brand: "lenovo",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/71wJJL7q8nL._SL1500_.jpg").open,
@@ -444,220 +444,262 @@ lenovo.save!
 
 puts "Creating seirra gear"
 
-wheels = Product.new(
-  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Enve 4.5 Clincher Wheelset",
-  price: "$2900",
-  description: "Custom built product- Please allow 2 business days production before shipping.
-                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
-                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
-                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
-                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
-  brand: "Enve",
+mackin = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B07KT6MGZB/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=sierrasc-20&creative=9325&linkCode=as2&creativeASIN=B07KT6MGZB&linkId=b04bc4f9c80034705420fe935312b8e6",
+  title: "MACKIN J 343-1 Retro Cone Mid Calf Bootie",
+  price: "$25",
+  description: "PERFECT BOSST: Give yourslf the perfect boost of the day in these booties. The 3.35 inch height cone heels reveals a sturdy long lasting boot.
+  COMFORT AND DURABLITY. You will fall in love with the comfort
+  GET THE LOOK. Versatile, mid-calf booties give a simple, sleek look.  Perfect for year round wear.
+  100 % VEGAN. Lightweight fabric, no animals were harmed making this item.
+  FIT. This fit is true to size . Wear it with jeans or leggings.",
+  brand: "MACKIN J",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/51K-LeBdH-L._UY695_.jpg").open,
+  category: "clothing"
 )
 
-wheels.user = gcn
-wheels.save!
+mackin.user = sierra
+mackin.save!
 
-cycle_bag = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
-  price: "$124.95",
-  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
-                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
-                Create limitless set-ups with a robust, SlipLock compatible strap system
-                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
-                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
-  brand: "Lowepro",
+flower = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B06XTSYHQQ/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=sierrasc-20&creative=9325&linkCode=as2&creativeASIN=B06XTSYHQQ&linkId=5f32a5efeb0a510d994229956ff69ba7",
+  title: 'Handmade Rose Flower Wreath Crown Halo for Wedding Festivals',
+  price: "$13.95",
+  description: 'Because it is handmade, normally, several small balls will fall off. But it can be easily glued without influencing the overall outlook
+  Floral Headband with simply, sweet, elegant design, makes you look more charming and eye-catching
+  Adjustable size with the ribbon,very comfortable to wear and doesnxt demand an exclusive hair style to hold it
+  Perfect for those who allergic to flowers and suffer from headaches due to strongly smelling flowers
+  It come in pleasant colors matching any dress and occasion,such as bridal, bridesmaids or flower girls in the wedding, festivals, photography, etc',
+  brand: "Ever Fairy",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
-  category: "Photography",
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/61RJO5UFbfL._SX679._SX._UX._SY._UY_.jpg").open,
+  category: "clothing",
 )
 
-cycle_bag.user = gcn
-cycle_bag.save!
+flower.user = sierra
+flower.save!
 
-helmet = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Kask Protone Helmet",
-  price: "$181.42",
-  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
-                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
-                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
-                Reinforced frame protects the shell from secondary impacts",
+dress = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B072Q32QXR/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=sierrasc-20&creative=9325&linkCode=as2&creativeASIN=B072Q32QXR&linkId=0760ee9eea27c96eedfae9d7710fe132",
+  title: "iHeartRaves Women's Stretchy Sheer Mesh and Lace Long Side Slit Maxi Skirts",
+  price: "$39",
+  description: "100% Polyester
+  Elastic closure
+  Machine wash warm separately; Do not bleach; Tumble dry low
+  Exclusively designed by the iHeartRaves team. **Bottoms sold separately**
+  Add a touch of elegance to your next festival outfit with our Women's Sheer Mesh Maxi Skirts. The beautiful details on these garments will have you feeling extra fancy on the dance floor.
+  SHEER BLISS: These mesh skirts features sultry slits and can be easily paired with a bodysuit or your favorite bottoms. The stretchy, elastic band or adjustable front tie will fit most body types and sultry side cutouts give your outfit an edgy look. Layer this sheer skirt over booty shorts to complete your festival look!
+  PERFECT FOR - dancing, steampunk outfits, rave clothes, club wear, gothic & lolita outfits, concert clothing, music festival attire, parties, going out on the town, date night, or other events!",
   brand: "Kask",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
-  category: "cycling",
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/61bASkT2jtL._UX569_.jpg").open,
+  category: "clothing",
 )
 
-helmet.user = gcn
-helmet.save!
+dress.user = sierra
+dress.save!
 
-shimano_gear = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
-  price: "$223",
-  description: "HG-EV 11-speed cassette sprocket
-                Rider tuned wider gearing options
-                Includes lock ring
-                Made in Japan",
-  brand: "Shimano",
+zoom = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B01DPOXS8I/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=schultzzie-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01DPOXS8I&linkId=da82d623a20742dbae3eeccd93d9be6b",
+  title: "Zoom H4N PRO Digital Multitrack Recorder",
+  price: "$219",
+  description: "Four-channel recording up to 24-bit, 96 kHz. Built-in stereo X/Y microphones, up to 140 dB SPL
+  2 XLR/TRS inputs with locking connectors. Records directly to SD/SDHC cards up to 32 GB
+  4-in/2-out USB audio interface. Monaural speaker: 400 mW 8 Ω
+  Line/phone-LINE Output load impedance- 10 kΩ or more. LINE rated output level: -10 dBu. PHONE- 20 mW + 20 mW (into 32Ω load)
+  Usb 2.0 high speed. Usb functions can be powered using usb bus power. Plug-in and phantom power cannot be set during recording and playback. Compatible operating systems is windows vista and newer mac os x 10.6 and newer
+  ",
+  brand: "zoom",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
+  category: "technology"
 )
 
-shimano_gear.user = gcn
-shimano_gear.save!
+zoom.user = sierra
+zoom.save!
 
-puts "Creating Joao's gear"
+showpo = Product.new(
+  referal_link: "https://www.showpo.com/eu/azure-top-in-black?utm=cmf&utm_source=CommissionFactory&utm_medium=Text+Link&utm_content=&utm_campaign=Affiliate_45242&affid=45242&clickid=&cfclick=e4f1b472abdd44079da91e77a0998a15&t=1559807205856",
+  title: 'Azure Top In Black Mesh',
+  price: "$35",
+  description: 'Stand out from the crowd in the Azure Top In Black! This is the top that you need in your life! Sitting at a cropped length and featuring adjustable straps, youll never want to take this stunning piece off!
 
-wheels = Product.new(
-  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Enve 4.5 Clincher Wheelset",
-  price: "$2900",
-  description: "Custom built product- Please allow 2 business days production before shipping.
-                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
-                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
-                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
-                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
-  brand: "Enve",
+
+  - Made With 100% Polyester & Love
+  - No Lining
+  - Care For Me: Hand Wash With Cold Water, Cool Iron, Do Not Soak, Do Not Tumble Dry, Wash Separately
+  - Cropped Length: 22cm/ 8.66in
+  - Exposed Zipper On The Center Back
+  - Adjustable Straps
+  - Medium Stretch'
+  brand: "showpo",
+  seller: "showpo",
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
+  category: "clothing",
+)
+
+showpo.user = sierra
+showpo.save!
+
+
+puts "Creating peachy's gear"
+
+paris = Product.new(
+  referal_link: "https://www.amazon.com/LOreal-Paris-Cosmetics-Voluminous-Paradise/dp/B07DBGRCYN/ref=sr_1_2_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-2-spons&th=1",
+  title: "L'Oreal Paris Makeup Lash Paradise Mascara",
+  price: "$14"
+  description: "VOLUMIZING AND LENGTHENING MASCARA: This volumizing and lengthening mascara delivers a full lash fringe that’s feathery soft, with no flaking, no smudging, and no clumping. Just voluptuous volume and intense length
+  L'OREAL PARIS MASCARA: Get the long, full eyelashes you love with our best mascaras and primers. Choose from our innovative volumizing formulas and variety of brushes",
+  brand: "L'oreal",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/peachy-gear/81W3DU17N1L._SX522_.jpg").open,
+  category: "lifestyle"
 )
 
-wheels.user = gcn
-wheels.save!
+paris.user = peachy
+paris.save!
 
-cycle_bag = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
-  price: "$124.95",
-  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
-                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
-                Create limitless set-ups with a robust, SlipLock compatible strap system
-                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
-                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
-  brand: "Lowepro",
+pompom = Product.new(
+  referal_link: "https://www.amazon.com/BEAKEY-Foundation-Blending-Flawless-Multi-colored/dp/B01F36JEXE/ref=sr_1_12?keywords=makeup&qid=1559809511&s=gateway&sr=8-12",
+  title: 'Makeup Sponge Set Blender Beauty Foundation Blending Sponge',
+  price: "$8.99",
+  description: 'Makeup sponges for all kinds of cosmetics, foundation, BB cream, powder, concealer, isolation, liquid, etc
+  Made from non-latex material, soft feeling, well bouncy beauty sponge, easy to distinguish
+  Beauty makeup blender sponge gives you a perfect makeup application, avoid the waste of cosmetics
+  Wet and dry use, blending sponge turns bigger when wet, dab it evenly to form a gorgeous makeup
+  Attention: BEAKEY-US trademark registration number 5280096. 100% money back guarantee. Plz identify the legit BEAKEY products with special BEAKEY brand logo on package. ONLY sold by BEAKEY SELLER. Refer to the 7th main pic for real BEAKEY PRODUCTS.',
+  brand: "Beakey",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
-  category: "Photography",
+  photo: Pathname.new("app/assets/images/peachy-gear/61b-R9LbtdL._SX522_.jpg").open,
+  category: "lifestyle",
 )
 
-cycle_bag.user = gcn
-cycle_bag.save!
+pompom.user = peachy
+pompom.save!
 
-helmet = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Kask Protone Helmet",
-  price: "$181.42",
-  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
-                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
-                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
-                Reinforced frame protects the shell from secondary impacts",
-  brand: "Kask",
+pincel = Product.new(
+  referal_link: "https://www.amazon.com/BS-MALL-Synthetic-Cosmetics-Foundation-Blending/dp/B071K5RTRT/ref=sr_1_21_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-21-spons&psc=1",
+  title: "Premium Synthetic Kabuki Makeup Brush Set Cosmetics",
+  price: "$9.99",
+  description: "BS-MALL Makeup Brushes Provides Assortment of Makeup Brushes - Kabuki, Foundation, & Eye Shadow Brushes; Lip Liner, Blush & Powder Brushes. 
+  Shop BS-MALL's array of makeup brushes, cosmetic tools and applicators to ensure perfect results. Find beauty tools for face,eyelashes, eyebrows and more. 
+  Our makeup brushes have bold handle for easy use. Highest quality material, high density bristle, high quality Synthetic fiber hair,Does Not SHED.",
+  brand: "BS-MALL",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
-  category: "cycling",
+  photo: Pathname.new("app/assets/images/peachy-gear/718YMreZcHL._SX522_.jpg").open,
+  category: "lifestyle",
 )
 
-helmet.user = gcn
-helmet.save!
+pincel.user = peachy
+pincel.save!
 
-shimano_gear = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
-  price: "$223",
-  description: "HG-EV 11-speed cassette sprocket
-                Rider tuned wider gearing options
-                Includes lock ring
-                Made in Japan",
-  brand: "Shimano",
+rmv = Product.new(
+  referal_link: "https://www.amazon.com/MS-DEAR-Color-Removal-Sponge-Solutions/dp/B06W5PMXV9/ref=sr_1_27?keywords=makeup&qid=1559809511&s=gateway&sr=8-27&th=1",
+  title: "Color Removal Sponge",
+  price: "$5.99",
+  description: "Even you use high-pigment eye shadow, you just ran the brush back and forth across the sponge a few times, and then ran it across the sponge a few more times, it really remove all remaining color on the brush quickly and effectively, so that you can immediately use it for another color and that helps speed up your makeup process.",
+  brand: "MS.dear",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/peachy-gear/71QQ41TtiqL._SX522_.jpg").open,
+  category: "lifestyle"
 )
 
-shimano_gear.user = gcn
-shimano_gear.save!
+rmv.user = peachy
+rmv.save!
 
-puts "Creating Joao's gear"
-
-wheels = Product.new(
-  referal_link: "https://www.amazon.com/dp/B076B9W78H/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Enve 4.5 Clincher Wheelset",
-  price: "$2900",
-  description: "Custom built product- Please allow 2 business days production before shipping.
-                Brake Type: Rim brake only with molded surface. Not suitable for disc brake use.
-                Weight: DT Swiss 240S-1530g, Chris King R45-1520g, DT Swiss 180 Ceramic-1470g
-                Spoke Count & Type: 20/24 Front/Rear, Bladed DT Aerolite or Sapim CX-Ray Black
-                Included in package: 700C Enve 4.5 wheelset, rim tape, brake pads, valve extenders",
-  brand: "Enve",
+box = Product.new(
+  referal_link: "https://www.amazon.com/Prism-Makeup-ROSEMARRY-Pigmented-Eyeshadow/dp/B07RLN3XSD/ref=sr_1_30?keywords=makeup&qid=1559809511&s=gateway&sr=8-30&th=1",
+  title: "Prism Makeup ROSEMARRY ",
+  price: "$12.99",
+  description: "【MATTE AND SHIMMER COLORS】PRISM MAKEUP ROSEMARRY eyeshadow palette with 18 shades, including luminous, natural matte colors and shimmer. Great colour combination: gorgeous shimmering bronze, eye popping copper and warm ballet pink. Super creamy, velvety soft and smooth, easy to layer and blend. Great for exploring colors and makeup artistry",
+  brand: "Prism makeup",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/peachy-gear/71Rt-4ZI5HL._SX522_.jpg").open,
+  category: "lifestyle"
 )
 
-wheels.user = gcn
-wheels.save!
+box.user = peachy
+box.save!
 
-cycle_bag = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00ND21JW0/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: 'Lowepro ProTactic 350 AW - A Professional Camera Backpack for 1-2 Pro DSLR Cameras and 13" Laptop',
-  price: "$124.95",
-  description: 'Fits 1-2 Pro DSLRs, one with up to 24-70mm f/2.8 lens attached, 6 lenses/speed lights, 13" laptop, tripod and accessories
-                Never miss a critical mission thanks four access points: the molded, turret-loading top, quick-grab from both sides, and full, back entry for set-up and security
-                Create limitless set-ups with a robust, SlipLock compatible strap system
-                Get versatile with five modular accessories - water bottle pouch, accessory case, tripod cup and two cinch straps - all Slip Lock-compatible and included with pack
-                ProTactic features ActivZone System technology to deliver targeted support at shoulder blades, lumbar and waist for comfort on the move.Exterior Material : Nylon',
-  brand: "Lowepro",
+puts "Creating dave's gear"
+
+pixel = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B07HKP9Y8H/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=dav0d2-20&creative=9325&linkCode=as2&creativeASIN=B07HKP9Y8H&linkId=683a0a344c2c03416c768d41e0173c3c",
+  title: "Google Pixel 3 64GB - Just Black (Renewed)",
+  price: "$428.9Stunning 5.5 FHD+ flexible OLED at 443ppi display on Corning Gorilla Glass 5
+  Change the way you take pictures with the Pixel 3s 12.2MP dual-pixel rear-facing camera and 8MP wide-angle and normal FoV cameras dual front-facing camera
+  Take better night pics with Night Sight. You’ll never want to use your flash again. Night Sight brings out all the best details and colors that get lost in the dark. Only on Pixel.",
+  brand: "L'oreal",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/joao-gear/joao-bag.jpg").open,
-  category: "Photography",
+  photo: Pathname.new("app/assets/images/peachy-gear/81W3DU17N1L._SX522_.jpg").open,
+  category: "lifestyle"
 )
 
-cycle_bag.user = gcn
-cycle_bag.save!
+pixel.user = dave
+pixel.save!
 
-helmet = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "Kask Protone Helmet",
-  price: "$181.42",
-  description: "Aero Control Technology creates an incredibly aerodynamic and top-performing shell, tested in the Wind Tunnel and able to provide an impressive CX rate
-                MIT Technology guarantees higher safety and complete protection, thanks to the polycarbonate layer that covers the shell on the top, on the base ring and on the back
-                In-Mold construction joins the inner polystyrene core to the outer polycarbonate layer to ensure better shock absorption
-                Reinforced frame protects the shell from secondary impacts",
-  brand: "Kask",
+pompom = Product.new(
+  referal_link: "https://www.amazon.com/BEAKEY-Foundation-Blending-Flawless-Multi-colored/dp/B01F36JEXE/ref=sr_1_12?keywords=makeup&qid=1559809511&s=gateway&sr=8-12",
+  title: 'Makeup Sponge Set Blender Beauty Foundation Blending Sponge',
+  price: "$8.99",
+  description: 'Makeup sponges for all kinds of cosmetics, foundation, BB cream, powder, concealer, isolation, liquid, etc
+  Made from non-latex material, soft feeling, well bouncy beauty sponge, easy to distinguish
+  Beauty makeup blender sponge gives you a perfect makeup application, avoid the waste of cosmetics
+  Wet and dry use, blending sponge turns bigger when wet, dab it evenly to form a gorgeous makeup
+  Attention: BEAKEY-US trademark registration number 5280096. 100% money back guarantee. Plz identify the legit BEAKEY products with special BEAKEY brand logo on package. ONLY sold by BEAKEY SELLER. Refer to the 7th main pic for real BEAKEY PRODUCTS.',
+  brand: "Beakey",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-helmet.jpg").open,
-  category: "cycling",
+  photo: Pathname.new("app/assets/images/peachy-gear/61b-R9LbtdL._SX522_.jpg").open,
+  category: "lifestyle",
 )
 
-helmet.user = gcn
-helmet.save!
+pompom.user = peachy
+pompom.save!
 
-shimano_gear = Product.new(
-  referal_link: "https://www.amazon.com/dp/B00E3P1RXW/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
-  title: "SHIMANO 6800 Ultegra 11-Speed Cassette",
-  price: "$223",
-  description: "HG-EV 11-speed cassette sprocket
-                Rider tuned wider gearing options
-                Includes lock ring
-                Made in Japan",
-  brand: "Shimano",
+pincel = Product.new(
+  referal_link: "https://www.amazon.com/BS-MALL-Synthetic-Cosmetics-Foundation-Blending/dp/B071K5RTRT/ref=sr_1_21_sspa?keywords=makeup&qid=1559809511&s=gateway&sr=8-21-spons&psc=1",
+  title: "Premium Synthetic Kabuki Makeup Brush Set Cosmetics",
+  price: "$9.99",
+  description: "BS-MALL Makeup Brushes Provides Assortment of Makeup Brushes - Kabuki, Foundation, & Eye Shadow Brushes; Lip Liner, Blush & Powder Brushes. 
+  Shop BS-MALL's array of makeup brushes, cosmetic tools and applicators to ensure perfect results. Find beauty tools for face,eyelashes, eyebrows and more. 
+  Our makeup brushes have bold handle for easy use. Highest quality material, high density bristle, high quality Synthetic fiber hair,Does Not SHED.",
+  brand: "BS-MALL",
   seller: "Amazon",
-  photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
-  category: "cycling"
+  photo: Pathname.new("app/assets/images/peachy-gear/718YMreZcHL._SX522_.jpg").open,
+  category: "lifestyle",
 )
 
-shimano_gear.user = gcn
-shimano_gear.save!
+pincel.user = peachy
+pincel.save!
 
+rmv = Product.new(
+  referal_link: "https://www.amazon.com/MS-DEAR-Color-Removal-Sponge-Solutions/dp/B06W5PMXV9/ref=sr_1_27?keywords=makeup&qid=1559809511&s=gateway&sr=8-27&th=1",
+  title: "Color Removal Sponge",
+  price: "$5.99",
+  description: "Even you use high-pigment eye shadow, you just ran the brush back and forth across the sponge a few times, and then ran it across the sponge a few more times, it really remove all remaining color on the brush quickly and effectively, so that you can immediately use it for another color and that helps speed up your makeup process.",
+  brand: "MS.dear",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/peachy-gear/71QQ41TtiqL._SX522_.jpg").open,
+  category: "lifestyle"
+)
+
+rmv.user = peachy
+rmv.save!
+
+box = Product.new(
+  referal_link: "https://www.amazon.com/Prism-Makeup-ROSEMARRY-Pigmented-Eyeshadow/dp/B07RLN3XSD/ref=sr_1_30?keywords=makeup&qid=1559809511&s=gateway&sr=8-30&th=1",
+  title: "Prism Makeup ROSEMARRY ",
+  price: "$12.99",
+  description: "【MATTE AND SHIMMER COLORS】PRISM MAKEUP ROSEMARRY eyeshadow palette with 18 shades, including luminous, natural matte colors and shimmer. Great colour combination: gorgeous shimmering bronze, eye popping copper and warm ballet pink. Super creamy, velvety soft and smooth, easy to layer and blend. Great for exploring colors and makeup artistry",
+  brand: "Prism makeup",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/peachy-gear/71Rt-4ZI5HL._SX522_.jpg").open,
+  category: "lifestyle"
+)
+
+box.user = peachy
+box.save!
 
 puts "Creating reviews ..."
 
