@@ -1081,7 +1081,7 @@ alexa = Product.new(
 alexa.user = max_t
 alexa.save!
 
-sigma-lens = Product.new(
+sigma_lens = Product.new(
   referal_link: "https://www.amazon.com/Sigma-200-500mm-Ultra-Telephoto-Nikon-Cameras/dp/B0013DAPNU/ref=sr_1_2?keywords=Sigma+200-500mm+ultra+telephoto+zoom+lens+for+Nikon+DSLR+cameras&qid=1559831727&s=gateway&sr=8-2",
   title: "Sigma 200-500mm f/2.8 APO EX DG Ultra-Telephoto Zoom Lens for Nikon DSLR Cameras",
   price: "$25,999.00",
@@ -1092,7 +1092,7 @@ sigma-lens = Product.new(
   category: "photography",
 )
 
-sigma-lens.user = max_t
+sigma_lens.user = max_t
 sigma_lens.save!
 
 rolex = Product.new(
@@ -1130,7 +1130,7 @@ wallet = Product.new(
 wallet.user = max_t
 wallet.save!
 
-pink-shoe = Product.new(
+pink_shoe = Product.new(
   referal_link: "https://www.amazon.com/L-L-Surprise-Sneakers-Athletic/dp/B07JFDQH3B?ref_=Oct_DLandingS_PC_e2af349c_1&smid=A3FHA054XVVQPZ",
   title: "L.O.L Surprise Girls Sneakers, Light Up Fashion and Athletic Shoes with Strap, Queen Bee Deva MC Swag and Rocker, Little Girl/Big Girl size 8 to 3, Ages 3 to 10",
   price: "$23.13",
@@ -1145,8 +1145,8 @@ pink-shoe = Product.new(
   category: "clothing",
 )
 
-pink-shoe.user = joao
-pink-shoe.save!
+pink_shoe.user = joao
+pink_shoe.save!
 
 backpack = Product.new(
   referal_link: "https://www.amazon.com/North-Face-Borealis-Backpack-Black/dp/B0764J1FV5/ref=sr_1_4?crid=11O9QDHC3FKM4&keywords=the+north+face+backpack&qid=1559833093&s=gateway&sprefix=the+north+face+back%2Caps%2C270&sr=8-4",
