@@ -12,8 +12,8 @@ puts "Creating fake Joao..."
 joao = User.new(
   email: "joao@hiive.com",
   password: "123456",
-  first_name: "Joao",
-  last_name: "Lobo",
+  first_name: "joao",
+  last_name: "lobo",
   user_type: "shopper",
   store_url: "joao",
   photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
@@ -26,8 +26,8 @@ puts "Creating fake Max S..."
 max_s = User.new(
   email: "max.s@hiive.com",
   password: "123456",
-  first_name: "Max",
-  last_name: "Salemans",
+  first_name: "max",
+  last_name: "salemans",
   user_type: "shopper",
   store_url: "max-s",
   photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
@@ -40,8 +40,8 @@ puts "Creating fake Max T..."
 max_t = User.new(
   email: "max.t@hiive.com",
   password: "123456",
-  first_name: "Max",
-  last_name: "Teunissen",
+  first_name: "max",
+  last_name: "teunissen",
   user_type: "shopper",
   store_url: "max-s",
   photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
@@ -54,8 +54,8 @@ puts "Creating fake Tristan..."
 tristan = User.new(
   email: "tristan@hiive.com",
   password: "123456",
-  first_name: "Tristan",
-  last_name: "Viney",
+  first_name: "tristan",
+  last_name: "viney",
   user_type: "shopper",
   store_url: "tristan",
   photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
@@ -83,13 +83,15 @@ puts "Creating fake report..."
 food = User.new(
   email: "food@hiive.com",
   password: "123456",
-  first_name: "Report",
-  last_name: "of the week",
+  first_name: "weekly",
+  last_name: "report",
   store_url: "RPOTWeek",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/DZ8z7TqW4AAUlXK.jpg").open,
   description: "I review all the fasfood i can get my hands on",
+
   creator_type: "foodie",
+
 )
 food.save!
 
@@ -97,8 +99,8 @@ puts "Creating fake professor poliakoff..."
 professor = User.new(
   email: "poliakoff@hiive.com",
   password: "123456",
-  first_name: "Periodic",
-  last_name: "Videos",
+  first_name: "periodic",
+  last_name: "videos",
   store_url: "PTV",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/Martynpoliakoff.jpg").open,
@@ -112,8 +114,8 @@ puts "Creating fake dave ramsey..."
 daver = User.new(
   email: "dave_ramsay@hiive.com",
   password: "123456",
-  first_name: "Dave",
-  last_name: "Ramsey",
+  first_name: "dave",
+  last_name: "ramsey",
   store_url: "DR",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/e0e87e8cd5d771dd8923077bb5025e0b.jpg").open,
@@ -121,9 +123,11 @@ daver = User.new(
   creator_type: "podcaster",
 )
 daver.save!
+
 puts "Creating fake pewdiepie..."
 
-  pewds = User.new(
+puts "Creating fake felix..."
+pewds = User.new(
   email: "pewds@hiive.com",
   password: "123456",
   first_name: "Felix",
@@ -142,8 +146,8 @@ joe = User.new(
   email: "joe@hiive.com",
   password: "123456",
   first_name: "joe",
-  last_name: "Rogan",
-  store_url: "Jrogan",
+  last_name: "rogan",
+  store_url: "jrogan",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/rs-213329-R1247_FEA_Rogen_A.jpg").open,
   description: "I am the biggest podcaster in the world, and a MMA jiujitsu fighter",
@@ -169,28 +173,30 @@ puts "Creating fake Classy vlog..."
 classy = User.new(
   email: "classy@hiive.com",
   password: "123456",
-  first_name: "Stay",
-  last_name: "Classy",
+  first_name: "stay",
+  last_name: "classy",
   store_url: "Sclassy",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (2).jpg").open,
   description: "Hi, we are Danish ,and out blog is about our daily life in Lisbon ",
   creator_type: "travel",
+
 )
 classy.save!
 
-puts "Creating fake blad and bankrupt..."
-
+puts "Creating fake bald and bankrupt..."
 bald = User.new(
   email: "bald@hiive.com",
   password: "123456",
-  first_name: "bald",
-  last_name: "and bankrupt",
+  first_name: "bald,",
+  last_name: "bankrupt",
   store_url: "BAR",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (3).jpg").open,
   description: "Hi, i travel in eastern europe, and show my daily life in this gloomy part of the world",
+
   creator_type: "travel",
+
 )
 bald.save!
 
@@ -198,9 +204,9 @@ puts "Creating fake georgia..."
 georgia = User.new(
   email: "georgia@hiive.com",
   password: "123456",
-  first_name: "Feorgia",
-  last_name: "Free",
-  store_url: "georgia",
+  first_name: "georgia",
+  last_name: "free",
+  store_url: "greoriaf",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed (4).jpg").open,
   description: "I give advice to woman about relashionship behaiviour",
@@ -213,8 +219,8 @@ puts "Creating fake mark..."
 mark = User.new(
   email: "mark@hiive.com",
   password: "123456",
-  first_name: "Mark",
-  last_name: "Abroad",
+  first_name: "mark",
+  last_name: "abroad",
   store_url: "MAbroad",
   user_type: "creator",
   photo: Pathname.new("app/assets/images/seededC/unnamed.jpg").open,
@@ -222,6 +228,7 @@ mark = User.new(
   creator_type: "foodie",
 )
 mark.save!
+
 puts "Creating fake roman..."
 roman = User.new(
   email: "roman@hiive.com",
@@ -237,12 +244,11 @@ roman = User.new(
 roman.save!
 
 puts "Creating fake GCN.."
-
 gcn = User.new(
   email: "GCN@hiive.com",
   password: "123456",
-  first_name: "GC",
-  last_name: "Network",
+  first_name: "gc",
+  last_name: "network",
   user_type: "creator",
   store_url: "gcn",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
@@ -268,12 +274,11 @@ dave = User.new(
 dave.save!
 
 puts "Creating fake Peachy..."
-
 peachy = User.new(
   email: "peachy@hiive.com",
   password: "123456",
   first_name: "peachy",
-  last_name: "P",
+  last_name: "p",
   user_type: "creator",
   store_url: "peachy",
   photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
@@ -289,7 +294,7 @@ sierra = User.new(
   email: "sierra@hiive.com",
   password: "123456",
   first_name: "sierra",
-  last_name: "Schultzzie",
+  last_name: "schultzzie",
   user_type: "creator",
   store_url: "sierra",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
@@ -304,13 +309,13 @@ puts "Creating fake Peter..."
 peter = User.new(
   email: "peter@live.com",
   password: "123456",
-  first_name: "Peter",
-  last_name: "McKinnon",
+  first_name: "peter",
+  last_name: "mcKinnon",
   user_type: "creator",
   store_url: "peter",
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee.",
-  creator_type: "photograper",
+  creator_type: "photographer",
 )
 
 peter.save!
@@ -337,8 +342,8 @@ puts "Creating fake therapy..."
 unbox = User.new(
   email: "unbox@live.com",
   password: "123456",
-  first_name: "Unbox",
-  last_name: "Therapy",
+  first_name: "unbox",
+  last_name: "therapy",
   user_type: "creator",
   store_url: "Unbox-therapy",
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/DSZWeIfVoAAzn3J.jpg").open,
@@ -657,7 +662,7 @@ mackin = Product.new(
   FIT. This fit is true to size . Wear it with jeans or leggings.",
   brand: "MACKIN J",
   seller: "Amazon",
-  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/51K-LeBdH-L._UY695_.jpg").open,
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/ugly-shoes.jpg").open,
   category: "clothing",
 )
 
@@ -737,7 +742,7 @@ showpo = Product.new(
   - Medium Stretch",
   brand: "showpo",
   seller: "showpo",
-  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
+  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/sexy-girl.png").open,
   category: "clothing",
 )
 
