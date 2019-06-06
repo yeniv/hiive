@@ -6,6 +6,7 @@ tmp/*
 !tmp/.keep
 *.swp
 .DS_Store
+public/uploads
 public/assets
 public/packs
 public/packs-test
