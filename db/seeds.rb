@@ -18,7 +18,7 @@ max = User.new(
   last_name: "Teunissen",
   user_type: "shopper",
   photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
-  description: "Simply awesome."
+  description: "Simply awesome.",
 )
 
 joao = User.new(
@@ -29,7 +29,7 @@ joao = User.new(
   user_type: "shopper",
   store_url: "joao",
   photo: Pathname.new("./app/assets/images/seed-user/joao.jpg").open,
-  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!"
+  description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!",
 )
 joao.save!
 
@@ -43,7 +43,7 @@ max_s = User.new(
   user_type: "shopper",
   store_url: "max-s",
   photo: Pathname.new("./app/assets/images/seed-user/max-s.jpg").open,
-  description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!"
+  description: "Wood has always been fascinating to me, from the entire tree to the beautiful patterns of the nerves. Here you can find my favorite tools and I hope they will bring you just as much joy as they've given me!",
 )
 max_s.save!
 
@@ -56,7 +56,7 @@ max_t = User.new(
   last_name: "Teunissen",
   user_type: "shopper",
   store_url: "max-s",
-  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open
+  photo: Pathname.new("./app/assets/images/seed-user/max-t.jpg").open,
 )
 max_t.save!
 
@@ -70,7 +70,7 @@ tristan = User.new(
   user_type: "shopper",
   store_url: "tristan",
   photo: Pathname.new("./app/assets/images/seed-user/tristan.jpg").open,
-  description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places."
+  description: "I never go anywhere without my camera, which earns me some weird looks, but some of my favorite photos have been captured in the most unexpected places.",
 )
 
 tristan.save!
@@ -86,7 +86,7 @@ casey = User.new(
   user_type: "creator",
   photo: Pathname.new("./app/assets/images/caesey-gear/1_yn3yekLM4yUM2Tr2TXEhvw.jpg").open,
   description: "Hi, I live in New York City and love YouTube.",
-  creator_type: "Travel blogger"
+  creator_type: "Travel blogger",
 )
 casey.save!
 
@@ -101,7 +101,7 @@ gcn = User.new(
   store_url: "GCN",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,
   description: "I'm a huge cyclist fanatic! While cycling off the beaten paths of the world I've met many interesting people who I wwant to share my experiences with!",
-  creator_type: "Professial Cyclist"
+  creator_type: "Professial Cyclist",
 )
 gcn.save!
 
@@ -117,7 +117,7 @@ dave = User.new(
   photo: Pathname.new("app/assets/images/dave-gear/23347476_1986850841533000_5657334637437911040_n.jpg").open,
   description: "Hey everyone! My name is Dave and I make quality videos about useful tech.
   If you're into that kinda stuff, subscribe!",
-  creator_type: "Tech reviewer"
+  creator_type: "Tech reviewer",
 )
 dave.save!
 
@@ -133,7 +133,7 @@ peachy = User.new(
   photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
   description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm. 
   ",
-  creator_type: "Makeup artist"
+  creator_type: "Makeup artist",
 )
 peachy.save!
 
@@ -149,7 +149,7 @@ sierra = User.new(
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
   description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
   ",
-  creator_type: "Lifstyle blogger"
+  creator_type: "Lifstyle blogger",
 )
 sierra.save!
 
@@ -164,10 +164,10 @@ peter = User.new(
   store_url: "peter",
   photo: Pathname.new("./app/assets/images/seed-user/peter.jpg").open,
   description: "I teach things about photography and cinematography. Oh, I also VLOG. :) And drink coffee. Lots of coffee.",
-  creator_type: "Photography"
+  creator_type: "Photography",
 
-  )
-  
+)
+
 peter.save!
 
 puts "Creating fake steve..."
@@ -182,8 +182,8 @@ steve = User.new(
   photo: Pathname.new("app/assets/images/steveramsey-gear/unnamed.jpg").open,
   description: "Woodworking for Mere Mortals is dedicated to the Weekend Woodworker who doesn't have an enormous shop space and a ton of expensive tools.
   Learn how you can set up a woodworking shop for under $1000.",
-  creator_type: "Wood enthusiast"
-  )
+  creator_type: "Wood enthusiast",
+)
 
 steve.save!
 
@@ -199,8 +199,8 @@ unbox = User.new(
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/DSZWeIfVoAAzn3J.jpg").open,
   description: "Where products get naked.
    Here you will find a variety of videos showcasing the coolest products on the planet. From the newest smartphone to surprising gadgets and technology you never knew existed. It's all here on Unbox Therapy.",
-  creator_type: "Teach reviewer"
-  )
+  creator_type: "Teach reviewer",
+)
 
 unbox.save!
 
@@ -314,12 +314,11 @@ wheels = Product.new(
   brand: "Enve",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-wheels.jpg").open,
-  category: "cycling"
+  category: "cycling",
 )
 
 wheels.user = gcn
 wheels.save!
-
 
 helmet = Product.new(
   referal_link: "https://www.amazon.com/dp/B00YS9MY1M/?cv_ct_id=amzn1.idea.SP5UNTPPW3RG&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_cyclingmaven_dp_vv_d",
@@ -349,7 +348,7 @@ shimano_gear = Product.new(
   brand: "Shimano",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/joao-gear/joao-shimano-gear.jpg").open,
-  category: "cycling"
+  category: "cycling",
 )
 
 shimano_gear.user = gcn
@@ -387,7 +386,7 @@ router = Product.new(
   brand: "Festool",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-festool.jpg").open,
-  category: "tools"
+  category: "tools",
 )
 
 router.user = steve
@@ -405,7 +404,7 @@ bevel = Product.new(
   brand: "CROWN",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-bevel.jpg").open,
-  category: "tools"
+  category: "tools",
 )
 
 bevel.user = steve
@@ -423,7 +422,7 @@ finish = Product.new(
   brand: "Tried & True Wood Finish",
   seller: "Amazon",
   photo: Pathname.new("./app/assets/images/max-gear/max-finish.jpg").open,
-  category: "tools"
+  category: "tools",
 )
 
 finish.user = steve
@@ -439,7 +438,7 @@ moft = Product.new(
   brand: "Moft",
   seller: "Kickstarter",
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/1423e89c83013872247c277b62bf4f26_original.jpg").open,
-  category: "technology"
+  category: "technology",
 )
 
 moft.user = unbox
@@ -494,7 +493,7 @@ lenovo = Product.new(
   brand: "lenovo",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/unboxtherapy-gear/71wJJL7q8nL._SL1500_.jpg").open,
-  category: "technology"
+  category: "technology",
 )
 
 lenovo.user = unbox
@@ -514,7 +513,7 @@ mackin = Product.new(
   brand: "MACKIN J",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/51K-LeBdH-L._UY695_.jpg").open,
-  category: "clothing"
+  category: "clothing",
 )
 
 mackin.user = sierra
@@ -522,13 +521,13 @@ mackin.save!
 
 flower = Product.new(
   referal_link: "https://www.amazon.com/gp/product/B06XTSYHQQ/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=sierrasc-20&creative=9325&linkCode=as2&creativeASIN=B06XTSYHQQ&linkId=5f32a5efeb0a510d994229956ff69ba7",
-  title: 'Handmade Rose Flower Wreath Crown Halo for Wedding Festivals',
+  title: "Handmade Rose Flower Wreath Crown Halo for Wedding Festivals",
   price: "$13.95",
-  description: 'Because it is handmade, normally, several small balls will fall off. But it can be easily glued without influencing the overall outlook
+  description: "Because it is handmade, normally, several small balls will fall off. But it can be easily glued without influencing the overall outlook
   Floral Headband with simply, sweet, elegant design, makes you look more charming and eye-catching
   Adjustable size with the ribbon,very comfortable to wear and doesnxt demand an exclusive hair style to hold it
   Perfect for those who allergic to flowers and suffer from headaches due to strongly smelling flowers
-  It come in pleasant colors matching any dress and occasion,such as bridal, bridesmaids or flower girls in the wedding, festivals, photography, etc',
+  It come in pleasant colors matching any dress and occasion,such as bridal, bridesmaids or flower girls in the wedding, festivals, photography, etc",
   brand: "Ever Fairy",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/61RJO5UFbfL._SX679._SX._UX._SY._UY_.jpg").open,
@@ -571,7 +570,7 @@ zoom = Product.new(
   brand: "zoom",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/71mwthf7DQL._SL1500_ (1).jpg").open,
-  category: "technology"
+  category: "technology",
 )
 
 zoom.user = sierra
@@ -579,9 +578,9 @@ zoom.save!
 
 showpo = Product.new(
   referal_link: "https://www.showpo.com/eu/azure-top-in-black?utm=cmf&utm_source=CommissionFactory&utm_medium=Text+Link&utm_content=&utm_campaign=Affiliate_45242&affid=45242&clickid=&cfclick=e4f1b472abdd44079da91e77a0998a15&t=1559807205856",
-  title: 'Azure Top In Black Mesh',
+  title: "Azure Top In Black Mesh",
   price: "$35",
-  description: 'Stand out from the crowd in the Azure Top In Black! This is the top that you need in your life! Sitting at a cropped length and featuring adjustable straps, youll never want to take this stunning piece off!
+  description: "Stand out from the crowd in the Azure Top In Black! This is the top that you need in your life! Sitting at a cropped length and featuring adjustable straps, youll never want to take this stunning piece off!
 
 
   - Made With 100% Polyester & Love
@@ -590,7 +589,7 @@ showpo = Product.new(
   - Cropped Length: 22cm/ 8.66in
   - Exposed Zipper On The Center Back
   - Adjustable Straps
-  - Medium Stretch',
+  - Medium Stretch",
   brand: "showpo",
   seller: "showpo",
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/azure_top_in_black1.jpg").open,
@@ -599,7 +598,6 @@ showpo = Product.new(
 
 showpo.user = sierra
 showpo.save!
-
 
 puts "Creating peachy's gear"
 
@@ -612,7 +610,7 @@ paris = Product.new(
   brand: "L'oreal",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/peachy-gear/81W3DU17N1L._SX522_.jpg").open,
-  category: "lifestyle"
+  category: "lifestyle",
 )
 
 paris.user = peachy
@@ -620,13 +618,13 @@ paris.save!
 
 pompom = Product.new(
   referal_link: "https://www.amazon.com/BEAKEY-Foundation-Blending-Flawless-Multi-colored/dp/B01F36JEXE/ref=sr_1_12?keywords=makeup&qid=1559809511&s=gateway&sr=8-12",
-  title: 'Makeup Sponge Set Blender Beauty Foundation Blending Sponge',
+  title: "Makeup Sponge Set Blender Beauty Foundation Blending Sponge",
   price: "$8.99",
-  description: 'Makeup sponges for all kinds of cosmetics, foundation, BB cream, powder, concealer, isolation, liquid, etc
+  description: "Makeup sponges for all kinds of cosmetics, foundation, BB cream, powder, concealer, isolation, liquid, etc
   Made from non-latex material, soft feeling, well bouncy beauty sponge, easy to distinguish
   Beauty makeup blender sponge gives you a perfect makeup application, avoid the waste of cosmetics
   Wet and dry use, blending sponge turns bigger when wet, dab it evenly to form a gorgeous makeup
-  Attention: BEAKEY-US trademark registration number 5280096. 100% money back guarantee. Plz identify the legit BEAKEY products with special BEAKEY brand logo on package. ONLY sold by BEAKEY SELLER. Refer to the 7th main pic for real BEAKEY PRODUCTS.',
+  Attention: BEAKEY-US trademark registration number 5280096. 100% money back guarantee. Plz identify the legit BEAKEY products with special BEAKEY brand logo on package. ONLY sold by BEAKEY SELLER. Refer to the 7th main pic for real BEAKEY PRODUCTS.",
   brand: "Beakey",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/peachy-gear/61b-R9LbtdL._SX522_.jpg").open,
@@ -660,7 +658,7 @@ rmv = Product.new(
   brand: "MS.dear",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/peachy-gear/71QQ41TtiqL._SX522_.jpg").open,
-  category: "lifestyle"
+  category: "lifestyle",
 )
 
 rmv.user = peachy
@@ -674,7 +672,7 @@ box = Product.new(
   brand: "Prism makeup",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/peachy-gear/71Rt-4ZI5HL._SX522_.jpg").open,
-  category: "lifestyle"
+  category: "lifestyle",
 )
 
 box.user = peachy
@@ -686,13 +684,13 @@ pixel = Product.new(
   referal_link: "https://www.amazon.com/gp/product/B07HKP9Y8H/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=dav0d2-20&creative=9325&linkCode=as2&creativeASIN=B07HKP9Y8H&linkId=683a0a344c2c03416c768d41e0173c3c",
   title: "Google Pixel 3 64GB - Just Black (Renewed)",
   price: "$428.9",
-  description:"Stunning 5.5 FHD+ flexible OLED at 443ppi display on Corning Gorilla Glass 5
+  description: "Stunning 5.5 FHD+ flexible OLED at 443ppi display on Corning Gorilla Glass 5
   Change the way you take pictures with the Pixel 3s 12.2MP dual-pixel rear-facing camera and 8MP wide-angle and normal FoV cameras dual front-facing camera
   Take better night pics with Night Sight. You’ll never want to use your flash again. Night Sight brings out all the best details and colors that get lost in the dark. Only on Pixel.",
   brand: "Google",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/dave-gear/51i26XWLGFL._SL1000_.jpg").open,
-  category: "technology"
+  category: "technology",
 )
 
 pixel.user = dave
@@ -700,14 +698,14 @@ pixel.save!
 
 asus = Product.new(
   referal_link: "https://www.amazon.com/ASUS-IPS-Type-GeForce-Gigabit-TUF505DU-EB74/dp/B07QQB6DC1/ref=sr_1_1?camp=1789&creative=9325&keywords=GA502&linkCode=xm2&linkId=5447bc85e547e4cfa87948c02061ae93&qid=1559810471&s=gateway&sr=8-1",
-  title: 'ASUS TUF (2019) Gaming Laptop',
+  title: "ASUS TUF (2019) Gaming Laptop",
   price: "$1,099.00",
-  description: 'Nvidia GeForce GTX 1660 Ti 6GB graphics
+  description: "Nvidia GeForce GTX 1660 Ti 6GB graphics
   Quad-core AMD Ryzen 7 3750H Processor
   15.6” FHD (1920x1080) 120Hz IPS-Type Display
   256GB NVMe SSD + 1TB HDD | 16GB DDR4 RAM | Windows 10 Home
   Durable MIL-STD-810 military standard construction
-  Dual fans with anti-dust technology | Backlit keyboard rated for 20-million keystroke durability',
+  Dual fans with anti-dust technology | Backlit keyboard rated for 20-million keystroke durability",
   brand: "Asus",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/dave-gear/81pG6xR8dnL._SL1500_.jpg").open,
@@ -748,7 +746,7 @@ samsung = Product.new(
   brand: "Samsung",
   seller: "Amazon",
   photo: Pathname.new("app/assets/images/dave-gear/41KOSseOOdL._SL1000_.jpg").open,
-  category: "technology"
+  category: "technology",
 )
 
 samsung.user = dave
