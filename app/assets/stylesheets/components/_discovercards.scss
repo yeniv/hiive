@@ -11,7 +11,6 @@
     display: grid;
     grid-template-columns: 1fr;
     border-radius: 10px;
-    // background-color: white;
     padding: 15px;
     margin-top: 30px;
 }
@@ -168,14 +167,16 @@
 }
 
 .profile-user-card-discover {
-    margin-top: 20px;
-    margin-right: 30px;
-    display: inline-block;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .profiles-in-middle {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    grid-gap: 40px 41px;
+    margin-top: 37px;
 }
 
 
