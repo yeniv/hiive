@@ -89,6 +89,164 @@ casey = User.new(
   creator_type: "Travel blogger",
 )
 casey.save!
+puts "Creating fake Boiler..."
+broom = User.new(
+  email: "broom@hiive.com",
+  password: "123456",
+  first_name: "boiler",
+  last_name: "room",
+  store_url: "Broom",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/boilerroomjpg.jpg").open,
+  description: "Taking techno music to the masses",
+  creator_type: "Dj",
+)
+broom.save!
+puts "Creating fake report..."
+food = User.new(
+  email: "food@hiive.com",
+  password: "123456",
+  first_name: "Report",
+  last_name: "of the week",
+  store_url: "RPOTWeek",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/DZ8z7TqW4AAUlXK.jpg").open,
+  description: "I review all the fasfood i can get my hands on",
+  creator_type: "Food reviewer",
+)
+food.save!
+puts "Creating fake professor poliakoff..."
+professor = User.new(
+  email: "poliakoff@hiive.com",
+  password: "123456",
+  first_name: "Periodic",
+  last_name: "Videos",
+  store_url: "PTV",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/Martynpoliakoff.jpg").open,
+  description: "I bring back interest to Chemestry in a fun way",
+  creator_type: "Teacher",
+)
+professor.save!
+puts "Creating fake dave ramsey..."
+
+daver = User.new(
+  email: "dave_ramsay@hiive.com",
+  password: "123456",
+  first_name: "Dave",
+  last_name: "Ramsey",
+  store_url: "DR",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/e0e87e8cd5d771dd8923077bb5025e0b.jpg").open,
+  description: "I help people get free from debt problems",
+  creator_type: "Podcaster",
+)
+daver.save!
+puts "Creating fake piewdiepie..."
+pewds = User.new(
+  email: "pewds@hiive.com",
+  password: "123456",
+  first_name: "Felix",
+  last_name: "piewdiepie",
+  store_url: "casey",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/pewdiepie-mental-health.jpg").open,
+  description: "I make kid friendly jokes",
+  creator_type: "Gamer",
+)
+pewds.save!
+puts "Creating fake joe rogan..."
+
+joe = User.new(
+  email: "joe@hiive.com",
+  password: "123456",
+  first_name: "joe",
+  last_name: "Rogan",
+  store_url: "Jrogan",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/rs-213329-R1247_FEA_Rogen_A.jpg").open,
+  description: "I am the biggest podcaster in the world, and a MMA jiujitsu fighter",
+  creator_type: "Podcaster",
+)
+joe.save!
+puts "Creating fake Capitan joe..."
+capitan = User.new(
+  email: "capitan@hiive.com",
+  password: "123456",
+  first_name: "capitan",
+  last_name: "joe",
+  store_url: "Cjoe",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed (1).jpg").open,
+  description: "I give airplanes enthusiasts their daily fix of airplane stuff",
+  creator_type: "Pilot",
+)
+capitan.save!
+puts "Creating fake Classy vlog..."
+classy = User.new(
+  email: "classy@hiive.com",
+  password: "123456",
+  first_name: "Stay",
+  last_name: "Classy",
+  store_url: "Sclassy",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed (2).jpg").open,
+  description: "Hi, we are Danish ,and out blog is about our daily life in Lisbon ",
+  creator_type: "Travel blogger",
+)
+classy.save!
+puts "Creating fake blad and bankrupt..."
+bald = User.new(
+  email: "bald@hiive.com",
+  password: "123456",
+  first_name: "bald",
+  last_name: "and bankrupt",
+  store_url: "BAR",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed (3).jpg").open,
+  description: "Hi, i travel in eastern europe, and show my daily life in this gloomy part of the world",
+  creator_type: "Travel blogger",
+)
+bald.save!
+puts "Creating fake georgia..."
+georgia = User.new(
+  email: "georgia@hiive.com",
+  password: "123456",
+  first_name: "Feorgia",
+  last_name: "Free",
+  store_url: "casey",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed (4).jpg").open,
+  description: "I give advice to woman about relashionship behaiviour",
+  creator_type: "Life choach",
+)
+georgia.save!
+puts "Creating fake mark..."
+mark = User.new(
+  email: "mark@hiive.com",
+  password: "123456",
+  first_name: "Mark",
+  last_name: "Abroad",
+  store_url: "MAbroad",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed.jpg").open,
+  description: "Hi, I currently travelling the world and tasting the best food",
+  creator_type: "Food reviewer",
+)
+mark.save!
+puts "Creating fake roman..."
+roman = User.new(
+  email: "roman@hiive.com",
+  password: "123456",
+  first_name: "roman",
+  last_name: "mards",
+  store_url: "casey",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/ut_roman_1_intro.jpg").open,
+  description: "Hi,i give advice, and talk about the design and all the work put into everyday things!",
+  creator_type: "Podcaster",
+)
+casey.save!
 
 puts "Creating fake GCN.."
 
@@ -149,7 +307,7 @@ sierra = User.new(
   photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/go-to-tee-8_1200x1200.jpg").open,
   description: "Hey guys its Sierra Schultzzie! I'm just a disney obsessed, chihuahua loving, curvy queen from Southern California! OH! And I'm married to my best friend. We have another channel called Sierra and Stephen IRL were you can see our daily life.
   ",
-  creator_type: "Lifstyle blogger",
+  creator_type: "Lifestyle blogger",
 )
 sierra.save!
 
