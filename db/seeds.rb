@@ -95,8 +95,8 @@ puts "Creating fake GCN.."
 gcn = User.new(
   email: "GCN@hiive.com",
   password: "123456",
-  first_name: "Global",
-  last_name: "Cycling Network",
+  first_name: "GC",
+  last_name: "Network",
   user_type: "creator",
   store_url: "GCN",
   photo: Pathname.new("app/assets/images/CGN-gear/2016_gcn_cycling_jersey_set_for_sale_1491711364_3ae8470b.jpg").open,

@@ -1,0 +1,35 @@
+.display-grid-creators {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 1060px;
+    padding-left: 45px;
+}
+
+.profile-user-card-creators {
+    width: 200px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.everything-in-middle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.adding-margin-creators {
+    margin-top: 15px;
+}
+
+.creators-title-aligned {
+    background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 900;
+    width: 355px;
+    padding: 2px 7px;
+    margin: 25px 44px;
+}
