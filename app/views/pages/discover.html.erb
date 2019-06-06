@@ -38,11 +38,11 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned">top 5 creators</span>
+      <span class="title-aligned">top creators</span>
     </div>
     <div class="card-5-creators">
       <div class="row profiles-in-middle">
-        <% @all_likes.each do |user|  %>
+        <% @top_creators.each do |user|  %>
           <%= link_to "#{user.store_url}" do %>
               <div class="profile-user-card-discover profile-headline">
                 <!-- <h3> <span class="profile-headline-highlight"> creator </span></h3> -->
@@ -53,7 +53,7 @@
                   <div class="adding-margin-creators">
                       <span><%= user.creator_type %></span>
                   </div>
-                </h3>      
+                </h3>
               </div>
           <% end %>
         <% end %>
@@ -63,7 +63,7 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >4 random products</span>
+      <span class="title-aligned" >discover products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
@@ -133,7 +133,7 @@
 
             <% if product.likes.where(user: @current).empty? %>
 
-              <%= render partzial: "likes/like", locals: {
+              <%= render partial: "likes/like", locals: {
                 product: product
               } %>
 
