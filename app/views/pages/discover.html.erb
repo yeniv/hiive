@@ -1,7 +1,7 @@
 <div class=" nav-padding allpage">
   <div class=" container category-cards-middle">
     <div class="title-categories">
-        <h1 class="title-aligned">Top 5 Categories: </h1>
+        <span class="title-aligned">Top 5 Categories : </span>
     </div>
     <div class="cards display-of-cards">
         <%= link_to  params.merge(cat: "Photography").permit(:cat, :querry) do %>
@@ -37,63 +37,127 @@
     </div>
 
   <div class="container category-cards-middle">
-    <h1>Top 5 creators</h1>
+    <div class="title-categories">
+      <span class="title-aligned">Top 5 creators :</span>
+    </div>
     <div class="card-5-creators">
       <div class="row">
         <% @all_likes.each do |user|  %>
-        <div class="col single-creator">
-            <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p class="wrappeer text-top-creators"> <%= user.first_name %>
-              <%= user.last_name %></p>
-        </div>
+          <div class="user-info-discover user-info-left">
+            <div class="profile-user-card profile-headline">
+              <!-- <h3> <span class="profile-headline-highlight"> creator </span></h3> -->
+              <div class="d-flex justify-content-center">
+              <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, class: "profile-about-avatar" %>
+              </div>
+              <h3>
+                <span class="profile-headline-highlight"><%= user.first_name %></span>
+                <span class="profile-headline-highlight"><%= user.last_name %></span>
+              </h3>
+              <div class="profile-user-content-discover">
+                <h5> <%= user.creator_type %></h5>
+                <p class= ""> <%= user.description %></p>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
 
   <div class="container category-cards-middle">
-    <h1>3 newest creators</h1>
-    <div class="card-5-creators">
-      <div class="row">
-        <% @newest_creators.each do |creator|%>
-        <div class="col single-creator">
-            <%= cl_image_tag creator.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-            <p class="wrappeer text-top-creators"> <%= creator.first_name %>
-              <%= creator.last_name %></p>
-        </div>
-        <% end %>
-      </div>
+    <div class="title-categories">
+      <span class="title-aligned" >4 Random products :</span>
     </div>
-  </div>
-
-  <div class="container category-cards-middle">
-    <h2>5 Random products</h2>
     <div class="card-5-creators">
       <div class="row">
         <%  @random_products.each do |product| %>
-        <div class="col single-product">
-            <div class="div-heigth">
-              <%= cl_image_tag product.photo, width: 500, height: 500, class: 'images-product-rand' %>
-            </div>
-            <div class="text-5-products-top">
-              <p class="text-top-creators"> <%= product.title %></p>
-            </div>
-        </div>
+        <div class="col-3 hiive-card-container-discover">
+
+          <div class="hiive-card">
+
+          <div class="hiive-card-photo-discover" style="background-image: url(<%= product.photo %>)">
+          </div>
+
+          <div class="hiive-card-content">
+          <p class="hiive-card-title"><%= product.title.truncate(67)%></p>
+          <div class="d-flex justify-content-between">
+
+          <% if product.user != current_user%>
+          <div class="like-button-<%= product.id %>">
+
+            <% if product.likes.where(user: @current).empty? %>
+
+              <%= render partial: "likes/like", locals: {
+                product: product
+              } %>
+
+            <% else %>
+              <%= render partial: "likes/unlike", locals: {
+                product: product,
+                like: product.likes.find_by_user_id(current_user.id)
+              } %>
+            <% end %>
+          </div>
+          <% else %>
+            <div></div>
+          <% end %>
+          <p class="hiive-card-price"><%= product.price == '' ? 'currently unavailable' : product.price %></p>
+          </div>
+          </div>
+          </div>
+            <%= button_to "buy", product.referal_link, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
+            <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-right' %>
+          </div>
         <% end %>
       </div>
     </div>
   </div>
 
   <div class="container category-cards-middle">
-      <h1>Top 5 products</h1>
-      <div class="card-5-creators">
-        <div class="row">
-          <% @top_5_products.each do |product| %>
-          <div class="col single-creator">
-              <%= cl_image_tag product.photo, width: 200, height: 200, crop: :fill, class: 'images-prod' %>
-              <p class="wrappeer text-top-creators"><%= product.title %></p>
+    <div class="title-categories">
+      <span class="title-aligned" >Top 4 products :</span>
+    </div>
+    <div class="card-5-creators">
+      <div class="row">
+        <% @top_5_products.each do |product| %>
+        <div class="col-3 hiive-card-container-discover">
+
+          <div class="hiive-card">
+
+          <div class="hiive-card-photo-discover" style="background-image: url(<%= product.photo %>)">
           </div>
+
+          <div class="hiive-card-content">
+          <p class="hiive-card-title"><%= product.title.truncate(67)%></p>
+          <div class="d-flex justify-content-between">
+
+          <% if product.user != current_user%>
+          <div class="like-button-<%= product.id %>">
+
+            <% if product.likes.where(user: @current).empty? %>
+
+              <%= render partial: "likes/like", locals: {
+                product: product
+              } %>
+
+            <% else %>
+              <%= render partial: "likes/unlike", locals: {
+                product: product,
+                like: product.likes.find_by_user_id(current_user.id)
+              } %>
+            <% end %>
+          </div>
+          <% else %>
+            <div></div>
           <% end %>
-        </div>
+          <p class="hiive-card-price"><%= product.price == '' ? 'currently unavailable' : product.price %></p>
+          </div>
+          </div>
+          </div>
+            <%= button_to "buy", product.referal_link, class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
+            <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-right' %>
+          </div>
+        <% end %>
       </div>
     </div>
+  </div>
