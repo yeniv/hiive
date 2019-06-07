@@ -1,8 +1,9 @@
+  <div class="nav-padding">
   <div class="container container-background">
     <div class="text-aligned-with-photo">
       <div>
         <div class="mt-4">
-          <p class="mb-0">recommended by:</p>
+          <p class="mb-1">endorsed by:</p>
 
           <%= link_to public_profile_path(@product.user.store_url) do %>
           <div class="d-flex justify-content-start align-items-center">
@@ -51,7 +52,7 @@
 <div class="container review-in-the-middle">
   <% unless @product.user == current_user %>
   <div class="reviews-container-scss">
-    <h2 class="strong-purple">Write a review!</h2>
+    <h2 class="strong-purple">review this product</h2>
     <%= simple_form_for [@product, @review] do |r| %>
     <%= r.input :description, label: "Review Description" %>
     <%= r.input :rating, label: "Rating", collection: [1, 2, 3, 4, 5] %>
@@ -65,7 +66,7 @@
       <div class="d-flex justify-content-between">
         <div class="">
           <%= cl_image_tag review.user.photo, width: 45, height: 45 , crop: :fill, class: 'avatar-show-page text-right' %>
-          <span class="review-username"><%= review.user.first_name %></span>
+          <p class="review-username"><%= review.user.first_name %> <%= review.user.last_name %></p>
 
           <p class="ml-1 mt-2 mb-1"> </p>
         </div>
@@ -86,4 +87,5 @@
     </div>
     <% end %>
   </div>
+</div>
 </div>

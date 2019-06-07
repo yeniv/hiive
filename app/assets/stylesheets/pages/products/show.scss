@@ -31,19 +31,26 @@
 .creators-tip {
     display: inline;
     background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 90px;
+    padding-right: 12px;
     margin-right: -8px;
-    margin-left: 20px;
+    margin-left: -80px;
     z-index: -1;
     color: white;
     font-family: "Montserrat", sans-serif;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 35px;
-    line-height: 55px;
+    font-size: 28px;
+    line-height: 40px;
     font-weight: 900;
     text-align: center;
+    z-index: 1;
+}
+.avatar-creator-show-page {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.15);
     z-index: 10;
+    margin-left: 10px;
 }
 a:hover {
   text-decoration: none;
@@ -152,14 +159,13 @@ a:hover {
 
 .avatar-show-page {
     border-radius: 50%;
-    margin-left: 15px;
-    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
+    margin-left: 0px;
+    border: 2px solid white;
+    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    margin-left: 12px;
 }
 
-.avatar-creator-show-page {
-    border-radius: 50%;
-    box-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 0.1);
-}
 
 .text-width-review {
     width: 100%;
@@ -170,11 +176,19 @@ a:hover {
 }
 
 .review-username {
-  color: #653080;
-  font-size: 17px;
-  font-weight: 500;
-  text-align: right;
-  padding-left: 10px;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: right;
+    padding-left: -6px;
+    font-weight: 700;
+    background: linear-gradient(145deg, #823ea3 0%, #653080 100%);
+    padding-left: 62px;
+    padding-right: 10px;
+    margin-right: 9px;
+    margin-left: 4px;
+    z-index: 1;
+    margin-top: -34px;
 }
 
 .review-date {
