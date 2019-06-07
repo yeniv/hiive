@@ -557,7 +557,7 @@ bike1 = Product.new(
 
   Reliable Shimano 7-Speed Drivetrain
   The Shimano Tourney 7-speed drivetrain is always reliable. With little maintenance required, this Shimano Tourney drivetrain will shift through the gears to find a comfortable cadence to match the terrain. The compact chainset is supported by a set of forged alloy double cranks for strength and durability at a lightweight.
-  
+
   Alloy QR Wheelset
   The large 700x25C wheels offer great strength and are more than capable of withstanding rough city roads. Rolling on Kenda 700x25C tyres will provide a touch of comfort.",
   brand: "Brand-x",
@@ -634,7 +634,7 @@ bike6 = Product.new(
   description: "Whether you love pushing to your limits on your local trails or taking on epic day-long rides, the full-suspension Escarpe is the perfect all-around trail bike. Combining modern low, long and slack geometry with the latest features and technologies, it’s ready to take your riding ability to the next level.
 
   Designed to offer the ideal blend of balance, fun and efficiency, this super-capable Escarpe VR Mountain Bike (NX Eagle 1x12) offers a massive 150mm travel, front and rear, from its RockShox forks and shock to swallow up the roughest terrain. There’s also SRAM NX Eagle 1x12 gearing, SRAM Guide R disc brakes, plus dropper post routing and ISCG 05 chainguide mounts to make it ready for upgrades. Finishing off this trail-ready ride is a Boost wheelset with 2.6” wide Maxxis 3C tyres, which are both tubeless ready for the ultimate high-grip handling, so you can carve up the singletrack.
-  
+
   ",
   brand: "vitus",
   seller: "ChainReactionCycles",
@@ -1081,7 +1081,7 @@ alexa = Product.new(
 alexa.user = roman
 alexa.save!
 
-sigma-lens = Product.new(
+sigma_lens = Product.new(
   referal_link: "https://www.amazon.com/Sigma-200-500mm-Ultra-Telephoto-Nikon-Cameras/dp/B0013DAPNU/ref=sr_1_2?keywords=Sigma+200-500mm+ultra+telephoto+zoom+lens+for+Nikon+DSLR+cameras&qid=1559831727&s=gateway&sr=8-2",
   title: "Sigma 200-500mm f/2.8 APO EX DG Ultra-Telephoto Zoom Lens for Nikon DSLR Cameras",
   price: "$25,999.00",
@@ -1092,7 +1092,7 @@ sigma-lens = Product.new(
   category: "photography",
 )
 
-sigma-lens.user = roman
+sigma_lens.user = roman
 sigma_lens.save!
 
 rolex = Product.new(
@@ -1130,7 +1130,7 @@ wallet = Product.new(
 wallet.user = roman
 wallet.save!
 
-pink-shoe = Product.new(
+pink_shoe = Product.new(
   referal_link: "https://www.amazon.com/L-L-Surprise-Sneakers-Athletic/dp/B07JFDQH3B?ref_=Oct_DLandingS_PC_e2af349c_1&smid=A3FHA054XVVQPZ",
   title: "L.O.L Surprise Girls Sneakers, Light Up Fashion and Athletic Shoes with Strap, Queen Bee Deva MC Swag and Rocker, Little Girl/Big Girl size 8 to 3, Ages 3 to 10",
   price: "$23.13",
@@ -1145,8 +1145,13 @@ pink-shoe = Product.new(
   category: "clothing",
 )
 
+<<<<<<< HEAD
 pink-shoe.user = roman
 pink-shoe.save!
+=======
+pink_shoe.user = joao
+pink_shoe.save!
+>>>>>>> dc0edd34a4de5b4b0ef19ccc81ccadedbf3cf6b5
 
 backpack = Product.new(
   referal_link: "https://www.amazon.com/North-Face-Borealis-Backpack-Black/dp/B0764J1FV5/ref=sr_1_4?crid=11O9QDHC3FKM4&keywords=the+north+face+backpack&qid=1559833093&s=gateway&sprefix=the+north+face+back%2Caps%2C270&sr=8-4",

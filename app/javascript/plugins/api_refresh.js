@@ -2,7 +2,7 @@ const card_container = document.getElementById('api-refresh');
 
 const apiFetch = () => {
   const user = document.querySelector('.user-info').id
-  fetch(`${location.origin}//api/v1/users/${user}/products`)
+  fetch(`${location.origin}/api/v1/users/${user}/products`)
   .then(response => response.json())
   .then((data) => {
     card_container.innerHTML = "";

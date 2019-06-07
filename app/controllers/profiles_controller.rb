@@ -5,6 +5,9 @@ class ProfilesController < ApplicationController
     @user = current_user
     authorize :profile, :private_profile?
 
+    ## new scraper
+    # Scraper.single_job(params[:link], @user.id) unless params[:link].nil?
+
     @products = Product.where(user: @user)
 
     flash.now[:notice] = "👋 Hi #{@user.first_name}! Welcome to is your new store. Add some products to get started." if @user.products.empty?

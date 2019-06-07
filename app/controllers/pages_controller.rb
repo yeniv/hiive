@@ -13,9 +13,9 @@ class PagesController < ApplicationController
   private
 
   def top_5_products
-   product_list = Like.group(:product_id).count
-   top_products = product_list.sort_by { |_, value| value }.last(5).reverse.to_h
-   @top_5_products = top_products.map { |item| Product.find(item[0]) }
+    product_list = Like.group(:product_id).count
+    top_products = product_list.sort_by { |_, value| value }.last(8).reverse.to_h
+    @top_5_products = top_products.map { |item| Product.find(item[0]) }
   end
 
   def top_creators

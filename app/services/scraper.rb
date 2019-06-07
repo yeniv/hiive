@@ -17,7 +17,10 @@ class Scraper
   def self.amazon_scraper(url)
     begin
       product_params = {}
-      html_file = RestClient.get(url)
+      headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
+
+      html_file = RestClient.get(url, headers)
       html_doc = Nokogiri::HTML(html_file)
 
       product_params[:referal_link] = url
@@ -57,17 +60,27 @@ class Scraper
     product_params
   end
 
-  def self.single_link(text)
+  def self.single_job(text, user_id)
     url_regex = /(www\.)?([a-zA-Z0-9_%]*)\b\.[a-z]{2,4}(\.[a-z]{2})?/
     validator(text).each do |link|
       seller = link.match(url_regex)[2]
-      case seller
-      when 'amzn' || 'amazon'
-        new_product = Product.new(amazon_scraper(link))
-        new_product.user = User.last
-        new_product.save!
-      else
-        p "Sorry. Unable to auto-generate a link from #{seller}."
+      amazon_check = ['amzn', 'amazon'].include?(seller)
+      if amazon_check
+        params = amazon_scraper(link)
+
+        new_product = Product.new(params)
+        new_product.user_id = user_id
+        new_product.remote_photo_url = params[:photo]
+        if new_product.save!
+          ActionCable.server.broadcast "#{user_id}:product_flashes",
+          message: "<p>🎉 <strong>#{new_product.title}</strong> successfully added to your store!</p>",
+          flash_color: "purple"
+        else
+          sleep(1) # fix this so it doesn't load on home page. (using 'current_page?' ?)
+          ActionCable.server.broadcast "#{user_id}:product_flashes",
+          message: "<p>😢 Uhoh! This is embarrassing... We can't automatically add products from <strong>#{seller}</strong> yet. Please add manually.</p>",
+          flash_color: "danger"
+        end
       end
     end
   end
