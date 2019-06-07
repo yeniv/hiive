@@ -776,7 +776,6 @@ vans_1 = Product.new(
   photo: Pathname.new("./app/assets/images/category-pictures/vans-1.jpeg").open,
   category: "sneakers",
 )
-
 vans_1.user = gcn
 vans_1.save!
 
@@ -791,7 +790,6 @@ vans_2 = Product.new(
   photo: Pathname.new("./app/assets/images/category-pictures/vans-2.png").open,
   category: "sneakers",
 )
-
 vans_2.user = gcn
 vans_2.save!
 
@@ -827,10 +825,89 @@ nike_shoe = Product.new(
   photo: Pathname.new("app/assets/images/category-pictures/shoes-3.jpg").open,
   category: "sneakers",
 )
-
 nike_shoe.user = steve
 nike_shoe.save!
 
+climbing_1 = Product.new(
+  referal_link: "https://www.amazon.com/stores/page/E3F219E8-EBDD-4617-87E5-C6ED66A1D08B?store_ref=SB_A07924153K98ML2NXOIE2&pf_rd_p=3fade48a-e699-4c96-bf08-bb772ac0e242&hsa_cr_id=2480489440901&lp_slot=auto-sparkle-hsa-tetris&lp_asins=B01A5DXN96,B016RUIRTW,B01KWYZR60&lp_mat_key=climbing&lp_query=climbing&sb-ci-n=brandLogo&sb-ci-v=images%252FI%252F61dhDLUEOKL._SR160%252C120_.jpg",
+  title: "AYAMAYA 30kn / 3000kg Aluminum Locking Rock Climbing Carabiner D Shape",
+  price: "$26.71",
+  description: "Keylock nose prevents snagging. Munter Hitch compatible.
+  Pear shaped facilitates belaying single ropes with a Munter hitch
+  Easily opened with one hand
+  Using: Climbing / Aerial Work / Fire Rescue / Downhill etc.
+  CE certified. Strength: Closed - 6744 lbf / 30 kN; Open - 1574 lbf / 7 kN; Minor Axis - 1574 lbf / 7 kN",
+  brand: "Ayamaya",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_1.jpg").open,
+  category: "climbing",
+)
+climbing_1.user = emelie
+climbing_1.save!
+
+climbing_2 = Product.new(
+  referal_link: "https://www.amazon.com/Sportiva-TarantuLace-Performance-Climbing-Flame/dp/B005DLQ9EW/ref=sxin_2_ac_d_rm?keywords=climbing&pd_rd_i=B01K7UYZTE&pd_rd_r=f58b0a88-2a84-4946-8dc9-8637c2349592&pd_rd_w=uYAMx&pd_rd_wg=S59wO&pf_rd_p=0bc35c17-1e0d-4808-b361-20ab11b00973&pf_rd_r=97T63QHD17QT0ME12Z1K&qid=1559912982&s=gateway&th=1",
+  title: "La Sportiva Men's TarantuLace Performance Rock Climbing Shoe",
+  price: "$26.71",
+  description: "Keylock nose prevents snagging. Munter Hitch compatible.
+  Pear shaped facilitates belaying single ropes with a Munter hitch
+  Easily opened with one hand
+  Using: Climbing / Aerial Work / Fire Rescue / Downhill etc.
+  CE certified. Strength: Closed - 6744 lbf / 30 kN; Open - 1574 lbf / 7 kN; Minor Axis - 1574 lbf / 7 kN",
+  brand: "La Sportiva",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_2.jpg").open,
+  category: "climbing",
+)
+climbing_2.user = emelie
+climbing_2.save!
+
+climbing_3 = Product.new(
+  referal_link: "https://www.amazon.com/stores/page/E3F219E8-EBDD-4617-87E5-C6ED66A1D08B?store_ref=SB_A07924153K98ML2NXOIE2&pf_rd_p=3fade48a-e699-4c96-bf08-bb772ac0e242&hsa_cr_id=2480489440901&lp_slot=auto-sparkle-hsa-tetris&lp_asins=B01A5DXN96,B016RUIRTW,B01KWYZR60&lp_mat_key=climbing&lp_query=climbing&sb-ci-n=brandLogo&sb-ci-v=images%252FI%252F61dhDLUEOKL._SR160%252C120_.jpg",
+  title: "Weanas Thicken Climbing Harness, Protect Waist Safety Harness",
+  price: "$18.99",
+  description: "polyester
+  ★ Beginner's Harness: CE Certified. Harness weight limited: 300KG. Half body climbing harness, traditional buckle, harness construction distributes pressure to keep you comfortable while climbing Comfortable wear is a good companion for your outdoor sports
+  ★ Fits Well on All Size: Fits waist strap 51cm to 118cm, Leg strap 38cm to 70m, one size fits for person. Well on all ages and can be shared by the whole family. Easy to operate, wear and remove
+  ★ Durable Bearing Loop: High load bearing, all the connections and webbing are very sturdy with reinforced ends to bear your weight and protect your safety at all times
+  ★ Wide Range of Uses: Perfecting for mountaineering, tree climbing, indoor climbing, rock climbing, outward band, fire rescue, working on the higher level etc. Comfortable cushioning to ensure safety during rock climbing",
+  brand: "Weana",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_3.jpg").open,
+  category: "climbing",
+)
+climbing_3.user = emelie
+climbing_3.save!
+
+climbing_4 = Product.new(
+  referal_link: "https://www.amazon.com/Mammut-Revelation-Protect-neon-orange/dp/B01N4P1FHJ/ref=sr_1_21_sspa?keywords=climbing&qid=1559912982&s=gateway&sr=8-21-spons&psc=1&smid=ABBOLX8XX3K3W",
+  title: "9.2 Revelation Protect",
+  price: "$289.99",
+  description: "Small diameter and low weight provide optimum handling while climbing and belaying
+  Only 57 grams/meter
+  Mammut's PROTECT coating offers higher performance and resists one to two more standard UIAA falls than the same rope without the treatment
+  Abrasion-resistant middle marker
+  Rope ends feature durable ultrasound welding which prevents separation and sheath slippage",
+  brand: "Mammut",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_4.jpg").open,
+  category: "climbing",
+)
+climbing_4.user = emelie
+climbing_4.save!
+
+climbing_5 = Product.new(
+  referal_link: "https://www.amazon.com/Climbing-Technologies-Chest-Ascender/dp/B009ZJ2H5I/ref=sr_1_18_sspa?keywords=climbing&qid=1559913679&s=gateway&sr=8-18-spons&psc=1",
+  title: "Climbing Technologies Chest Ascender",
+  price: "$64.80",
+  description: "Very strong and durable climbing technology.",
+  brand: "Climbing Technologies",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/seededC/climbing_5.png").open,
+  category: "climbing",
+)
+climbing_5.user = emelie
+climbing_5.save!
 
 finish = Product.new(
   referal_link: "https://www.amazon.com/dp/B0155AUTG4/?cv_ct_id=amzn1.idea.3QN2LXQZFF81P&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
@@ -868,7 +945,6 @@ shoes_3 = Product.new(
   photo: Pathname.new("app/assets/images/max-gear/shoe_4.jpg").open,
   category: "sneakers",
 )
-
 shoes_3.user = steve
 shoes_3.save!
 
