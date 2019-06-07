@@ -72,7 +72,9 @@ class ProductsController < ApplicationController
     authorize @product
     @product.destroy
     # redirect_to private_profile_path(current_user)
-    flash[:alert] = "⚡️ #{@product.title} was removed from your store!"
+    ActionCable.server.broadcast "#{current_user.id}:product_flashes",
+      message: "<p><strong>#{@product.title}</strong> was removed from your store!</p>",
+      flash_color: "danger"
   end
 
   private
