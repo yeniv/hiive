@@ -1280,7 +1280,7 @@ samsung.save!
 alexa = Product.new(
   referal_link: "https://www.amazon.com/dp/B0792KTHKJ/ref=gbps_img_s-5_21b9_f9b32084?smid=ATVPDKIKX0DER&pf_rd_p=28320233-63b3-4284-8e9c-b70e247421b9&pf_rd_s=slot-5&pf_rd_t=701&pf_rd_i=gb_main&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=NEWMFE2NN1JC3H7YZFCK",
   title: "Alexa smart speaker",
-  price: "$29.99",
+  price: "$45",
   description: "Our most popular smart speaker. Now with a fabric design and improved speaker for richer and louder sound.
   Voice control your music. Stream songs from Amazon Music, Apple Music, Spotify, Sirius XM, and others. You can also listen to audiobooks from Audible.
   Bigger, better sound. Pair with a second Echo Dot (3rd gen) for rich, stereo sound. Fill your home with music with compatible Echo devices in different rooms.
@@ -1301,7 +1301,7 @@ alexa.save!
 sigma_lens = Product.new(
   referal_link: "https://www.amazon.com/Sigma-200-500mm-Ultra-Telephoto-Nikon-Cameras/dp/B0013DAPNU/ref=sr_1_2?keywords=Sigma+200-500mm+ultra+telephoto+zoom+lens+for+Nikon+DSLR+cameras&qid=1559831727&s=gateway&sr=8-2",
   title: "Sigma 200-500mm f/2.8 APO EX DG Ultra-Telephoto Zoom Lens for Nikon DSLR Cameras",
-  price: "$25,999.00",
+  price: "$25,999",
   description: "Ultra telephoto zoom lens; fast aperture of F2.8 at the 500mm and F5.6 at the 1000mm focal length.",
   brand: "Sigma",
   seller: "Amazon",
@@ -1309,13 +1309,13 @@ sigma_lens = Product.new(
   category: "photography",
 )
 
-sigma_lens.user = roman
+sigma_lens.user = casey
 sigma_lens.save!
 
 rolex = Product.new(
   referal_link: "https://www.amazon.com/Rolex-Rainbow-EVEROSE-Diamond-116695SATS/dp/B078N4392Q/ref=sr_1_15?keywords=rolex&qid=1559832083&s=apparel&sr=1-15",
-  title: "ROLEX Rainbow Yacht Master EVEROSE Diamond Dial 116695SATS",
-  price: "$135,000.00",
+  title: "ROLEX Rainbow Yacht Master",
+  price: "$21,000",
   description: "Brand, Seller, or Collection Name:	Rolex
   Part Number	116695SATS
   Display Type	Analog
@@ -1331,8 +1331,8 @@ rolex.save!
 
 wallet = Product.new(
   referal_link: "https://www.amazon.com/TUMI-Nassau-Billfold-Whiskey-Burnished/dp/B07MPW98NY/ref=sr_1_2?pf_rd_i=19006153011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=5fe5821d-10bc-4d6e-a8d7-b69018016555&pf_rd_r=JVG2W13VAVQ1HJYFHP1Z&pf_rd_s=merchandised-search-2&pf_rd_t=101&qid=1559832413&s=apparel&sr=1-2",
-  title: "TUMI - Nassau Double Billfold Wallet with RFID ID Lock for Men - Whiskey Burnished",
-  price: "$155.00",
+  title: "TUMI Billfold Wallet with RFID ID Lock for Men - Whiskey Burnished",
+  price: "$256",
   description: "Leather,Nappa
   Imported
   INTERIOR FEATURES: ID window; double bill compartment; 4 card pockets; 2 slip pockets; RFID ID lock
@@ -1344,13 +1344,13 @@ wallet = Product.new(
   category: "lifestyle",
 )
 
-wallet.user = roman
+wallet.user = casey
 wallet.save!
 
 backpack = Product.new(
   referal_link: "https://www.amazon.com/North-Face-Borealis-Backpack-Black/dp/B0764J1FV5/ref=sr_1_4?crid=11O9QDHC3FKM4&keywords=the+north+face+backpack&qid=1559833093&s=gateway&sprefix=the+north+face+back%2Caps%2C270&sr=8-4",
   title: "The North Face Borealis Men's Outdoor Backpack",
-  price: "$79.67",
+  price: "$80",
   description: "The North Face Borealis Men's Outdoor Backpack",
   brand: "The north face",
   seller: "Amazon",
@@ -1358,8 +1358,91 @@ backpack = Product.new(
   category: "lifestyle",
 )
 
-backpack.user = roman
-backpack.save!
+backpack.user = casey
+
+eames = Product.new(
+  referal_link: "https://www.flinders.nl/vitra-dsw-stoel-met-esdoorn-onderstel?gclid=CjwKEAjwlujnBRDl2teOp_veulQSJAC5bHgt3zbzMnGeGirkMMs8hqKJqMESt6OS1KYFzD_jZSiz-xoCywLw_wcB#23203",
+  title: "Eames DSW chair with yellowish maple base",
+  price: "$390",
+  description: "The seat is made of plastic and can also be covered in one of the 27 colors in the fabric type Hopsak. The Eames DSW chair has (as new dimensions) a width of 46.5 centimeters, a depth of 55 centimeters and a height of 83 centimeters. The seat height of the chair is 43 centimeters. Instead of a yellowish maple frame, there is also a DSW chair with dark maple or black maple in the same series.",
+  brand: "Eames",
+  seller: "Finders NL",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/eames-chair.jpg").open,
+  category: "Designer goods",
+)
+
+eames.user = roman
+eames.save!
+
+microphone = Product.new(
+  referal_link: "https://www.stars-music.co.uk/neumann-u87-ai-studio-set-microphone-studio_56858.html",
+  title: "Neumann U87",
+  price: "$2494",
+  description: "Studio recording and live microphone.",
+  brand: "NEUMANN",
+  seller: "Stars Music",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/Neumann.jpg").open,
+  category: "Audio",
+)
+
+microphone.user = roman
+microphone.save!
+
+mixer = Product.new(
+  referal_link: "alesis.com/multimix16usb20",
+  title: "Alesis Multimix 16 USB 2.0",
+  price: "$299",
+  description: "Designed with low–noise analog electronics, the MultiMix 16 USB 2.0 mixer lets users take advantage of 100 studio–grade 28–bit digital effects. Whether used for mobile or studio recording, the MultiMix 16 USB 2.0 mixer makes recording high–quality audio to your computer fast and easy.",
+  brand: "NEUMANN",
+  seller: "Alesis",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/mixer.jpg").open,
+  category: "Audio",
+)
+
+mixer.user = roman
+mixer.save!
+
+cable = Product.new(
+  referal_link: "https://www.thomann.de/nl/pro_snake_17900_mikrofonkabel_15_orange.htm",
+  title: "Pro snake 17900 Mic-Cable 15 Orange",
+  price: "$24",
+  description: "Made in germany.",
+  brand: "Pro Snake",
+  seller: "Thomann",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/cable.png").open,
+  category: "Audio",
+)
+
+cable.user = roman
+cable.save!
+
+zoom_mic = Product.new(
+  referal_link: "https://www.amazon.com/gp/product/B003QKBVYK/ref=as_li_tf_tl?ie=UTF8&camp=211189&creative=373489&creativeASIN=B003QKBVYK&link_code=as3&tag=audiotuts-20",
+  title: "Zoom ZH1 H1 Handy Portable Digital Recorder",
+  price: "$180",
+  description: "Stereo X/Y mic configuration captures perfect stereo images.",
+  brand: "Zoom",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/zoom-mic.png").open,
+  category: "Audio",
+)
+
+zoom_mic.user = roman
+zoom_mic.save!
+
+headphones_roman = Product.new(
+  referal_link: "https://www.headphonezone.in/products/sennheiser-hd-280-pro",
+  title: "Sennheiser HD 280 Pro",
+  price: "$1249",
+  description: "The best your ears can get.",
+  brand: "Sennheiser",
+  seller: "Headphone Zone",
+  photo: Pathname.new("app/assets/images/roman-mars-gear/headphones.jpg").open,
+  category: "Audio",
+)
+
+headphones_roman.user = roman
+headphones_roman.save!
 
 harnass = Product.new(
   referal_link: "https://shop.epictv.co.uk/en/harnesses/mammut/ophir-women?sku=MAMS17W_HARNOPH_DCCXS",
