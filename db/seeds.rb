@@ -881,7 +881,7 @@ climbing_3 = Product.new(
   photo: Pathname.new("./app/assets/images/seededC/climbing_3.jpg").open,
   category: "climbing",
 )
-climbing_3.user = emelie
+climbing_3.user = mark
 climbing_3.save!
 
 climbing_4 = Product.new(
