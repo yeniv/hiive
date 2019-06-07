@@ -16,11 +16,11 @@
 
 
 
-          <% if @product.user != current_user%>
+          <% if @product.user != current_user %>
           <div class="text-right like-button-<%= @product.id %>">
 
             <% if @product.likes.where(user: current_user).empty? %>
-
+              <%# raise %>
               <%= render partial: "likes/like", locals: {
                 product: @product
               } %>

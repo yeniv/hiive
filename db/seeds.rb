@@ -367,6 +367,21 @@ unbox = User.new(
 unbox.save!
 
 
+puts "Creating fake KittyPlaysGames .."
+
+kitty = User.new(
+  email: "kitty@live.com",
+  password: "123456",
+  first_name: "kitty",
+  last_name: "PlaysGames ",
+  user_type: "creator",
+  store_url: "KittyPlaysGames",
+  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
+  description: "Hey, i am a twitch streamer, and i love to play role playing games",
+  creator_type: "streamer",
+)
+
+kitty.save!
 
 puts "Creating fake xminx..."
 
@@ -1292,9 +1307,77 @@ backpack = Product.new(
 backpack.user = roman
 backpack.save!
 
+harnass = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/harnesses/mammut/ophir-women?sku=MAMS17W_HARNOPH_DCCXS",
+  title: "Ophir Women",
+  price: "$39.88",
+  description: "TThe second generation of the sporty Ophira harness is adapted to the female anatomy and based on the innovative Mammut® two-part webbing technology. This offers maximum comfort, excellent breathability and a huge range of movement. The fresh, asymmetrical design is a real eye-catcher on the rocks and in the climbing gym.",
+  brand: "Mammut",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/harnass.jpg").open,
+  category: "climbing",
+)
+
+harnass.user = emelie
+harnass.save!
+
+hook = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/carabiners/grivel/k6t-mega-twist-lock",
+  title: "Mega K6T",
+  price: "$10.57",
+  description: "The Grivel Mega K6T is a HMS carabiner with a twist gate for for, fast and easy locking and unlocking, part of Grivel's newest line of carabiners.Part of their new completely modern and ultra-light new line, Grivel carabiners are made from 7000-series aluminium - the same alloy used in their ice axe shafts - that offers the best balance between weight, breaking strength, and durability, for the ultimate in carabiner technology.",
+  brand: "Grivel",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/hook.jpg").open,
+  category: "climbing",
+)
+
+hook.user = emelie
+hook.save!
+
+climbing_shoes = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/climbing-shoes/boreal/joker-plus-womens?sku=113864",
+  title: "Joker Plus Women's",
+  price: "$88.64",
+  description: "The Boreal Joker Plus Women's is a low-volume version of the Joker Plus that's better suited to people with narrower, low-volume feet. The Joker Plus Women's features a semi-asymmetric last and a stiff midsole to provide all-day support and comfort to beginner and multi-pitch climbers alike. The split leather and synthetic microfibre upper is lined with a PU Air Net lining for the best comfort possible. The padded HFS (Heel Fit System) enhances comfort, whilst the EVA Cushioned Heel System protects the heel of the foot from impacts, like when jumping or falling from boulders.",
+  brand: "Boreal",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/climbing_shoes.jpg").open,
+  category: "climbing",
+)
+
+climbing_shoes.user = emelie
+climbing_shoes.save!
+
+leggings = Product.new(
+  referal_link: "https://www.3rdrockclothing.com/collections/leggings/products/botangle-antique",
+  title: "Recycled Ankle Pocket Leggins Botangel Antique",
+  price: "$55.99",
+  description: "Leggings that fit seamlessly into your active lifestyle. Get ahead of the game with leggings that hold their shape and enhance yours.  Prevent waste and don’t be afraid to kiss the sun this killer fabric provides UV protection and is cooling on the skin.",
+  brand: "Titan",
+  seller: "3rd Rock",
+  photo: Pathname.new("app/assets/images/category-pictures/climbing-leggings.jpg").open,
+  category: "climbing",
+)
+
+leggings.user = emelie
+leggings.save!
+
+yellow_pants = Product.new(
+  referal_link: "https://www.3rdrockclothing.com/collections/trousers/products/nova-mens-movement-climbing-trousers-all?variant=13993394962495",
+  title: "Men's Movement Climbing Trousers",
+  price: "$55.99",
+  description: "Our best selling NOVA returns. Perfect for winter climbing and summer days at the crag, these extra durable organic trousers are specifically made for climbing and movement-based activities. Our Organic Cotton is extremely soft and comfortable and we often hear that these trousers make the best PJs too.",
+  brand: "Nova",
+  seller: "3rd Rock",
+  photo: Pathname.new("app/assets/images/category-pictures/yellow_pants.jpg").open,
+  category: "climbing",
+)
+
+yellow_pants.user = steve
+yellow_pants.save!
+
 puts "Creating reviews ..."
-
-
 
 r1 = Review.new(
   description: "Hands down the best DSLR you will ever use! I purchased the 1Dx Mark ii for its incredible image quality & high frame rates for both still images & video. It’s ability to take 120 FPS video at 1080p is totally legit & well worth the money!
@@ -1391,7 +1474,7 @@ r9 = Review.new(
 )
 
 r9.product = bag
-r9.user = casey
+r9.user = max_s
 r9.save!
 
 r10 = Review.new(
