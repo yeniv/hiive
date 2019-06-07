@@ -62,14 +62,21 @@
   </div>
 
 
-
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >top products</span>
+      <span class="title-aligned">top products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
         <% @top_5_products.each do |product| %>
+        <div class="col-3 hiive-card-container-discover">
+  <div class="container category-cards-middle">
+    <div class="title-categories">
+      <span class="title-aligned" >random products</span>
+    </div>
+    <div class="card-5-creators">
+      <div class="row">
+        <%  @random_products.each do |product| %>
         <div class="col-3 hiive-card-container-discover">
 
           <div class="hiive-card">
