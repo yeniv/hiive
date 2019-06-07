@@ -10,9 +10,9 @@
             </div>
         <% end %>
 
-        <%= link_to "products?cat=tools" do %>
-            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/Tools-category-picture.jpg") %>')">
-                Tools
+        <%= link_to "products?cat=sneakers" do %>
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/shoes-cat.jpg") %>')">
+                Sneakers
             </div>
         <% end %>
 
@@ -63,11 +63,11 @@
 
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >discover products</span>
+      <span class="title-aligned">top products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
-        <%  @random_products.each do |product| %>
+        <% @top_5_products.each do |product| %>
         <div class="col-3 hiive-card-container-discover">
 
           <div class="hiive-card">
@@ -110,13 +110,14 @@
     </div>
   </div>
 
+
   <div class="container category-cards-middle">
     <div class="title-categories">
-      <span class="title-aligned" >top products</span>
+      <span class="title-aligned" >random products</span>
     </div>
     <div class="card-5-creators">
       <div class="row">
-        <% @top_5_products.each do |product| %>
+        <%  @random_products.each do |product| %>
         <div class="col-3 hiive-card-container-discover">
 
           <div class="hiive-card">

@@ -79,36 +79,51 @@ casey = User.new(
 )
 casey.save!
 
-puts "Creating fake report..."
-food = User.new(
-  email: "food@hiive.com",
+puts "Creating fake roman..."
+roman = User.new(
+  email: "roman@hiive.com",
   password: "123456",
-  first_name: "weekly",
-  last_name: "report",
-  store_url: "RPOTWeek",
+  first_name: "roman",
+  last_name: "mars",
+  store_url: "roman",
   user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/DZ8z7TqW4AAUlXK.jpg").open,
-  description: "I review all the fasfood i can get my hands on",
-
-  creator_type: "foodie",
-
+  photo: Pathname.new("app/assets/images/seededC/ut_roman_1_intro.jpg").open,
+  description: "Hi,i give advice, and talk about the design and all the work put into everyday things!",
+  creator_type: "podcaster",
 )
-food.save!
+roman.save!
 
-puts "Creating fake professor poliakoff..."
-professor = User.new(
-  email: "poliakoff@hiive.com",
+
+puts "Creating fake Peachy..."
+peachy = User.new(
+  email: "peachy@hiive.com",
   password: "123456",
-  first_name: "periodic",
-  last_name: "videos",
-  store_url: "PTV",
+  first_name: "peachy",
+  last_name: "p",
   user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/Martynpoliakoff.jpg").open,
-  description: "I bring back interest to Chemestry in a fun way",
-  creator_type: "teacher",
+  store_url: "peachy",
+  photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
+  description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm.
+  ",
+  creator_type: "makeup artist",
 )
-professor.save!
+peachy.save!
 
+puts "Creating fake pewdiepie..."
+
+puts "Creating fake felix..."
+pewds = User.new(
+  email: "pewds@hiive.com",
+  password: "123456",
+  first_name: "Felix",
+  last_name: "PewDiePie",
+  store_url: "pewds",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/pewdiepie-mental-health.jpg").open,
+  description: "I make kid friendly jokes",
+  creator_type: "gamer",
+)
+pewds.save!
 
 puts "Creating fake professor h3h3..."
 
@@ -140,22 +155,6 @@ daver = User.new(
   creator_type: "podcaster",
 )
 daver.save!
-
-puts "Creating fake pewdiepie..."
-
-puts "Creating fake felix..."
-pewds = User.new(
-  email: "pewds@hiive.com",
-  password: "123456",
-  first_name: "Felix",
-  last_name: "PewDiePie",
-  store_url: "pewds",
-  user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/pewdiepie-mental-health.jpg").open,
-  description: "I make kid friendly jokes",
-  creator_type: "gamer",
-)
-pewds.save!
 
 puts "Creating fake joe rogan..."
 
@@ -246,20 +245,6 @@ mark = User.new(
 )
 mark.save!
 
-puts "Creating fake roman..."
-roman = User.new(
-  email: "roman@hiive.com",
-  password: "123456",
-  first_name: "roman",
-  last_name: "mards",
-  store_url: "roman",
-  user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/ut_roman_1_intro.jpg").open,
-  description: "Hi,i give advice, and talk about the design and all the work put into everyday things!",
-  creator_type: "podcaster",
-)
-roman.save!
-
 puts "Creating fake GCN.."
 gcn = User.new(
   email: "GCN@hiive.com",
@@ -289,21 +274,6 @@ dave = User.new(
   creator_type: "tech",
 )
 dave.save!
-
-puts "Creating fake Peachy..."
-peachy = User.new(
-  email: "peachy@hiive.com",
-  password: "123456",
-  first_name: "peachy",
-  last_name: "p",
-  user_type: "creator",
-  store_url: "peachy",
-  photo: Pathname.new("app/assets/images/peachy-gear/maxresdefault.jpg").open,
-  description: "Peachy is a female-focused comedy channel that explores the fun and frustration of modern womanhood with honesty, class, and more than a little bit of sarcasm.
-  ",
-  creator_type: "makeup artist",
-)
-peachy.save!
 
 puts "Creating fake Sierra..."
 
@@ -338,6 +308,20 @@ peter = User.new(
 peter.save!
 
 puts "Creating fake steve..."
+
+puts "Creating fake professor poliakoff..."
+professor = User.new(
+  email: "poliakoff@hiive.com",
+  password: "123456",
+  first_name: "periodic",
+  last_name: "videos",
+  store_url: "PTV",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/Martynpoliakoff.jpg").open,
+  description: "I bring back interest to Chemestry in a fun way",
+  creator_type: "teacher",
+)
+professor.save!
 
 steve = User.new(
   email: "steve@live.com",
@@ -400,6 +384,23 @@ xminx = User.new(
   description: "Where all your gaming doubts, and stuck points get solved! i mostly stream fps games, i love to play them all!",
   creator_type: "streamer",
 )
+
+
+puts "Creating fake report..."
+food = User.new(
+  email: "food@hiive.com",
+  password: "123456",
+  first_name: "weekly",
+  last_name: "report",
+  store_url: "RPOTWeek",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/DZ8z7TqW4AAUlXK.jpg").open,
+  description: "I review all the fasfood i can get my hands on",
+
+  creator_type: "foodie",
+
+)
+food.save!
 
 xminx.save!
 
@@ -764,6 +765,36 @@ router = Product.new(
 router.user = steve
 router.save!
 
+
+vans_1 = Product.new(
+  referal_link: "https://www.vans.nl/shop/nl/vans-nl/anaheim-factory-era-95-dx-schoenen-vn0a2rr1vph#hero=0",
+  title: "ANAHEIM FACTORY ERA 95 DX SCHOENEN",
+  price: "$85.00",
+  description: "This season we introduce the Color Theory Collection, allowing you to create your own color story with our offering of unisex footwear and apparel. Combining vibrant, unique hues with the iconic sidestripe skate shoe, the Old Skool also features sturdy canvas and suede uppers, re-enforced toecaps to withstand repeated wear.",
+  brand: "Vans",
+  seller: "Vans",
+  photo: Pathname.new("./app/assets/images/category-pictures/vans-1.jpeg").open,
+  category: "sneakers",
+)
+
+vans_1.user = gcn
+vans_1.save!
+
+
+vans_2 = Product.new(
+  referal_link: "https://www.vans.nl/shop/nl/vans-nl/old-skool-schoenen-vn0a38g1vrp#hero=0",
+  title: "OLD SKOOL SHOES",
+  price: "$60.00",
+  description: "This season we introduce the Color Theory Collection, allowing you to create your own color story with our offering of unisex footwear and apparel. Combining vibrant, unique hues with the iconic sidestripe skate shoe, the Old Skool also features sturdy canvas and suede uppers, re-enforced toecaps to withstand repeated wear.",
+  brand: "Vans",
+  seller: "Vans",
+  photo: Pathname.new("./app/assets/images/category-pictures/vans-2.png").open,
+  category: "sneakers",
+)
+
+vans_2.user = gcn
+vans_2.save!
+
 bevel = Product.new(
   referal_link: "https://www.amazon.com/dp/B001C04FZS/?cv_ct_id=amzn1.idea.MUCBTHY2XFPZ&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: "Crown Tools 116 / Big Horn 20120 9 Inch Miniature Bevel, Rosewood",
@@ -782,6 +813,25 @@ bevel = Product.new(
 bevel.user = steve
 bevel.save!
 
+nike_shoe = Product.new(
+  referal_link: "https://www.amazon.com/NIKE-Revolution-Running-Black-Cool-Regular/dp/B06XKL3DBZ/ref=sr_1_3?keywords=shoes&qid=1559900017&s=apparel&sr=1-3",
+  title: "Nike Men's Revolution 4 Running Shoe",
+  price: "$39.99",
+  description: "MEN'S RUNNING SHOES Molded pods offer multi-surface traction. Pods flatten on impact then spring back at toe-off creating a piston effect that delivers responsive cushioning.
+  ATHLETIC SHOES Soft foam midsole delivers lightweight, responsive cushioning. Underlays in the vamp and toe tip offer support and structure for a comfortable ride.
+  CORE PERFORMANCE Minimal in design running shoes. Full-length rubber outsole provides durable traction and cushioning to run longer.
+  LIGHTWEIGHT SHOE No-sew overlays along the midfoot and eyestays provide durability while keeping the shoe lightweight. Single-layer mesh upper for optimal breathability.
+  NIKE MEN'S SHOE Imported, synthetic and rubber sole",
+  brand: "Nike",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/shoes-3.jpg").open,
+  category: "sneakers",
+)
+
+nike_shoe.user = steve
+nike_shoe.save!
+
+
 finish = Product.new(
   referal_link: "https://www.amazon.com/dp/B0155AUTG4/?cv_ct_id=amzn1.idea.3QN2LXQZFF81P&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
   title: "Tried and True Danish Oil, Pint",
@@ -799,6 +849,28 @@ finish = Product.new(
 
 finish.user = steve
 finish.save!
+
+shoes_3 = Product.new(
+  referal_link: "https://www.amazon.com/dp/B0155AUTG4/?cv_ct_id=amzn1.idea.3QN2LXQZFF81P&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
+  title: "Under Armour Men's Micro G Assert 7 Sneaker",
+  price: "$41.99",
+  description: '100% Textile and Synthetic
+  Imported
+  Synthetic sole
+  Shaft measures approximately low-top from arch
+  Lightweight mesh upper delivers complete breathability
+  Durable leather overlays for stability & that locks in your midfoot
+  EVA sockliner provides soft, step-in comfort
+  One-piece Micro G foam midsole for ultimate comfort
+  Solid rubber outsole covers high impact zones for greater durability with less weight',
+  brand: "Under Armor",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/max-gear/shoe_4.jpg").open,
+  category: "sneakers",
+)
+
+shoes_3.user = steve
+shoes_3.save!
 
 puts "Creating unbox gear"
 
@@ -1193,29 +1265,6 @@ wallet = Product.new(
 
 wallet.user = roman
 wallet.save!
-
-pink_shoe = Product.new(
-  referal_link: "https://www.amazon.com/L-L-Surprise-Sneakers-Athletic/dp/B07JFDQH3B?ref_=Oct_DLandingS_PC_e2af349c_1&smid=A3FHA054XVVQPZ",
-  title: "L.O.L Surprise Girls Sneakers, Light Up Fashion and Athletic Shoes with Strap, Queen Bee Deva MC Swag and Rocker, Little Girl/Big Girl size 8 to 3, Ages 3 to 10",
-  price: "$23.13",
-  description: "STYLISH & FUN: Queen Bee and Deva, or MC Swag and Rocker on a beautiful, virbrant pink and white sneakers. Kids can enjoy LOL Surprise in style!
-  LIGHT UP: These LOL Surprise sneakers light up! With every step, your child will see their favorite LOL Surprise characters light up.
-  INDOOR & OUTDOOR: Kids can enjoy their sneakers both indoor and outdoor- at home, in the park, and at school! Non-Marking bottoms are perfect for any surface
-  EASY TO PUT ON – Kids can slip their foot into their sneakers, and adjust the strap to their liking. No laces, no problem! Strap provides a more comfortable fit for your child’s foot. Easy to slip on, easy to slip off. No more worrying that your child will trip over their laces!
-  KIDS SIZING: Sizing is available for Little Girl and Big Girl size 8 to 2. Perfect for ages 2 to 8",
-  brand: "L.O.L",
-  seller: "Amazon",
-  photo: Pathname.new("app/assets/images/SierraSchultzzie-gear/pinkshoe.jpg").open,
-  category: "clothing",
-)
-
-<<<<<<< HEAD
-pink-shoe.user = roman
-pink-shoe.save!
-=======
-pink_shoe.user = joao
-pink_shoe.save!
->>>>>>> dc0edd34a4de5b4b0ef19ccc81ccadedbf3cf6b5
 
 backpack = Product.new(
   referal_link: "https://www.amazon.com/North-Face-Borealis-Backpack-Black/dp/B0764J1FV5/ref=sr_1_4?crid=11O9QDHC3FKM4&keywords=the+north+face+backpack&qid=1559833093&s=gateway&sprefix=the+north+face+back%2Caps%2C270&sr=8-4",
