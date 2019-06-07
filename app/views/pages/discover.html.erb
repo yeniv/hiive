@@ -1,7 +1,7 @@
 <div class=" nav-padding allpage">
   <div class=" container category-cards-middle">
     <div class="title-categories">
-        <span class="title-aligned">top 5 Categories</span>
+        <span class="title-aligned">top categories</span>
     </div>
     <div class="cards display-of-cards">
         <%= link_to "products?cat=Photography" do %>
@@ -11,7 +11,7 @@
         <% end %>
 
         <%= link_to "products?cat=sneakers" do %>
-            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/shoes-cat.jpg") %>')">
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/sneakers.jpg") %>')">
                 Sneakers
             </div>
         <% end %>
@@ -29,7 +29,7 @@
         <% end %>
 
         <%= link_to "products?cat=lifestyle" do %>
-            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/lifestyle-category.jpg") %>')">
+            <div class="card-category-discover-page" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path("category-pictures/lifestyle.jpg") %>')">
                 Lifestyle
             </div>
         <% end %>
@@ -61,6 +61,7 @@
     </div>
   </div>
 
+
   <div class="container category-cards-middle">
     <div class="title-categories">
       <span class="title-aligned">top products</span>
@@ -69,48 +70,6 @@
       <div class="row">
         <% @top_5_products.each do |product| %>
         <div class="col-3 hiive-card-container-discover">
-
-          <div class="hiive-card">
-
-          <div class="hiive-card-photo-discover" style="background-image: url(<%= product.photo %>)">
-          </div>
-
-          <div class="hiive-card-content">
-          <p class="hiive-card-title"><%= product.title.truncate(67)%></p>
-          <div class="d-flex justify-content-between">
-
-          <% if product.user != current_user%>
-          <div class="like-button-<%= product.id %>">
-
-            <% if product.likes.where(user: current_user).empty? %>
-
-              <%= render partial: "likes/like", locals: {
-                product: product
-              } %>
-
-            <% else %>
-              <%= render partial: "likes/unlike", locals: {
-                product: product,
-                like: product.likes.find_by_user_id(current_user.id)
-              } %>
-            <% end %>
-          </div>
-          <% else %>
-            <div></div>
-          <% end %>
-          <p class="hiive-card-price"><%= product.price == '' ? 'currently unavailable' : product.price %></p>
-          </div>
-          </div>
-          </div>
-            <%= button_to "buy", product.referal_link, :formtarget => "_blank", class: 'col-6 hiive-card-btn hiive-card-btn-left' %>
-            <%= button_to "more info", product_path(product), method: :get, class: 'col-6 hiive-card-btn hiive-card-btn-right' %>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-
   <div class="container category-cards-middle">
     <div class="title-categories">
       <span class="title-aligned" >random products</span>
