@@ -1420,4 +1420,15 @@ r13.product = finish
 r13.user = casey
 r13.save!
 
+puts "Creating fake likes..."
+
+Like.create(user: tristan, product_id: 456)
+Like.create(user: tristan, product_id: 490)
+Like.create(user: tristan, product_id: 471)
+Like.create(user: tristan, product_id: 475)
+Like.create(user: tristan, product_id: 498)
+Like.create(user: tristan, product_id: 495)
+Like.create(user: tristan, product_id: 461)
+Like.create(user: tristan, product_id: 500)
+
 puts "All seeds created successfully!"
