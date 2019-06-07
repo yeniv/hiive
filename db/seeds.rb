@@ -371,6 +371,70 @@ unbox = User.new(
 
 unbox.save!
 
+puts "Creating fake KittyPlaysGames .."
+
+kitty = User.new(
+  email: "kitty@live.com",
+  password: "123456",
+  first_name: "kitty",
+  last_name: "PlaysGames ",
+  user_type: "creator",
+  store_url: "KittyPlaysGames",
+  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
+  description: "Hey, i am a twitch streamer, and i love to play role playing games",
+  creator_type: "Streamer",
+)
+
+kitty.save!
+
+puts "Creating fake xminx..."
+
+xminx = User.new(
+  email: "xminx@live.com",
+  password: "123456",
+  first_name: "x",
+  last_name: "minx",
+  user_type: "creator",
+  store_url: "xminx",
+  photo: Pathname.new("app/assets/images/gamergirl/58410345_168106704187596_5529006691560120402_n.jpg").open,
+  description: "Where all your gaming doubts, and stuck points get solved! i mostly stream fps games, i love to play them all!",
+  creator_type: "streamer",
+)
+
+xminx.save!
+
+puts "Creating fake emelie..."
+
+emelie = User.new(
+  email: "emelie@live.com",
+  password: "123456",
+  first_name: "emelie",
+  last_name: "outdoor",
+  user_type: "creator",
+  store_url: "outdooremelie",
+  photo: Pathname.new("app/assets/images/gamergirl/maxresdefault.jpg").open,
+  description: "Hey, im emelie from sweeden, and im here to show you all about survival in northen sweden, in case of an apocalypse",
+  creator_type: "survivalist",
+)
+
+emelie.save!
+
+puts "Creating fake brook..."
+
+brook = User.new(
+  email: "brook@live.com",
+  password: "123456",
+  first_name: "brook",
+  last_name: "crist",
+  user_type: "creator",
+  store_url: "crist",
+  photo: Pathname.new("app/assets/images/gamergirl/unnamed.jpg").open,
+  description: "Hey im a Fisher, and a hunter, i teach all about how woman can also make great outdoorzy persons!",
+  creator_type: "fisherman",
+)
+
+brook.save!
+
 # CREATE PRODUCTS
 
 puts "Creating Caesey gear"
