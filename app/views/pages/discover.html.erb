@@ -82,7 +82,7 @@
           <% if product.user != current_user%>
           <div class="like-button-<%= product.id %>">
 
-            <% if product.likes.where(user: @current).empty? %>
+            <% if product.likes.where(user: current_user).empty? %>
 
               <%= render partial: "likes/like", locals: {
                 product: product
@@ -131,7 +131,7 @@
           <% if product.user != current_user%>
           <div class="like-button-<%= product.id %>">
 
-            <% if product.likes.where(user: @current).empty? %>
+            <% if product.likes.where(user: current_user).empty? %>
 
               <%= render partial: "likes/like", locals: {
                 product: product
