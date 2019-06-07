@@ -1,5 +1,12 @@
 <div class="container nav-padding everything-in-middle">
-  <span class="creators-title-aligned">top 5 creators</span>
+
+  <div class="">
+    <h1 class="search-headline mb-5">
+    say hello to the<br>
+    <span class="search-headline-highlight">world's best creators</span>
+  </h1>
+  </div>
+
   <div class="display-grid-creators">
     <% @profiles.each do |profile| %>
       <%= link_to "#{profile.store_url}" do %>
@@ -12,9 +19,9 @@
             <div class="adding-margin-creators">
               <span><%= profile.creator_type %></span>
             </div>
-          </h3>      
+          </h3>
         </div>
-      <% end %> 
+      <% end %>
     <% end %>
   </div>
 </div>
