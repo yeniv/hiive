@@ -127,34 +127,42 @@ pewds.save!
 
 puts "Creating fake professor h3h3..."
 
-h3h3 = User.new(
-  email: "h3h3@hiive.com",
+
+puts "Creating fake KittyPlaysGames .."
+
+kitty = User.new(
+  email: "kitty@live.com",
   password: "123456",
-  first_name: "ethan",
-  last_name: "hilla",
-  store_url: "h&H",
+  first_name: "kitty",
+  last_name: "PlaysGames ",
   user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/EthanRegular.png").open,
-  description: "I make jokes about funny videos, in also do podcasts",
-  creator_type: "podcaster",
+  store_url: "KittyPlaysGames",
+  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
+  description: "Hey, i am a twitch streamer, and i love to play role playing games",
+  creator_type: "Streamer",
 )
-h3h3.save!
+
+kitty.save!
 
 
 puts "Creating fake dave ramsey..."
 
-daver = User.new(
-  email: "dave_ramsay@hiive.com",
+
+
+brook = User.new(
+  email: "brook@live.com",
   password: "123456",
-  first_name: "dave",
-  last_name: "ramsey",
-  store_url: "DR",
+  first_name: "brook",
+  last_name: "crist",
   user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/e0e87e8cd5d771dd8923077bb5025e0b.jpg").open,
-  description: "I help people get free from debt problems",
-  creator_type: "podcaster",
+  store_url: "crist",
+  photo: Pathname.new("app/assets/images/gamergirl/unnamed.jpg").open,
+  description: "Hey im a Fisher, and a hunter, i teach all about how woman can also make great outdoorzy persons!",
+  creator_type: "fisherman",
 )
-daver.save!
+
+brook.save!
+
 
 puts "Creating fake joe rogan..."
 
@@ -171,19 +179,22 @@ joe = User.new(
 )
 joe.save!
 
-puts "Creating fake Captain joe..."
-capitan = User.new(
-  email: "capitan@hiive.com",
+
+emelie = User.new(
+  email: "emelie@live.com",
   password: "123456",
-  first_name: "Captain",
-  last_name: "Joe",
-  store_url: "Cjoe",
+  first_name: "emelie",
+  last_name: "outdoor",
   user_type: "creator",
-  photo: Pathname.new("app/assets/images/seededC/unnamed (1).jpg").open,
-  description: "I give airplanes enthusiasts their daily fix of airplane stuff",
-  creator_type: "pilot",
+  store_url: "outdooremelie",
+  photo: Pathname.new("app/assets/images/gamergirl/maxresdefault.jpg").open,
+  description: "Hey, im emelie from sweeden, and im here to show you all about survival in northen sweden, in case of an apocalypse",
+  creator_type: "rock climber",
 )
-capitan.save!
+
+emelie.save!
+
+
 
 puts "Creating fake Classy vlog..."
 classy = User.new(
@@ -355,6 +366,7 @@ unbox = User.new(
 
 unbox.save!
 
+
 puts "Creating fake KittyPlaysGames .."
 
 kitty = User.new(
@@ -384,7 +396,7 @@ xminx = User.new(
   description: "Where all your gaming doubts, and stuck points get solved! i mostly stream fps games, i love to play them all!",
   creator_type: "streamer",
 )
-
+xminx.save!
 
 puts "Creating fake report..."
 food = User.new(
@@ -402,39 +414,54 @@ food = User.new(
 )
 food.save!
 
-xminx.save!
+
 
 puts "Creating fake emelie..."
 
-emelie = User.new(
-  email: "emelie@live.com",
-  password: "123456",
-  first_name: "emelie",
-  last_name: "outdoor",
-  user_type: "creator",
-  store_url: "outdooremelie",
-  photo: Pathname.new("app/assets/images/gamergirl/maxresdefault.jpg").open,
-  description: "Hey, im emelie from sweeden, and im here to show you all about survival in northen sweden, in case of an apocalypse",
-  creator_type: "survivalist",
-)
-
-emelie.save!
 
 puts "Creating fake brook..."
 
-brook = User.new(
-  email: "brook@live.com",
-  password: "123456",
-  first_name: "brook",
-  last_name: "crist",
-  user_type: "creator",
-  store_url: "crist",
-  photo: Pathname.new("app/assets/images/gamergirl/unnamed.jpg").open,
-  description: "Hey im a Fisher, and a hunter, i teach all about how woman can also make great outdoorzy persons!",
-  creator_type: "fisherman",
-)
 
-brook.save!
+puts "Creating fake Captain joe..."
+capitan = User.new(
+  email: "capitan@hiive.com",
+  password: "123456",
+  first_name: "Captain",
+  last_name: "Joe",
+  store_url: "Cjoe",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/unnamed (1).jpg").open,
+  description: "I give airplanes enthusiasts their daily fix of airplane stuff",
+  creator_type: "pilot",
+)
+capitan.save!
+
+daver = User.new(
+  email: "dave_ramsay@hiive.com",
+  password: "123456",
+  first_name: "dave",
+  last_name: "ramsey",
+  store_url: "DR",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/e0e87e8cd5d771dd8923077bb5025e0b.jpg").open,
+  description: "I help people get free from debt problems",
+  creator_type: "podcaster",
+)
+daver.save!
+
+
+h3h3 = User.new(
+  email: "h3h3@hiive.com",
+  password: "123456",
+  first_name: "ethan",
+  last_name: "hilla",
+  store_url: "h&H",
+  user_type: "creator",
+  photo: Pathname.new("app/assets/images/seededC/EthanRegular.png").open,
+  description: "I make jokes about funny videos, in also do podcasts",
+  creator_type: "podcaster",
+)
+h3h3.save!
 
 # CREATE PRODUCTS
 
@@ -1487,5 +1514,16 @@ r13 = Review.new(
 r13.product = finish
 r13.user = casey
 r13.save!
+
+# puts "Creating fake likes..."
+
+# Like.create(user: tristan, product_id: 456)
+# Like.create(user: tristan, product_id: 490)
+# Like.create(user: tristan, product_id: 471)
+# Like.create(user: tristan, product_id: 475)
+# Like.create(user: tristan, product_id: 498)
+# Like.create(user: tristan, product_id: 495)
+# Like.create(user: tristan, product_id: 461)
+# Like.create(user: tristan, product_id: 500)
 
 puts "All seeds created successfully!"
