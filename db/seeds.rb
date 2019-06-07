@@ -125,29 +125,7 @@ pewds = User.new(
 )
 pewds.save!
 
-puts "Creating fake professor h3h3..."
-
-
-puts "Creating fake KittyPlaysGames .."
-
-kitty = User.new(
-  email: "kitty@live.com",
-  password: "123456",
-  first_name: "kitty",
-  last_name: "PlaysGames ",
-  user_type: "creator",
-  store_url: "KittyPlaysGames",
-  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
-  description: "Hey, i am a twitch streamer, and i love to play role playing games",
-  creator_type: "Streamer",
-)
-
-kitty.save!
-
-
 puts "Creating fake dave ramsey..."
-
-
 
 brook = User.new(
   email: "brook@live.com",
@@ -1377,6 +1355,63 @@ yellow_pants = Product.new(
 yellow_pants.user = steve
 yellow_pants.save!
 
+nike_1 = Product.new(
+  referal_link: "https://store.nike.com/nl/nl_nl/product/nike-air-max-270-by-you/?piid=10000507&pbid=312861396",
+  title: "Nike AIR MAX 270",
+  price: "$85.00",
+  description: "This season we introduce the Color Theory Collection, allowing you to create your own color story with our offering of unisex footwear and apparel. Combining vibrant, unique hues with the iconic sidestripe skate shoe, the Old Skool also features sturdy canvas and suede uppers, re-enforced toecaps to withstand repeated wear.",
+  brand: "Nike",
+  seller: "Nike",
+  photo: Pathname.new("./app/assets/images/category-pictures/nike1.jpg").open,
+  category: "sneakers",
+)
+
+nike_1.user = joe
+nike_1.save!
+
+nike_2 = Product.new(
+  referal_link: "https://www.43einhalb.com/en/nike-wmns-air-force-1-sage-low-topaz-gold-312870",
+  title: "Nike WMNS Air Force 1 Sage Low",
+  price: "$85.00",
+  description: "In 1982, the Nike Air Force 1 was introduced to the market for the first time! It is the Nike sneaker which probably enjoys the highest recognition, not at least because it was celebrated in the hip-hop scene for decades like no other sneaker. This new version of the Air Force 1 gets an overall update: Minimalism rules supreme in this edition of the streetwear legend, with super-clean design lines, a reduced and soft upper made of suede.",
+  brand: "Nike",
+  seller: "43einhalb",
+  photo: Pathname.new("./app/assets/images/category-pictures/nike2.jpg").open,
+  category: "sneakers",
+)
+
+nike_2.user = peachy
+nike_2.save!
+
+superga_1 = Product.new(
+  referal_link: "https://www.zalando.nl/superga-2730-sneakers-laag-su111a01u-e11.html",
+  title: "Cotu low",
+  price: "$65.00",
+  description: "In 1982, the Nike Air Force 1 was introduced to the market for the first time! It is the Nike sneaker which probably enjoys the highest recognition, not at least because it was celebrated in the hip-hop scene for decades like no other sneaker. This new version of the Air Force 1 gets an overall update: Minimalism rules supreme in this edition of the streetwear legend, with super-clean design lines, a reduced and soft upper made of suede.",
+  brand: "Superga",
+  seller: "Zalando",
+  photo: Pathname.new("./app/assets/images/category-pictures/superga1.jpg").open,
+  category: "sneakers",
+)
+
+superga_1.user = georgia
+superga_1.save!
+
+adidas1 = Product.new(
+  referal_link: "https://www.adidas.com/us/pod-s3.1-shoes/B37508.html",
+  title: "Adidas POD-S3.1 Shoes",
+  price: "$69.00",
+  description: "The P.O.D. System brings the best of '90s cushioning to today's streets. These shoes blend adidas heritage inspiration with a knit upper that has a snug, supportive feel.",
+  brand: "Adidas",
+  seller: "Adidas",
+  photo: Pathname.new("./app/assets/images/category-pictures/adidas1.jpg").open,
+  category: "sneakers",
+)
+
+adidas1.user = sierra
+adidas1.save!
+
+
 puts "Creating reviews ..."
 
 r1 = Review.new(
@@ -1514,16 +1549,5 @@ r13 = Review.new(
 r13.product = finish
 r13.user = casey
 r13.save!
-
-# puts "Creating fake likes..."
-
-# Like.create(user: tristan, product_id: 456)
-# Like.create(user: tristan, product_id: 490)
-# Like.create(user: tristan, product_id: 471)
-# Like.create(user: tristan, product_id: 475)
-# Like.create(user: tristan, product_id: 498)
-# Like.create(user: tristan, product_id: 495)
-# Like.create(user: tristan, product_id: 461)
-# Like.create(user: tristan, product_id: 500)
 
 puts "All seeds created successfully!"
