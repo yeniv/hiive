@@ -125,29 +125,7 @@ pewds = User.new(
 )
 pewds.save!
 
-puts "Creating fake professor h3h3..."
-
-
-puts "Creating fake KittyPlaysGames .."
-
-kitty = User.new(
-  email: "kitty@live.com",
-  password: "123456",
-  first_name: "kitty",
-  last_name: "PlaysGames ",
-  user_type: "creator",
-  store_url: "KittyPlaysGames",
-  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
-  description: "Hey, i am a twitch streamer, and i love to play role playing games",
-  creator_type: "Streamer",
-)
-
-kitty.save!
-
-
 puts "Creating fake dave ramsey..."
-
-
 
 brook = User.new(
   email: "brook@live.com",
@@ -367,6 +345,21 @@ unbox = User.new(
 unbox.save!
 
 
+puts "Creating fake KittyPlaysGames .."
+
+kitty = User.new(
+  email: "kitty@live.com",
+  password: "123456",
+  first_name: "kitty",
+  last_name: "PlaysGames ",
+  user_type: "creator",
+  store_url: "KittyPlaysGames",
+  photo: Pathname.new("app/assets/images/gamergirl/59a88a674d3155e4f25f184fa365aae0.jpg").open,
+  description: "Hey, i am a twitch streamer, and i love to play role playing games",
+  creator_type: "streamer",
+)
+
+kitty.save!
 
 puts "Creating fake xminx..."
 
@@ -788,7 +781,6 @@ vans_1 = Product.new(
   photo: Pathname.new("./app/assets/images/category-pictures/vans-1.jpeg").open,
   category: "sneakers",
 )
-
 vans_1.user = gcn
 vans_1.save!
 
@@ -803,7 +795,6 @@ vans_2 = Product.new(
   photo: Pathname.new("./app/assets/images/category-pictures/vans-2.png").open,
   category: "sneakers",
 )
-
 vans_2.user = gcn
 vans_2.save!
 
@@ -839,10 +830,89 @@ nike_shoe = Product.new(
   photo: Pathname.new("app/assets/images/category-pictures/shoes-3.jpg").open,
   category: "sneakers",
 )
-
 nike_shoe.user = steve
 nike_shoe.save!
 
+climbing_1 = Product.new(
+  referal_link: "https://www.amazon.com/stores/page/E3F219E8-EBDD-4617-87E5-C6ED66A1D08B?store_ref=SB_A07924153K98ML2NXOIE2&pf_rd_p=3fade48a-e699-4c96-bf08-bb772ac0e242&hsa_cr_id=2480489440901&lp_slot=auto-sparkle-hsa-tetris&lp_asins=B01A5DXN96,B016RUIRTW,B01KWYZR60&lp_mat_key=climbing&lp_query=climbing&sb-ci-n=brandLogo&sb-ci-v=images%252FI%252F61dhDLUEOKL._SR160%252C120_.jpg",
+  title: "AYAMAYA 30kn / 3000kg Aluminum Locking Rock Climbing Carabiner D Shape",
+  price: "$26.71",
+  description: "Keylock nose prevents snagging. Munter Hitch compatible.
+  Pear shaped facilitates belaying single ropes with a Munter hitch
+  Easily opened with one hand
+  Using: Climbing / Aerial Work / Fire Rescue / Downhill etc.
+  CE certified. Strength: Closed - 6744 lbf / 30 kN; Open - 1574 lbf / 7 kN; Minor Axis - 1574 lbf / 7 kN",
+  brand: "Ayamaya",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_1.jpg").open,
+  category: "climbing",
+)
+climbing_1.user = emelie
+climbing_1.save!
+
+climbing_2 = Product.new(
+  referal_link: "https://www.amazon.com/Sportiva-TarantuLace-Performance-Climbing-Flame/dp/B005DLQ9EW/ref=sxin_2_ac_d_rm?keywords=climbing&pd_rd_i=B01K7UYZTE&pd_rd_r=f58b0a88-2a84-4946-8dc9-8637c2349592&pd_rd_w=uYAMx&pd_rd_wg=S59wO&pf_rd_p=0bc35c17-1e0d-4808-b361-20ab11b00973&pf_rd_r=97T63QHD17QT0ME12Z1K&qid=1559912982&s=gateway&th=1",
+  title: "La Sportiva Men's TarantuLace Performance Rock Climbing Shoe",
+  price: "$26.71",
+  description: "Keylock nose prevents snagging. Munter Hitch compatible.
+  Pear shaped facilitates belaying single ropes with a Munter hitch
+  Easily opened with one hand
+  Using: Climbing / Aerial Work / Fire Rescue / Downhill etc.
+  CE certified. Strength: Closed - 6744 lbf / 30 kN; Open - 1574 lbf / 7 kN; Minor Axis - 1574 lbf / 7 kN",
+  brand: "La Sportiva",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_2.jpg").open,
+  category: "climbing",
+)
+climbing_2.user = emelie
+climbing_2.save!
+
+climbing_3 = Product.new(
+  referal_link: "https://www.amazon.com/stores/page/E3F219E8-EBDD-4617-87E5-C6ED66A1D08B?store_ref=SB_A07924153K98ML2NXOIE2&pf_rd_p=3fade48a-e699-4c96-bf08-bb772ac0e242&hsa_cr_id=2480489440901&lp_slot=auto-sparkle-hsa-tetris&lp_asins=B01A5DXN96,B016RUIRTW,B01KWYZR60&lp_mat_key=climbing&lp_query=climbing&sb-ci-n=brandLogo&sb-ci-v=images%252FI%252F61dhDLUEOKL._SR160%252C120_.jpg",
+  title: "Weanas Thicken Climbing Harness, Protect Waist Safety Harness",
+  price: "$18.99",
+  description: "polyester
+  ★ Beginner's Harness: CE Certified. Harness weight limited: 300KG. Half body climbing harness, traditional buckle, harness construction distributes pressure to keep you comfortable while climbing Comfortable wear is a good companion for your outdoor sports
+  ★ Fits Well on All Size: Fits waist strap 51cm to 118cm, Leg strap 38cm to 70m, one size fits for person. Well on all ages and can be shared by the whole family. Easy to operate, wear and remove
+  ★ Durable Bearing Loop: High load bearing, all the connections and webbing are very sturdy with reinforced ends to bear your weight and protect your safety at all times
+  ★ Wide Range of Uses: Perfecting for mountaineering, tree climbing, indoor climbing, rock climbing, outward band, fire rescue, working on the higher level etc. Comfortable cushioning to ensure safety during rock climbing",
+  brand: "Weana",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_3.jpg").open,
+  category: "climbing",
+)
+climbing_3.user = mark
+climbing_3.save!
+
+climbing_4 = Product.new(
+  referal_link: "https://www.amazon.com/Mammut-Revelation-Protect-neon-orange/dp/B01N4P1FHJ/ref=sr_1_21_sspa?keywords=climbing&qid=1559912982&s=gateway&sr=8-21-spons&psc=1&smid=ABBOLX8XX3K3W",
+  title: "9.2 Revelation Protect",
+  price: "$289.99",
+  description: "Small diameter and low weight provide optimum handling while climbing and belaying
+  Only 57 grams/meter
+  Mammut's PROTECT coating offers higher performance and resists one to two more standard UIAA falls than the same rope without the treatment
+  Abrasion-resistant middle marker
+  Rope ends feature durable ultrasound welding which prevents separation and sheath slippage",
+  brand: "Mammut",
+  seller: "Amazon",
+  photo: Pathname.new("./app/assets/images/seededC/climbing_4.jpg").open,
+  category: "climbing",
+)
+climbing_4.user = emelie
+climbing_4.save!
+
+climbing_5 = Product.new(
+  referal_link: "https://www.amazon.com/Climbing-Technologies-Chest-Ascender/dp/B009ZJ2H5I/ref=sr_1_18_sspa?keywords=climbing&qid=1559913679&s=gateway&sr=8-18-spons&psc=1",
+  title: "Climbing Technologies Chest Ascender",
+  price: "$64.80",
+  description: "Very strong and durable climbing technology.",
+  brand: "Climbing Technologies",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/seededC/climbing_5.png").open,
+  category: "climbing",
+)
+climbing_5.user = emelie
+climbing_5.save!
 
 finish = Product.new(
   referal_link: "https://www.amazon.com/dp/B0155AUTG4/?cv_ct_id=amzn1.idea.3QN2LXQZFF81P&cv_ct_pg=storefront&cv_ct_wn=aip-storefront&ref=exp_cov_thewoodwhisperer_dp_vv_d",
@@ -880,7 +950,6 @@ shoes_3 = Product.new(
   photo: Pathname.new("app/assets/images/max-gear/shoe_4.jpg").open,
   category: "sneakers",
 )
-
 shoes_3.user = steve
 shoes_3.save!
 
@@ -1375,6 +1444,132 @@ headphones_roman = Product.new(
 headphones_roman.user = roman
 headphones_roman.save!
 
+harnass = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/harnesses/mammut/ophir-women?sku=MAMS17W_HARNOPH_DCCXS",
+  title: "Ophir Women",
+  price: "$39.88",
+  description: "TThe second generation of the sporty Ophira harness is adapted to the female anatomy and based on the innovative Mammut® two-part webbing technology. This offers maximum comfort, excellent breathability and a huge range of movement. The fresh, asymmetrical design is a real eye-catcher on the rocks and in the climbing gym.",
+  brand: "Mammut",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/harnass.jpg").open,
+  category: "climbing",
+)
+
+harnass.user = emelie
+harnass.save!
+
+hook = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/carabiners/grivel/k6t-mega-twist-lock",
+  title: "Mega K6T",
+  price: "$10.57",
+  description: "The Grivel Mega K6T is a HMS carabiner with a twist gate for for, fast and easy locking and unlocking, part of Grivel's newest line of carabiners.Part of their new completely modern and ultra-light new line, Grivel carabiners are made from 7000-series aluminium - the same alloy used in their ice axe shafts - that offers the best balance between weight, breaking strength, and durability, for the ultimate in carabiner technology.",
+  brand: "Grivel",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/hook.jpg").open,
+  category: "climbing",
+)
+
+hook.user = emelie
+hook.save!
+
+climbing_shoes = Product.new(
+  referal_link: "https://shop.epictv.co.uk/en/climbing-shoes/boreal/joker-plus-womens?sku=113864",
+  title: "Joker Plus Women's",
+  price: "$88.64",
+  description: "The Boreal Joker Plus Women's is a low-volume version of the Joker Plus that's better suited to people with narrower, low-volume feet. The Joker Plus Women's features a semi-asymmetric last and a stiff midsole to provide all-day support and comfort to beginner and multi-pitch climbers alike. The split leather and synthetic microfibre upper is lined with a PU Air Net lining for the best comfort possible. The padded HFS (Heel Fit System) enhances comfort, whilst the EVA Cushioned Heel System protects the heel of the foot from impacts, like when jumping or falling from boulders.",
+  brand: "Boreal",
+  seller: "Amazon",
+  photo: Pathname.new("app/assets/images/category-pictures/climbing_shoes.jpg").open,
+  category: "climbing",
+)
+
+climbing_shoes.user = emelie
+climbing_shoes.save!
+
+leggings = Product.new(
+  referal_link: "https://www.3rdrockclothing.com/collections/leggings/products/botangle-antique",
+  title: "Recycled Ankle Pocket Leggins Botangel Antique",
+  price: "$55.99",
+  description: "Leggings that fit seamlessly into your active lifestyle. Get ahead of the game with leggings that hold their shape and enhance yours.  Prevent waste and don’t be afraid to kiss the sun this killer fabric provides UV protection and is cooling on the skin.",
+  brand: "Titan",
+  seller: "3rd Rock",
+  photo: Pathname.new("app/assets/images/category-pictures/climbing-leggings.jpg").open,
+  category: "climbing",
+)
+
+leggings.user = emelie
+leggings.save!
+
+yellow_pants = Product.new(
+  referal_link: "https://www.3rdrockclothing.com/collections/trousers/products/nova-mens-movement-climbing-trousers-all?variant=13993394962495",
+  title: "Men's Movement Climbing Trousers",
+  price: "$55.99",
+  description: "Our best selling NOVA returns. Perfect for winter climbing and summer days at the crag, these extra durable organic trousers are specifically made for climbing and movement-based activities. Our Organic Cotton is extremely soft and comfortable and we often hear that these trousers make the best PJs too.",
+  brand: "Nova",
+  seller: "3rd Rock",
+  photo: Pathname.new("app/assets/images/category-pictures/yellow_pants.jpg").open,
+  category: "climbing",
+)
+
+yellow_pants.user = steve
+yellow_pants.save!
+
+nike_1 = Product.new(
+  referal_link: "https://store.nike.com/nl/nl_nl/product/nike-air-max-270-by-you/?piid=10000507&pbid=312861396",
+  title: "Nike AIR MAX 270",
+  price: "$85.00",
+  description: "This season we introduce the Color Theory Collection, allowing you to create your own color story with our offering of unisex footwear and apparel. Combining vibrant, unique hues with the iconic sidestripe skate shoe, the Old Skool also features sturdy canvas and suede uppers, re-enforced toecaps to withstand repeated wear.",
+  brand: "Nike",
+  seller: "Nike",
+  photo: Pathname.new("./app/assets/images/category-pictures/nike1.jpg").open,
+  category: "sneakers",
+)
+
+nike_1.user = joe
+nike_1.save!
+
+nike_2 = Product.new(
+  referal_link: "https://www.43einhalb.com/en/nike-wmns-air-force-1-sage-low-topaz-gold-312870",
+  title: "Nike WMNS Air Force 1 Sage Low",
+  price: "$85.00",
+  description: "In 1982, the Nike Air Force 1 was introduced to the market for the first time! It is the Nike sneaker which probably enjoys the highest recognition, not at least because it was celebrated in the hip-hop scene for decades like no other sneaker. This new version of the Air Force 1 gets an overall update: Minimalism rules supreme in this edition of the streetwear legend, with super-clean design lines, a reduced and soft upper made of suede.",
+  brand: "Nike",
+  seller: "43einhalb",
+  photo: Pathname.new("./app/assets/images/category-pictures/nike2.jpg").open,
+  category: "sneakers",
+)
+
+nike_2.user = peachy
+nike_2.save!
+
+superga_1 = Product.new(
+  referal_link: "https://www.zalando.nl/superga-2730-sneakers-laag-su111a01u-e11.html",
+  title: "Cotu low",
+  price: "$65.00",
+  description: "In 1982, the Nike Air Force 1 was introduced to the market for the first time! It is the Nike sneaker which probably enjoys the highest recognition, not at least because it was celebrated in the hip-hop scene for decades like no other sneaker. This new version of the Air Force 1 gets an overall update: Minimalism rules supreme in this edition of the streetwear legend, with super-clean design lines, a reduced and soft upper made of suede.",
+  brand: "Superga",
+  seller: "Zalando",
+  photo: Pathname.new("./app/assets/images/category-pictures/superga1.jpg").open,
+  category: "sneakers",
+)
+
+superga_1.user = georgia
+superga_1.save!
+
+adidas1 = Product.new(
+  referal_link: "https://www.adidas.com/us/pod-s3.1-shoes/B37508.html",
+  title: "Adidas POD-S3.1 Shoes",
+  price: "$69.00",
+  description: "The P.O.D. System brings the best of '90s cushioning to today's streets. These shoes blend adidas heritage inspiration with a knit upper that has a snug, supportive feel.",
+  brand: "Adidas",
+  seller: "Adidas",
+  photo: Pathname.new("./app/assets/images/category-pictures/adidas1.jpg").open,
+  category: "sneakers",
+)
+
+adidas1.user = sierra
+adidas1.save!
+
 
 puts "Creating reviews ..."
 
@@ -1473,7 +1668,7 @@ r9 = Review.new(
 )
 
 r9.product = bag
-r9.user = casey
+r9.user = max_s
 r9.save!
 
 r10 = Review.new(
@@ -1513,16 +1708,5 @@ r13 = Review.new(
 r13.product = finish
 r13.user = casey
 r13.save!
-
-# puts "Creating fake likes..."
-
-# Like.create(user: tristan, product_id: 456)
-# Like.create(user: tristan, product_id: 490)
-# Like.create(user: tristan, product_id: 471)
-# Like.create(user: tristan, product_id: 475)
-# Like.create(user: tristan, product_id: 498)
-# Like.create(user: tristan, product_id: 495)
-# Like.create(user: tristan, product_id: 461)
-# Like.create(user: tristan, product_id: 500)
 
 puts "All seeds created successfully!"
